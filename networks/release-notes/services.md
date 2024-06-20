@@ -8,9 +8,21 @@ Please visit the [Hedera status page](https://status.hedera.com/) for the latest
 
 ## [v0.50](https://github.com/hashgraph/hedera-services/releases/tag/v0.50.0)
 
-{% hint style="info" %}
-**MAINNET UPDATE SCHEDULED: JUNE 20, 2024**
+{% hint style="success" %}
+**MAINNET UPDATE: JUNE 20, 2024**
 {% endhint %}
+
+### [0.50.1](https://github.com/hashgraph/hedera-services/releases/tag/v0.50.1)
+
+#### What's Changed
+
+* chore: Cherry pick 13648 into release 0.50 branch by [@lukelee-sl](https://github.com/lukelee-sl) in [#13662](https://github.com/hashgraph/hedera-services/pull/13662)
+* fix(ci): cherry pick milestone assignee checks rel 50 by [@rbarkerSL](https://github.com/rbarkerSL) in [#13712](https://github.com/hashgraph/hedera-services/pull/13712)
+* fix: (cherry-pick) Use restart method to all token schemas by [@Neeharika-Sompalli](https://github.com/Neeharika-Sompalli) in [#13676](https://github.com/hashgraph/hedera-services/pull/13676)
+* fix: Enable tokens.balancesInQueries.enabled by [@netopyr](https://github.com/netopyr) in [#13716](https://github.com/hashgraph/hedera-services/pull/13716)
+* chore: Enable tokens.balancesInQueries in code by [@netopyr](https://github.com/netopyr) in [#13769](https://github.com/hashgraph/hedera-services/pull/13769)
+
+**➡ See the full list of changes** [**here**](https://github.com/hashgraph/hedera-services/compare/v0.50.0...v0.50.1)**.**
 
 ### [0.50.0](https://github.com/hashgraph/hedera-services/releases/tag/v0.50.0)
 
