@@ -6,10 +6,24 @@ description: Hedera Services release information
 
 Please visit the [Hedera status page](https://status.hedera.com/) for the latest versions supported on each network.
 
+## [v0.51](https://github.com/hashgraph/hedera-services/releases)
+
+{% hint style="info" %}
+**MAINNET UPDATE SCHEDULED: JULY 17, 2024**
+{% endhint %}
+
+{% hint style="info" %}
+**TESTNET UPDATE SCHEDULED: JUNE 26, 2024**
+{% endhint %}
+
 ## [v0.50](https://github.com/hashgraph/hedera-services/releases/tag/v0.50.0)
 
 {% hint style="success" %}
 **MAINNET UPDATE: JUNE 20, 2024**
+{% endhint %}
+
+{% hint style="success" %}
+**TESTNET UPDATE: JUNE 5, 2024**
 {% endhint %}
 
 ### [0.50.1](https://github.com/hashgraph/hedera-services/releases/tag/v0.50.1)
@@ -26,10 +40,6 @@ Please visit the [Hedera status page](https://status.hedera.com/) for the latest
 
 ### [0.50.0](https://github.com/hashgraph/hedera-services/releases/tag/v0.50.0)
 
-{% hint style="success" %}
-**TESTNET UPDATE: JUNE 5, 2024**
-{% endhint %}
-
 #### What's Changed
 
 * feat: reorganize ISS wiring by [@alittley](https://github.com/alittley) in [#11685](https://github.com/hashgraph/hedera-services/pull/11685)
@@ -44,6 +54,10 @@ Please visit the [Hedera status page](https://status.hedera.com/) for the latest
 * fix: wait longer for freeze transaction to be handled by [@JeffreyDallas](https://github.com/JeffreyDallas) in [#11790](https://github.com/hashgraph/hedera-services/pull/11790)
 
 **➡ See the full list of changes** [**here**](https://github.com/hashgraph/hedera-services/releases/tag/v0.50.0)**.**
+
+### Performance Results
+
+<figure><img src="../../.gitbook/assets/0.50_Performance Measurement Results_Extract.001.png" alt=""><figcaption></figcaption></figure>
 
 ## [v0.49](https://github.com/hashgraph/hedera-services/releases/tag/v0.49.0)
 
