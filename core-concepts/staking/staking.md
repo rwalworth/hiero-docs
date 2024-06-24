@@ -64,7 +64,7 @@ For a staked account to be eligible to earn rewards, the following must be true:
 * The account needs to be staked for the minimum staking period
 * The reward rate is voted on by the Hedera Governing Council and updated on mainnet
 
-Rewards will continue to be earned when a node is down or inactive in the first phase. The Council (through CoinCom) has voted to implement a maximum cap of 0.25% annual reward rate. The actual reward rate will vary depending on how many HBAR are staked for rewards, but the rate will not exceed the cap. In the future, when nodes are down or inactive the staked account will not be eligible to earn rewards.
+Rewards will continue to be earned when a node is down or inactive in the first phase. The Council (through CoinCom) has voted to implement a maximum cap of [2.5% annual reward rate](https://hedera.com/blog/hedera-governing-council-votes-to-approve-changes-to-staking-algorithm). The actual reward rate will vary depending on how many HBAR are staked for rewards, but the rate will not exceed the cap. In the future, when nodes are down or inactive the staked account will not be eligible to earn rewards.
 
 This staking system offers an additional unique functionality: **indirect staking**. If account A stakes to node N, then the stake increases the consensus weight of N, and account A is rewarded for every 24-hour period that it stakes. If account A stakes to account B, and account B stakes to node N, then the stake from both A and B will increase the consensus weight of N, but the rewards for both A and B will be received by B.
 
