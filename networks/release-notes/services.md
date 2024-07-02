@@ -6,15 +6,52 @@ description: Hedera Services release information
 
 Please visit the [Hedera status page](https://status.hedera.com/) for the latest versions supported on each network.
 
-## [v0.51](https://github.com/hashgraph/hedera-services/releases)
+## [v0.51](https://github.com/hashgraph/hedera-services/releases/tag/v0.51.5)
+
+{% hint style="success" %}
+**TESTNET UPDATE: JULY 2, 2024**
+{% endhint %}
 
 {% hint style="info" %}
 **MAINNET UPDATE SCHEDULED: JULY 17, 2024**
 {% endhint %}
 
-{% hint style="info" %}
-**TESTNET UPDATE SCHEDULED: JULY 2, 2024**
-{% endhint %}
+### Release Highlights
+
+#### [HIP 206](https://hips.hedera.com/hip/hip-206)
+
+**Functionality:**
+
+* Defines a new function to the Hedera Token Service system contract that allows for the atomic transfer of HBAR, fungible tokens and non-fungible tokens.
+  * Function cryptoTransfer(TransferList transferList,TokenTransferList\[] tokenTransfer)
+* Exposes an existing HAPI call via smart contracts.
+* Transfer respects granted allowances. &#x20;
+
+**Benefits:**
+
+* Enables native royalty support on the EVM since native $hbar can now be transferred using spending allowances
+* Direct interaction with HBAR and HTS tokens
+* Eliminates the need for token wrapping.
+* Enhances efficiency and reduces complexity.
+* Cuts costs by removing intermediary steps i.e., wrapping assets to interact with them.
+* Enables native royalty support on the EVM since native HBAR can now be transferred using spending allowances
+
+#### [HIP 906](https://hips.hedera.com/hip/hip-906)
+
+**Functionality:**
+
+* Introduces a new Hedera Account Service system contract.
+* Enables querying and granting approval of HBAR to a spender account from smart contracts code
+  * hbarAllowance, hbarApprove
+* Developers do not have to context switch out of smart contract code
+
+**Benefits:**
+
+* Introduces new account proxy contract for HBAR allowances
+* Enables grant, retrieve, and manage HBAR allowances within smart contracts
+  * Developers do not have to context switch out of smart contracts code
+* Simplifies workflows and enhances security
+* Expands potential use cases, especially for DeFi and token marketplaces
 
 ## [v0.50](https://github.com/hashgraph/hedera-services/releases/tag/v0.50.0)
 
