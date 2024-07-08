@@ -10,8 +10,6 @@ There are four options to establish a connection to Hedera Networks. Validation 
 
 **➡** [**Hashio**](https://swirldslabs.com/hashio/)
 
-**➡** [**Arkhia**](https://explorer.arkhia.io/mainnet/dashboard)
-
 **➡** [**Hedera JSON-RPC Relay**](hedera-json-rpc-relay.md)
 
 **➡** [**Validation Cloud**](validation-cloud.md)

@@ -62,7 +62,6 @@
     * [Schedule Your First Transaction](tutorials/more-tutorials/schedule-your-first-transaction.md)
     * [How to Connect to Hedera Networks Over RPC](tutorials/more-tutorials/json-rpc-connections/README.md)
       * [Configuring Hashio RPC endpoints](tutorials/more-tutorials/json-rpc-connections/hashio.md)
-      * [Configuring Arkhia RPC endpoints](tutorials/more-tutorials/json-rpc-connections/arkhia.md)
       * [Configuring Hedera JSON-RPC Relay endpoints](tutorials/more-tutorials/json-rpc-connections/hedera-json-rpc-relay.md)
       * [Configuring Validation Cloud RPC endpoints](tutorials/more-tutorials/json-rpc-connections/validation-cloud.md)
     * [JavaScript Testing](tutorials/more-tutorials/javascript-testing.md)
