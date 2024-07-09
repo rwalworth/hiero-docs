@@ -19,7 +19,7 @@ layout:
 
 # Welcome to Hedera — let’s build the future
 
-## Are you ready to shape the future of web3? Join the Hello Future Hackathon!&#x20;
+## Are you ready to build the unimaginable on Hedera? Join the Hello Future Hackathon!&#x20;
 
 {% embed url="https://www.canva.com/design/DAGJ9iE_WrU/ZFU25tkqBDsvnfRu-k4Fmw/view" fullWidth="false" %}
 

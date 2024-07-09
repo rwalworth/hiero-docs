@@ -1,6 +1,6 @@
 # Hello Future Hackathon
 
-## Are you ready to shape the future of web3?
+## Are you ready to build the unimaginable on Hedera?
 
 {% embed url="https://www.canva.com/design/DAGJ9iE_WrU/ZFU25tkqBDsvnfRu-k4Fmw/view" %}
 
