@@ -66,6 +66,7 @@
       * [Configuring Validation Cloud RPC endpoints](tutorials/more-tutorials/json-rpc-connections/validation-cloud.md)
     * [JavaScript Testing](tutorials/more-tutorials/javascript-testing.md)
     * [Create a Hedera DApp Integrated with WalletConnect](tutorials/more-tutorials/develop-a-hedera-dapp-integrated-with-walletconnect.md)
+    * [How to Connect MetaMask to Hedera](tutorials/more-tutorials/how-to-connect-metamask-to-hedera.md)
   * [Demo Applications](tutorials/demo-applications.md)
   * [Starter Projects](tutorials/starter-projects.md)
   * [Building on Hedera (course)](https://hashgraphdev.com/?code=docs.hedera.com)
