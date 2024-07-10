@@ -2,7 +2,7 @@
 
 * [Welcome to Hedera — let’s build the future](README.md)
 * [Getting Started](getting-started/README.md)
-  * [Introduction](getting-started/introduction.md)
+  * [Get Your Testnet Account](getting-started/introduction.md)
   * [Environment Setup](getting-started/environment-set-up.md)
   * [Create an Account](getting-started/create-an-account.md)
   * [Transfer HBAR](getting-started/transfer-hbar.md)
