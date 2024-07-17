@@ -6,6 +6,16 @@ description: Hedera Services release information
 
 Please visit the [Hedera status page](https://status.hedera.com/) for the latest versions supported on each network.
 
+## [v0.52](https://github.com/hashgraph/hedera-services/releases)
+
+{% hint style="info" %}
+**MAINNET UPDATE SCHEDULED: AUGUST 14, 2024**
+{% endhint %}
+
+{% hint style="info" %}
+**TESTNET UPDATE SCHEDULED: JULY 24, 2024**
+{% endhint %}
+
 ## [v0.51](https://github.com/hashgraph/hedera-services/releases/tag/v0.51.5)
 
 {% hint style="success" %}
