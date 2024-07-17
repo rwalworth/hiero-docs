@@ -8,8 +8,12 @@ Please visit the [Hedera status page](https://status.hedera.com/) for the latest
 
 ## [v0.51](https://github.com/hashgraph/hedera-services/releases/tag/v0.51.5)
 
-{% hint style="info" %}
+{% hint style="success" %}
 **MAINNET UPDATE SCHEDULED: JULY 17, 2024**
+{% endhint %}
+
+{% hint style="success" %}
+**TESTNET UPDATE: JULY 2, 2024**
 {% endhint %}
 
 ### Release Highlights
@@ -51,10 +55,6 @@ Please visit the [Hedera status page](https://status.hedera.com/) for the latest
 
 ### [0.51.5](https://github.com/hashgraph/hedera-services/releases/tag/v0.51.5)
 
-{% hint style="success" %}
-**TESTNET UPDATE: JULY 2, 2024**
-{% endhint %}
-
 #### What's Changed
 
 * feat(reconnect): introduce ReconnectMapStats interface by [@anthony-swirldslabs](https://github.com/anthony-swirldslabs) in [#13027](https://github.com/hashgraph/hedera-services/pull/13027)
@@ -69,6 +69,10 @@ Please visit the [Hedera status page](https://status.hedera.com/) for the latest
 * feat: Updated hedera-services code to support DAB protobuf changes. by [@iwsimon](https://github.com/iwsimon) in [#13090](https://github.com/hashgraph/hedera-services/pull/13090)
 
 **➡ See the full list of changes** [**here**](https://github.com/hashgraph/hedera-services/releases/tag/v0.51.5)**.**
+
+### Performance Results
+
+<figure><img src="../../.gitbook/assets/‎0.51_Performance Measurement Results_Extract.‎001.png" alt=""><figcaption></figcaption></figure>
 
 ## [v0.50](https://github.com/hashgraph/hedera-services/releases/tag/v0.50.0)
 
