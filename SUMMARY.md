@@ -248,6 +248,7 @@
       * [Wallet](sdks-and-apis/sdks/signature-provider/wallet.md)
       * [Local Provider](sdks-and-apis/sdks/signature-provider/local-provider.md)
   * [REST API](sdks-and-apis/rest-api.md)
+  * [Web3 API](sdks-and-apis/web3-api.md)
   * [Hedera Consensus Service gRPC API](sdks-and-apis/hedera-consensus-service-api.md)
   * [Hedera APIs](sdks-and-apis/hedera-api/README.md)
     * [Basic Types](sdks-and-apis/hedera-api/basic-types/README.md)
