@@ -83,7 +83,7 @@ The account is officially registered with Hedera when HBAR is initially deposite
 
 ## Import Hedera Account into Metamask
 
-#### Step 1: Go to [HashIO](https://swirldslabs.com/hashio/), the SwirldsLabs hosted version of the JSON-RPC Relay, and copy the Testnet URL.
+#### Step 1: Go to [HashIO](https://www.hashgraph.com/hashio/), the SwirldsLabs hosted version of the JSON-RPC Relay, and copy the Testnet URL.
 
 HashIO provides the URLs for each Hedera environment that will let you interact with the respective environment nodes on Hedera the same way you would an Ethereum node.
 
@@ -127,4 +127,4 @@ The release of the JSON-RPC Relay to developers brings greater usability to the 
 
 Happy Building! Feel free to reach out if you have any questions:
 
-<table data-card-size="large" data-view="cards"><thead><tr><th align="center"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td align="center"><p>Writer: Abi, DevRel Engineer</p><p><a href="https://github.com/a-ridley">GitHub</a> | <a href="https://www.linkedin.com/in/a-ridley/">LinkedIn</a></p></td><td><a href="https://www.linkedin.com/in/a-ridley/">https://www.linkedin.com/in/a-ridley/</a></td></tr><tr><td align="center"><p>Editor: Krystal, Technical Writer</p><p><a href="https://github.com/theekrystallee">GitHub</a> | <a href="https://hashnode.com/@theekrystallee">Hashnode</a></p></td><td><a href="https://twitter.com/theekrystallee">https://twitter.com/theekrystallee</a></td></tr></tbody></table>
+<table data-card-size="large" data-view="cards"><thead><tr><th align="right"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td align="right"><p>Writer: Abi, DevRel Engineer</p><p><a href="https://github.com/a-ridley">GitHub</a> | <a href="https://www.linkedin.com/in/a-ridley/">LinkedIn</a></p></td><td><a href="https://www.linkedin.com/in/a-ridley/">https://www.linkedin.com/in/a-ridley/</a></td></tr><tr><td align="right"><p>Editor: Krystal, Technical Writer</p><p><a href="https://github.com/theekrystallee">GitHub</a> | <a href="https://hashnode.com/@theekrystallee">Hashnode</a></p></td><td><a href="https://twitter.com/theekrystallee">https://twitter.com/theekrystallee</a></td></tr></tbody></table>
