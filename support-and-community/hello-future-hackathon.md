@@ -2,9 +2,7 @@
 
 ## Are you ready to build the unimaginable on Hedera?
 
-<a href="https://hellofuturehackathon.dev/" target="_blank">
-  <img src="../.gitbook/assets/hello-future-hackathon-2024-banner.png" alt="Hackathon Banner" style="width: 100%; max-width: 100%;">
-</a>
+<figure><img src="../.gitbook/assets/hello-future-hackathon-2024-banner.png" alt=""><figcaption></figcaption></figure>
 
 ## Join the Hello Future Hackathon and Innovate with Hedera!
 
