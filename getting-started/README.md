@@ -22,4 +22,4 @@ layout:
 
 ## Are you ready to build the unimaginable on Hedera? Join the Hello Future Hackathon!
 
-<figure><img src="../.gitbook/assets/hello-future-hackathon-2024-banner.png" alt=""><figcaption></figcaption></figure>
+{% embed url="https://www.canva.com/design/DAGJ9iE_WrU/ZFU25tkqBDsvnfRu-k4Fmw/view" %}
