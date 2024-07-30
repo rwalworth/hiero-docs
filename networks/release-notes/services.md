@@ -6,7 +6,7 @@ description: Hedera Services release information
 
 Please visit the [Hedera status page](https://status.hedera.com/) for the latest versions supported on each network.
 
-## [v0.52](https://github.com/hashgraph/hedera-services/releases)
+## [v0.52](https://github.com/hashgraph/hedera-services/releases/tag/v0.52.0)
 
 {% hint style="info" %}
 **MAINNET UPDATE SCHEDULED: AUGUST 14, 2024**
@@ -15,6 +15,23 @@ Please visit the [Hedera status page](https://status.hedera.com/) for the latest
 {% hint style="info" %}
 **TESTNET UPDATE SCHEDULED: JULY 31, 2024**
 {% endhint %}
+
+### [0.52.0](https://github.com/hashgraph/hedera-services/releases/tag/v0.52.0)
+
+#### What's Changed
+
+* feat: extract `HederaNetwork` interface with initial `SubProcessNetwork` impl by [@tinker-michaelj](https://github.com/tinker-michaelj) in [#13540](https://github.com/hashgraph/hedera-services/pull/13540)
+* build: make annotation library dependencies transitive by [@jjohannes](https://github.com/jjohannes) in [#13643](https://github.com/hashgraph/hedera-services/pull/13643)
+* chore: Address compiler warnings in LoggerApiSpecAssertions by [@jjohannes](https://github.com/jjohannes) in [#13644](https://github.com/hashgraph/hedera-services/pull/13644)
+* chore: disabled new backpressure via settings by [@cody-littley](https://github.com/cody-littley) in [#13635](https://github.com/hashgraph/hedera-services/pull/13635)
+* chore: Add `FakePlatform` and `FakeServicesRegistry` by [@Neeharika-Sompalli](https://github.com/Neeharika-Sompalli) in [#13549](https://github.com/hashgraph/hedera-services/pull/13549)
+* docs: File Service design doc by [@derektriley](https://github.com/derektriley) in [#13615](https://github.com/hashgraph/hedera-services/pull/13615)
+* build: (de)activate selection of javac lint features by [@jjohannes](https://github.com/jjohannes) in [#11838](https://github.com/hashgraph/hedera-services/pull/11838)
+* fix(reconnect): use AtomicLong for anticipatedMessages counter by [@anthony-swirldslabs](https://github.com/anthony-swirldslabs) in [#13650](https://github.com/hashgraph/hedera-services/pull/13650)
+* feat: Move to fully connected network by [@kfa-aguda](https://github.com/kfa-aguda) in [#13010](https://github.com/hashgraph/hedera-services/pull/13010)
+* docs: add design document for HIP-904 token cancel airdrop transaction by [@MiroslavGatsanoga](https://github.com/MiroslavGatsanoga) in [#12787](https://github.com/hashgraph/hedera-services/pull/12787)
+
+**➡ See the full list of changes** [**here**](https://github.com/hashgraph/hedera-services/releases/tag/v0.52.0)**.**
 
 ## [v0.51](https://github.com/hashgraph/hedera-services/releases/tag/v0.51.5)
 
