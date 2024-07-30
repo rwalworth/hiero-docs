@@ -132,6 +132,8 @@
     * [Multisig DAO](open-source-solutions/hashiodao/multisig-dao.md)
     * [DAO Proposals](open-source-solutions/hashiodao/dao-proposals.md)
     * [Local Environment Setup](open-source-solutions/hashiodao/local-environment-setup.md)
+  * [Hedera Custodians Library](open-source-solutions/hedera-custodians-library/README.md)
+    * [How to use it](open-source-solutions/hedera-custodians-library/how-to-use-it.md)
   * [Hedera Guardian](https://docs.hedera.com/guardian/guardian/)
   * [Hedera Wallet Snap By MetaMask](open-source-solutions/hedera-wallet-snap-by-metamask/README.md)
     * [Hedera Wallet Snap Documentation](https://docs.tuum.tech/hedera-wallet-snap/basics/introduction)
