@@ -18,6 +18,65 @@ Please visit the [Hedera status page](https://status.hedera.com/) for the latest
 **TESTNET UPDATE SCHEDULED: JULY 31, 2024**
 {% endhint %}
 
+### Release Highlights
+
+[**HIP-632**](https://hips.hedera.com/hip/hip-632)
+
+#### isAuthorizedRaw Functionality
+
+* Accepts three parameters:
+  * `address`
+  * `messageHash`
+  * `signatureBlob`
+* Validates the provided address (Hedera Account ID or virtual address)
+* Determines signature type based on `signatureBlob` length:
+  * 65 bytes: ECDSA
+  * 64 bytes: ED25519
+
+#### ECDSA Signature Handling
+
+* Extracts `v`, `r`, and `s` components
+* Runs ECRECOVER to recover signing address
+* Compares result with the account's virtual addresses
+
+#### ED25519 Signature Handling
+
+* Retrieves Hedera address
+* Checks for single associated key on account
+* Verifies signature against message hash and account key
+
+#### Benefits
+
+* Similar functionality to Ethereum's ECRECOVER precompile
+* Supports both ECDSA and ED25519 signature verification
+* Works with Hedera Account IDs and virtual addresses
+* Simplifies signature verification in smart contracts
+* Streamlines transaction authentication within contracts
+* Enhances Hedera-Ethereum authorization flow compatibility
+* Improves developer experience with familiar authorization mechanism
+
+#### [HIP 904](https://hips.hedera.com/hip/hip-904)
+
+#### TokenRect Functionality
+
+* Allows users to reject undesired tokens
+* Transfers thefull balance of one or more tokens from the requesting account to the treasury
+* Supports rejection of both fungible and non-fungible tokens
+* Handles up to 10 token rejections in a single transaction
+* Bypasses custom fees and royalties defined for the rejected tokens
+
+#### Benefits of TokenReject
+
+* Enables users to remove unwanted tokens from their accounts
+* Protects users from potential scams or unwanted airdrops
+* Allows rejection of tokens regardless of how they were acquired (manual or automatic association)
+* Helps users manage their token holdings more effectively
+* Prevents users from being forced to pay exorbitant or potentially malicious fees to remove tokens
+* Maintains account association with the token, allowing for future transactions if desired
+* Provides a simple mechanism for users to clean up their accounts
+* Enhances user control over their token portfolio
+* Improves overall user experience in token management
+
 #### What's Changed
 
 * feat: extract `HederaNetwork` interface with initial `SubProcessNetwork` impl by [@tinker-michaelj](https://github.com/tinker-michaelj) in [#13540](https://github.com/hashgraph/hedera-services/pull/13540)
@@ -47,14 +106,14 @@ Please visit the [Hedera status page](https://status.hedera.com/) for the latest
 
 #### [HIP 206](https://hips.hedera.com/hip/hip-206)
 
-**Functionality:**
+**Functionality**
 
 * Defines a new function to the Hedera Token Service system contract that allows for the atomic transfer of HBAR, fungible tokens and non-fungible tokens.
   * Function cryptoTransfer(TransferList transferList,TokenTransferList\[] tokenTransfer)
 * Exposes an existing HAPI call via smart contracts.
 * Transfer respects granted allowances. &#x20;
 
-**Benefits:**
+**Benefits**
 
 * Enables native royalty support on the EVM since native $hbar can now be transferred using spending allowances
 * Direct interaction with HBAR and HTS tokens
@@ -65,14 +124,14 @@ Please visit the [Hedera status page](https://status.hedera.com/) for the latest
 
 #### [HIP 906](https://hips.hedera.com/hip/hip-906)
 
-**Functionality:**
+**Functionality**
 
 * Introduces a new Hedera Account Service system contract.
 * Enables querying and granting approval of HBAR to a spender account from smart contracts code
   * hbarAllowance, hbarApprove
 * Developers do not have to context switch out of smart contract code
 
-**Benefits:**
+**Benefits**
 
 * Introduces new account proxy contract for HBAR allowances
 * Enables grant, retrieve, and manage HBAR allowances within smart contracts
