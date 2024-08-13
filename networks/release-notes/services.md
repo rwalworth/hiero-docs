@@ -9,7 +9,7 @@ Please visit the [Hedera status page](https://status.hedera.com/) for the latest
 ## [v0.52](https://github.com/hashgraph/hedera-services/releases/tag/v0.52.0)
 
 {% hint style="info" %}
-**MAINNET UPDATE SCHEDULED: AUGUST 14, 2024**
+**MAINNET UPDATE SCHEDULED: AUGUST 21, 2024**
 {% endhint %}
 
 ### [0.52.0](https://github.com/hashgraph/hedera-services/releases/tag/v0.52.0)
