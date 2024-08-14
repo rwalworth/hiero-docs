@@ -12,6 +12,12 @@ Please visit the [Hedera status page](https://status.hedera.com/) for the latest
 **MAINNET UPDATE SCHEDULED: AUGUST 21, 2024**
 {% endhint %}
 
+### [0.52.2](https://github.com/hashgraph/hedera-services/releases/tag/v0.52.2)
+
+{% hint style="info" %}
+**TESTNET UPDATE SCHEDULED: AUGUST 14, 2024**
+{% endhint %}
+
 ### [0.52.0](https://github.com/hashgraph/hedera-services/releases/tag/v0.52.0)
 
 {% hint style="success" %}
@@ -77,8 +83,27 @@ Please visit the [Hedera status page](https://status.hedera.com/) for the latest
 * Enhances user control over their token portfolio
 * Improves overall user experience in token management
 
+### [0.52.2](https://github.com/hashgraph/hedera-services/releases/tag/v0.52.2)
+
 #### What's Changed
 
+* chore(0.52): updates the buildkit and docker daemon configuration to use the registry mirror by [@nathanklick](https://github.com/nathanklick) in [#14777](https://github.com/hashgraph/hedera-services/pull/14777)
+* fix: immediately finalize transfer lists for scheduled crypto transfer by [@tinker-michaelj](https://github.com/tinker-michaelj) in [#14799](https://github.com/hashgraph/hedera-services/pull/14799)
+
+### [0.52.1](https://github.com/hashgraph/hedera-services/releases/tag/v0.52.1)
+
+#### What's Changed
+
+* ci: fix gradle publish failures in release-0.52 for hedera.com.evm by [@rbarkerSL](https://github.com/rbarkerSL) in [#14513](https://github.com/hashgraph/hedera-services/pull/14513)
+* fix: 14489 cherry pick docker rate limit fix in release052 by [@rbarkerSL](https://github.com/rbarkerSL) in [#14490](https://github.com/hashgraph/hedera-services/pull/14490)
+* fix(bug): Removed daemon config changes ([#14599](https://github.com/hashgraph/hedera-services/pull/14599)) by [@rbarkerSL](https://github.com/rbarkerSL) in [#14602](https://github.com/hashgraph/hedera-services/pull/14602)
+* fix: cherry pick misc fixes by [@tinker-michaelj](https://github.com/tinker-michaelj) in [#14609](https://github.com/hashgraph/hedera-services/pull/14609)
+
+### [0.52.0](https://github.com/hashgraph/hedera-services/releases/tag/v0.52.0)
+
+#### What's Changed
+
+* The `accounts.maxNumber` and `nfts.MaxAllowedMints` values both remain at 20 million for this release
 * feat: extract `HederaNetwork` interface with initial `SubProcessNetwork` impl by [@tinker-michaelj](https://github.com/tinker-michaelj) in [#13540](https://github.com/hashgraph/hedera-services/pull/13540)
 * build: make annotation library dependencies transitive by [@jjohannes](https://github.com/jjohannes) in [#13643](https://github.com/hashgraph/hedera-services/pull/13643)
 * chore: Address compiler warnings in LoggerApiSpecAssertions by [@jjohannes](https://github.com/jjohannes) in [#13644](https://github.com/hashgraph/hedera-services/pull/13644)
