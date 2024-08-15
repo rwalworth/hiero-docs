@@ -6,23 +6,7 @@ description: Hedera Services release information
 
 Please visit the [Hedera status page](https://status.hedera.com/) for the latest versions supported on each network.
 
-## [v0.52](https://github.com/hashgraph/hedera-services/releases/tag/v0.52.0)
-
-{% hint style="info" %}
-**MAINNET UPDATE SCHEDULED: AUGUST 21, 2024**
-{% endhint %}
-
-### [0.52.2](https://github.com/hashgraph/hedera-services/releases/tag/v0.52.2)
-
-{% hint style="success" %}
-**TESTNET UPDATE SCHEDULED: AUGUST 14, 2024**
-{% endhint %}
-
-### [0.52.0](https://github.com/hashgraph/hedera-services/releases/tag/v0.52.0)
-
-{% hint style="success" %}
-**TESTNET UPDATE SCHEDULED: JULY 31, 2024**
-{% endhint %}
+## Release 0.52
 
 ### Release Highlights
 
@@ -83,14 +67,22 @@ Please visit the [Hedera status page](https://status.hedera.com/) for the latest
 * Enhances user control over their token portfolio
 * Improves overall user experience in token management
 
-### [0.52.2](https://github.com/hashgraph/hedera-services/releases/tag/v0.52.2)
+### [Build 0.52.2](https://github.com/hashgraph/hedera-services/releases/tag/v0.52.2)
+
+{% hint style="info" %}
+**MAINNET UPDATE SCHEDULED: AUGUST 21, 2024**
+{% endhint %}
+
+{% hint style="success" %}
+**TESTNET UPDATE SCHEDULED: AUGUST 14, 2024**
+{% endhint %}
 
 #### What's Changed
 
 * chore(0.52): updates the buildkit and docker daemon configuration to use the registry mirror by [@nathanklick](https://github.com/nathanklick) in [#14777](https://github.com/hashgraph/hedera-services/pull/14777)
 * fix: immediately finalize transfer lists for scheduled crypto transfer by [@tinker-michaelj](https://github.com/tinker-michaelj) in [#14799](https://github.com/hashgraph/hedera-services/pull/14799)
 
-### [0.52.1](https://github.com/hashgraph/hedera-services/releases/tag/v0.52.1)
+### [Build 0.52.1](https://github.com/hashgraph/hedera-services/releases/tag/v0.52.1)
 
 #### What's Changed
 
@@ -99,7 +91,11 @@ Please visit the [Hedera status page](https://status.hedera.com/) for the latest
 * fix(bug): Removed daemon config changes ([#14599](https://github.com/hashgraph/hedera-services/pull/14599)) by [@rbarkerSL](https://github.com/rbarkerSL) in [#14602](https://github.com/hashgraph/hedera-services/pull/14602)
 * fix: cherry pick misc fixes by [@tinker-michaelj](https://github.com/tinker-michaelj) in [#14609](https://github.com/hashgraph/hedera-services/pull/14609)
 
-### [0.52.0](https://github.com/hashgraph/hedera-services/releases/tag/v0.52.0)
+### [Build 0.52.0](https://github.com/hashgraph/hedera-services/releases/tag/v0.52.0)
+
+{% hint style="success" %}
+**TESTNET UPDATE SCHEDULED: JULY 31, 2024**
+{% endhint %}
 
 #### What's Changed
 
