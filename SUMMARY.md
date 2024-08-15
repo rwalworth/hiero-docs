@@ -46,6 +46,7 @@
     * [Create and Transfer Your First Fungible Token](tutorials/token/create-and-transfer-your-first-fungible-token.md)
     * [Create and Transfer an NFT using a Solidity Contract](tutorials/token/create-and-transfer-an-nft-using-a-solidity-contract.md)
     * [Structure Your Token Metadata Using JSON Schema V2](tutorials/token/structure-your-token-metadata-using-json-schema-v2.md)
+    * [Hedera Token Service - Part 1: How to Mint NFTs](tutorials/token/hedera-token-service-part-1-how-to-mint-nfts.md)
   * [Local Node](tutorials/local-node/README.md)
     * [How to Run Hedera Local Node in a Cloud Development Environment (CDE)](tutorials/local-node/how-to-run-hedera-local-node-in-a-cloud-development-environment-cde/README.md)
       * [Run a Local Node in Gitpod](tutorials/local-node/how-to-run-hedera-local-node-in-a-cloud-development-environment-cde/gitpod.md)
