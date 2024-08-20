@@ -36,4 +36,8 @@ https://previewnet.hashio.io/api
 {% endtab %}
 {% endtabs %}
 
+{% hint style="warning" %}
+_**Please note**: Hashio is For development and testing purposes only. Production use cases are strongly encouraged to use_ [_commercial-grade JSON-RPC relays_](https://docs.hedera.com/hedera/core-concepts/smart-contracts/deploying-smart-contracts/json-rpc-relay#community-hosted-json-rpc-relays) _or host their own instance of the_ [_Hedera JSON-RPC Relay_](https://github.com/hashgraph/hedera-json-rpc-relay?tab=readme-ov-file#hedera-json-rpc-relay)_._
+{% endhint %}
+
 No further settings or configurations are needed!
