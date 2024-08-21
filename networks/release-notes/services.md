@@ -69,7 +69,7 @@ Please visit the [Hedera status page](https://status.hedera.com/) for the latest
 
 ### [Build 0.52.2](https://github.com/hashgraph/hedera-services/releases/tag/v0.52.2)
 
-{% hint style="info" %}
+{% hint style="success" %}
 **MAINNET UPDATE SCHEDULED: AUGUST 21, 2024**
 {% endhint %}
 
@@ -112,6 +112,10 @@ Please visit the [Hedera status page](https://status.hedera.com/) for the latest
 * docs: add design document for HIP-904 token cancel airdrop transaction by [@MiroslavGatsanoga](https://github.com/MiroslavGatsanoga) in [#12787](https://github.com/hashgraph/hedera-services/pull/12787)
 
 **➡ See the full list of changes** [**here**](https://github.com/hashgraph/hedera-services/releases/tag/v0.52.0)**.**
+
+### **Performance Results**
+
+<figure><img src="../../.gitbook/assets/‎0.52_Performance Measurement Results_Extract.‎001.png" alt=""><figcaption></figcaption></figure>
 
 ## [v0.51](https://github.com/hashgraph/hedera-services/releases/tag/v0.51.5)
 
