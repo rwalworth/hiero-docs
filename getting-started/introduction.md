@@ -30,6 +30,12 @@ The portal dashboard also serves as a central location where you can manage your
 
 <figure><img src="../.gitbook/assets/portal-faucet-token-testnet.png" alt="" width="563"><figcaption></figcaption></figure>
 
+{% hint style="info" %}
+**Note**: Testnet accounts on the developer portal are subject to a daily top-up limit of 1000 HBAR. Accounts _**do not**_ automatically get topped up. To top up your balance, you must manually request a refill through the portal dashboard every 24 hours.
+
+For clarity, topping up does not add an additional 1000 HBAR to your account balance. Instead, if your account balance falls below this threshold, up to 1000 HBAR is replenished. For example, if your account balance is 500 HBAR, refilling will only add enough HBAR to bring your balance to 1000 HBAR.
+{% endhint %}
+
 ***
 
 ## Hedera Faucet <a href="#hedera-faucet" id="hedera-faucet"></a>
