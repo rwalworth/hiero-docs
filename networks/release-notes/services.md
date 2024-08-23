@@ -6,6 +6,16 @@ description: Hedera Services release information
 
 Please visit the [Hedera status page](https://status.hedera.com/) for the latest versions supported on each network.
 
+## Release 0.53
+
+{% hint style="info" %}
+**MAINNET UPDATE SCHEDULED: SEPTEMBER 11, 2024**
+{% endhint %}
+
+{% hint style="info" %}
+**TESTNET UPDATE SCHEDULED: AUGUST 28, 2024**
+{% endhint %}
+
 ## Release 0.52
 
 ### Release Highlights
