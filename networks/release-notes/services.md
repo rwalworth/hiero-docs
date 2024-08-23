@@ -16,6 +16,30 @@ Please visit the [Hedera status page](https://status.hedera.com/) for the latest
 **TESTNET UPDATE SCHEDULED: AUGUST 28, 2024**
 {% endhint %}
 
+### [Build 0.53.1](https://github.com/hashgraph/hedera-services/releases/tag/v0.53.1)
+
+#### What's changed
+
+* fix: change order of descriptor variables by [@lpetrovic05](https://github.com/lpetrovic05) in [#15016](https://github.com/hashgraph/hedera-services/pull/15016)
+
+### [Build 0.53.0](https://github.com/hashgraph/hedera-services/releases/tag/v0.53.0)
+
+#### What's changes
+
+* docs: 13690 Added a design doc for `Ledger State API` by [@imalygin](https://github.com/imalygin) in [#13730](https://github.com/hashgraph/hedera-services/pull/13730)
+* chore: update Gradle to 8.8 / setup-gradle to v3.4.2 by [@jjohannes](https://github.com/jjohannes) in [#13757](https://github.com/hashgraph/hedera-services/pull/13757)
+* chore: Cleanup obsolete `test-clients` code and resources by [@tinker-michaelj](https://github.com/tinker-michaelj) in [#14050](https://github.com/hashgraph/hedera-services/pull/14050)
+* docs: update token reject design doc by [@MiroslavGatsanoga](https://github.com/MiroslavGatsanoga) in [#14061](https://github.com/hashgraph/hedera-services/pull/14061)
+* fix: passing upgrade `@HapiTest` by [@tinker-michaelj](https://github.com/tinker-michaelj) in [#13992](https://github.com/hashgraph/hedera-services/pull/13992)
+* feat: Ensure overwritten operations check for sufficient gas first by [@lukelee-sl](https://github.com/lukelee-sl) in [#11441](https://github.com/hashgraph/hedera-services/pull/11441)
+* test: HIP-904 Create HAPI tests for a hollow account on an alias on which we have a deleted account by [@zhpetkov](https://github.com/zhpetkov) in [#14036](https://github.com/hashgraph/hedera-services/pull/14036)
+* feat: HIP-904 Charge automatic associations during `CryptoTransfer` by [@Neeharika-Sompalli](https://github.com/Neeharika-Sompalli) in [#14107](https://github.com/hashgraph/hedera-services/pull/14107)
+* chore: inline pces proposal 2.0 by [@cody-littley](https://github.com/cody-littley) in [#14056](https://github.com/hashgraph/hedera-services/pull/14056)
+* feat: implement HIP-632 `isAuthorizedRaw` method by [@david-bakin-sl](https://github.com/david-bakin-sl) in [#14130](https://github.com/hashgraph/hedera-services/pull/14130)
+
+**➡ See the full list of changes** [**here**](https://github.com/hashgraph/hedera-services/releases/tag/v0.53.0)**.**\
+
+
 ## Release 0.52
 
 ### Release Highlights
