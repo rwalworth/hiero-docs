@@ -68,12 +68,6 @@ _**📣 Please note**: This faucet can dispense a maximum of 100 HBAR every 24 h
 
 </div>
 
-{% hint style="info" %}
-**Note**: Testnet accounts on the developer portal are subject to a daily top-up limit of 1000 HBAR. Accounts _**do not**_ automatically get topped up. To top up your balance, you must manually request a refill through the portal dashboard every 24 hours.
-
-For clarity, topping up does not add an additional 1000 HBAR to your account balance. Instead, if your account balance falls below this threshold, up to 1000 HBAR is replenished. For example, if your account balance is 500 HBAR, refilling will only add enough HBAR to bring your balance to 1000 HBAR.
-{% endhint %}
-
 ***
 
 ## **Testnet ECDSA Account via HashPack**
