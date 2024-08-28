@@ -9,11 +9,11 @@ Please visit the [Hedera status page](https://status.hedera.com/) for the latest
 ## Release 0.53
 
 {% hint style="info" %}
-**MAINNET UPDATE SCHEDULED: SEPTEMBER 11, 2024**
+**MAINNET UPDATE SCHEDULED: TBA**
 {% endhint %}
 
 {% hint style="info" %}
-**TESTNET UPDATE SCHEDULED: AUGUST 28, 2024**
+**TESTNET UPDATE SCHEDULED: TBA**
 {% endhint %}
 
 ### [Build 0.53.1](https://github.com/hashgraph/hedera-services/releases/tag/v0.53.1)
@@ -101,11 +101,17 @@ Please visit the [Hedera status page](https://status.hedera.com/) for the latest
 * Enhances user control over their token portfolio
 * Improves overall user experience in token management
 
-### [Build 0.52.2](https://github.com/hashgraph/hedera-services/releases/tag/v0.52.2)
+### [Build 0.52.3](https://github.com/hashgraph/hedera-services/releases/tag/v0.52.3)
 
 {% hint style="success" %}
-**MAINNET UPDATE SCHEDULED: AUGUST 21, 2024**
+**MAINNET UPDATE SCHEDULED: AUGUST 28, 2024**
 {% endhint %}
+
+#### What's Changed
+
+* fix: invalid `feeSchedules.json` by [@Neeharika-Sompalli](https://github.com/Neeharika-Sompalli) in [#14881](https://github.com/hashgraph/hedera-services/pull/14881)
+
+### [Build 0.52.2](https://github.com/hashgraph/hedera-services/releases/tag/v0.52.2)
 
 {% hint style="success" %}
 **TESTNET UPDATE SCHEDULED: AUGUST 14, 2024**
