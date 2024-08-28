@@ -9,11 +9,11 @@ Please visit the [Hedera status page](https://status.hedera.com/) for the latest
 ## Release 0.53
 
 {% hint style="info" %}
-**MAINNET UPDATE SCHEDULED: TBA**
+**MAINNET UPDATE SCHEDULED: SEPTEMBER 11, 2024**
 {% endhint %}
 
 {% hint style="info" %}
-**TESTNET UPDATE SCHEDULED: TBA**
+**TESTNET UPDATE SCHEDULED: AUGUST 29, 2024**
 {% endhint %}
 
 ### [Build 0.53.1](https://github.com/hashgraph/hedera-services/releases/tag/v0.53.1)
