@@ -16,6 +16,14 @@ Please visit the [Hedera status page](https://status.hedera.com/) for the latest
 **TESTNET UPDATE SCHEDULED: SEPTEMBER 4, 2024**
 {% endhint %}
 
+### [Build 0.53.3](https://github.com/hashgraph/hedera-services/releases/tag/v0.53.5)
+
+#### What's Changed
+
+* feat: add enableDAB flag to enable and disable DAB features by [@iwsimon](https://github.com/iwsimon) in [#15232](https://github.com/hashgraph/hedera-services/pull/15232)
+* ci: resolves release issue preventing the publication of the docker images by [@nathanklick](https://github.com/nathanklick) in [#15158](https://github.com/hashgraph/hedera-services/pull/15158)
+* fix: hedera-evm and hedera-evm-impl are overwriting each other in MC by [@rbarkerSL](https://github.com/rbarkerSL) in [#15175](https://github.com/hashgraph/hedera-services/pull/15175)
+
 ### [Build 0.53.1](https://github.com/hashgraph/hedera-services/releases/tag/v0.53.1)
 
 #### What's changed
