@@ -16,7 +16,7 @@ Please visit the [Hedera status page](https://status.hedera.com/) for the latest
 **TESTNET UPDATE SCHEDULED: SEPTEMBER 4, 2024**
 {% endhint %}
 
-### [Build 0.53.3](https://github.com/hashgraph/hedera-services/releases/tag/v0.53.5)
+### [Build 0.53.5](https://github.com/hashgraph/hedera-services/releases/tag/v0.53.5)
 
 #### What's Changed
 
