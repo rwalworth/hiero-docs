@@ -8,6 +8,14 @@ For the latest versions supported on each network, please visit the Hedera statu
 
 ## Latest Releases
 
+## [V0.113.0](https://github.com/hashgraph/hedera-mirror-node/releases/tag/v0.113.0)
+
+Full ingest support for the new [HIP-904](https://hips.hedera.com/hip/hip-904) token airdrop transactions was implemented. In the future, two new airdrop REST APIs will be added to support querying for outstanding and pending airdrops.
+
+A major focus of this release was to finalize our Citus database integration. Transaction state proof performance was optimized by reducing the set of partitions to scan for multiple tables. A similar optimization when querying the `record_file` table improved the performance of multiple contract results and logs APIs. The biggest change in terms of time and data was a reworking of the transaction table indexes for Citus that improved the performance of `/api/v1/accounts/{id}` and `/api/v1/transactions?account.id` when low volume accounts were searched. The entity list endpoints like `/api/v1/accounts`, `/api/v1/contracts`, etc. saw an increase to their max age to offload their response to CDNs at the cost of some staleness in data.
+
+As mentioned last release, the web3 tests continue to see a large refactoring effort. This release closes 14 tasks associated with the project and should be fully complete in the near future.
+
 ## [v0.112.0](https://github.com/hashgraph/hedera-mirror-node/releases/tag/v0.112.0)
 
 Our sharded database, [Citus](https://www.citusdata.com/), saw some major performance improvements that should make it suitable for a replacement for our production instances. Transaction hash look-ups saw a speed boost due to the addition of a new `distribution_id` column used to target the appropriate shard of data. A performance bottleneck caused by the use of SSL for communication between the coordinator and workers was identified and remediated. This change alone provides dramatic improvements across the board. The coordinator connection pool to the workers saw a boost as well, again improve overall performance. After seeing some memory problems due to the increase in query volume, we adjusted the `worker_mem` lower to a more appropriate level. Finally, we enabled topic message lookup in the REST API to improve the performance of the topic message endpoints.
