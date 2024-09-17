@@ -61,7 +61,7 @@ ATS integrates with key partners like [RedSwan](https://redswan.io/), [ioBuilder
 
 Asset Tokenization Studio operates through a modular, multi-layer implementation to manage the full token lifecycle.
 
-<figure><img src="../../.gitbook/assets/ats-multilayer-implementation.png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><picture><source srcset="../../.gitbook/assets/ats-multilayer-implementation-dark-mode.png" media="(prefers-color-scheme: dark)"><img src="../../.gitbook/assets/ats-multilayer-implementation-square-light-mode.png" alt=""></picture><figcaption></figcaption></figure>
 
 ### **Core Implementation**
 
@@ -112,4 +112,4 @@ For those interested in technical architecture, ATS utilizes factory contracts t
 
 This architecture allows administrators or issuers to update their digital securities without disruption and keeps the architecture more flexible, scalable, and efficient over time.
 
-<figure><img src="../../.gitbook/assets/ats-sc-architecture.png" alt=""><figcaption></figcaption></figure>
+<figure><picture><source srcset="../../.gitbook/assets/ats-sc-architecture-dark-mode.png" media="(prefers-color-scheme: dark)"><img src="../../.gitbook/assets/ats-sc-architecture.png" alt=""></picture><figcaption></figcaption></figure>
