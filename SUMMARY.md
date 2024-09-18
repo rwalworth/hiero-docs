@@ -20,7 +20,6 @@
     * [Deploy Your First Smart Contract](tutorials/smart-contracts/deploy-your-first-smart-contract.md)
     * [Deploy a Contract Using the Hedera Token Service](tutorials/smart-contracts/deploy-a-contract-using-the-hedera-token-service.md)
     * [Send and Receive HBAR Using Solidity Smart Contracts](tutorials/smart-contracts/send-and-receive-hbar-using-solidity-smart-contracts.md)
-    * [Create an HBAR Faucet App Using React and MetaMask](tutorials/smart-contracts/create-an-hbar-faucet-app-using-react-and-metamask.md)
     * [Deploy By Leveraging Ethereum Developer Tools On Hedera](tutorials/smart-contracts/deploy-by-leveraging-ethereum-developer-tools-on-hedera.md)
     * [Deploy a Subgraph Using The Graph and Hedera JSON-RPC Relay](tutorials/smart-contracts/deploy-a-subgraph-using-the-graph-and-json-rpc.md)
     * [Deploy Smart Contracts on Hedera Using Truffle](tutorials/smart-contracts/deploy-smart-contracts-on-hedera-using-truffle.md)
