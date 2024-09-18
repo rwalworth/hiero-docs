@@ -130,8 +130,6 @@
 * [Open Source Solutions and Integrations](open-source-solutions/README.md)
   * [Asset Tokenization Studio (ATS)](open-source-solutions/asset-tokenization-studio-ats/README.md)
     * [Web User Interface (UI)](open-source-solutions/asset-tokenization-studio-ats/web-user-interface-ui.md)
-    * [Smart Contracts](https://github.com/hashgraph/asset-tokenization-studio/tree/main/contracts)
-    * [TypeScript SDK](https://github.com/hashgraph/asset-tokenization-studio/tree/main/sdk)
     * [Frequently Asked Questions (FAQs)](open-source-solutions/asset-tokenization-studio-ats/frequently-asked-questions-faqs.md)
   * [HashioDAO](open-source-solutions/hashiodao/README.md)
     * [Governance Token DAO](open-source-solutions/hashiodao/governance-token-dao.md)
