@@ -8,7 +8,7 @@ Please visit the [Hedera status page](https://status.hedera.com/) for the latest
 
 ## Release 0.53
 
-{% hint style="info" %}
+{% hint style="success" %}
 **MAINNET UPDATE SCHEDULED: SEPTEMBER 11, 2024**
 {% endhint %}
 
