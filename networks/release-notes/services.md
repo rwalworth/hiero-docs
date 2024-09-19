@@ -157,7 +157,9 @@ Planned for delivery in release .54:
 
 ### [Build 0.53.0](https://github.com/hashgraph/hedera-services/releases/tag/v0.53.0)
 
-#### What's changes
+<details>
+
+<summary><strong>What's Changed</strong></summary>
 
 * docs: 13690 Added a design doc for `Ledger State API` by [@imalygin](https://github.com/imalygin) in [#13730](https://github.com/hashgraph/hedera-services/pull/13730)
 * chore: update Gradle to 8.8 / setup-gradle to v3.4.2 by [@jjohannes](https://github.com/jjohannes) in [#13757](https://github.com/hashgraph/hedera-services/pull/13757)
@@ -170,8 +172,9 @@ Planned for delivery in release .54:
 * chore: inline pces proposal 2.0 by [@cody-littley](https://github.com/cody-littley) in [#14056](https://github.com/hashgraph/hedera-services/pull/14056)
 * feat: implement HIP-632 `isAuthorizedRaw` method by [@david-bakin-sl](https://github.com/david-bakin-sl) in [#14130](https://github.com/hashgraph/hedera-services/pull/14130)
 
-**➡ See the full list of changes** [**here**](https://github.com/hashgraph/hedera-services/releases/tag/v0.53.0)**.**\
+**➡ See the full list of changes** [**here**](https://github.com/hashgraph/hedera-services/releases/tag/v0.53.0)**.**
 
+</details>
 
 ## Release 0.52
 
