@@ -16,9 +16,11 @@ Please visit the [Hedera status page](https://status.hedera.com/) for the latest
 **TESTNET UPDATE SCHEDULED: OCTOBER 2, 2024**
 {% endhint %}
 
-### Build 0.54.0
+### [Build 0.54.0](https://github.com/hashgraph/hedera-services/releases/tag/v0.54.0)
 
-#### What's Changed
+<details>
+
+<summary><strong>What's Changed</strong></summary>
 
 * feat: Enable health monitor by [@litt3](https://github.com/litt3) in [#14392](https://github.com/hashgraph/hedera-services/pull/14392)
 * chore: rename detailed consensus event by [@lpetrovic05](https://github.com/lpetrovic05) in [#14364](https://github.com/hashgraph/hedera-services/pull/14364)
@@ -33,6 +35,8 @@ Please visit the [Hedera status page](https://status.hedera.com/) for the latest
 
 **➡ See the full list of changes** [**here**](https://github.com/hashgraph/hedera-services/releases/tag/v0.54.0)**.**
 
+</details>
+
 ## Release 0.53
 
 {% hint style="success" %}
@@ -45,7 +49,7 @@ Please visit the [Hedera status page](https://status.hedera.com/) for the latest
 
 <details>
 
-<summary>Binaries (builds.hedera.com/) </summary>
+<summary><strong>Binaries (builds.hedera.com/)</strong> </summary>
 
 Build version.0 - [zip](http://builds.hedera.com/node/software/v0.53/build-v0.53.0.zip)  [sha384](http://builds.hedera.com/node/software/v0.53/build-v0.53.0.sha384)
 
