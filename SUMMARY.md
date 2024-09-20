@@ -212,7 +212,7 @@
       * [Update token custom fees](sdks-and-apis/sdks/token-service/update-a-fee-schedule.md)
       * [Update NFT metadata](sdks-and-apis/sdks/token-service/update-nft-metadata.md)
       * [Transfer tokens](sdks-and-apis/sdks/token-service/transfer-tokens.md)
-      * [Reject a token airdrop](sdks-and-apis/sdks/token-service/reject-an-airdrop.md)
+      * [Reject a token](sdks-and-apis/sdks/token-service/reject-an-airdrop.md)
       * [Delete a token](sdks-and-apis/sdks/token-service/delete-a-token.md)
       * [Mint a token](sdks-and-apis/sdks/token-service/mint-a-token.md)
       * [Burn a token](sdks-and-apis/sdks/token-service/burn-a-token.md)
