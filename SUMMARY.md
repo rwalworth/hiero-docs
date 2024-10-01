@@ -490,7 +490,6 @@
         * [Get file info](sdks-and-apis/deprecated/sdks/readme-1-1/get-file-info.md)
         * [Network Response Messages](sdks-and-apis/deprecated/sdks/readme-1-1/network-response-messages.md)
 * [Support & Community](support-and-community/README.md)
-  * [Hello Future Hackathon](support-and-community/hello-future-hackathon.md)
   * [Glossary](support-and-community/glossary.md)
   * [Discord](https://hedera.com/discord)
   * [GitHub](https://github.com/hashgraph)
