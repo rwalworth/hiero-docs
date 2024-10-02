@@ -62,7 +62,7 @@ Please visit the [Hedera status page](https://status.hedera.com/) for the latest
 
 <details>
 
-<summary><strong>Binaries (builds.hedera.com/)</strong> </summary>
+<summary><strong>Binaries (</strong><a href="https://builds.hedera.com/"><strong>builds.hedera.com</strong></a><strong>)</strong> </summary>
 
 Build version.0 - [zip](http://builds.hedera.com/node/software/v0.53/build-v0.53.0.zip)  [sha384](http://builds.hedera.com/node/software/v0.53/build-v0.53.0.sha384)
 
