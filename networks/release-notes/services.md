@@ -6,7 +6,7 @@ description: Hedera Services release information
 
 Please visit the [Hedera status page](https://status.hedera.com/) for the latest versions supported on each network.
 
-## Release 0.54
+## Release v0.54
 
 {% hint style="info" %}
 **MAINNET UPDATE SCHEDULED: OCTOBER 16, 2024**
@@ -15,6 +15,19 @@ Please visit the [Hedera status page](https://status.hedera.com/) for the latest
 {% hint style="info" %}
 **TESTNET UPDATE SCHEDULED: OCTOBER 2, 2024**
 {% endhint %}
+
+### [Build 0.54.1](https://github.com/hashgraph/hedera-services/releases/tag/v0.54.1)
+
+<details>
+
+<summary>What's Changed</summary>
+
+* fix: cherry-pick: remove dependencies to 'org.testcontainers' in production code by [@iwsimon](https://github.com/iwsimon) in [#15559](https://github.com/hashgraph/hedera-services/pull/15559)
+* chore: reducer EthTx relayer fees by [@tinker-michaelj](https://github.com/tinker-michaelj) in [#15580](https://github.com/hashgraph/hedera-services/pull/15580)
+
+**Full Changelog**: [v0.54.0...v0.54.1](https://github.com/hashgraph/hedera-services/compare/v0.54.0...v0.54.1)
+
+</details>
 
 ### [Build 0.54.0](https://github.com/hashgraph/hedera-services/releases/tag/v0.54.0)
 
@@ -37,7 +50,7 @@ Please visit the [Hedera status page](https://status.hedera.com/) for the latest
 
 </details>
 
-## Release 0.53
+## Release v0.53
 
 {% hint style="success" %}
 **MAINNET UPDATE SCHEDULED: SEPTEMBER 11, 2024**
@@ -176,7 +189,7 @@ Planned for delivery in release .54:
 
 </details>
 
-## Release 0.52
+## Release v0.52
 
 ### Release Highlights
 
