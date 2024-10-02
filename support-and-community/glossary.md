@@ -66,7 +66,7 @@ The contract Application Binary Interface (ABI) is the standard way to interact 
 
 ***
 
-Asset Tokenization Studio (ATS) is an open-source solution for tokenizing real-world assets (RWAs) on the Hedera network. It enables issuers to create, manage, and operate digital securities in compliance with global regulatory standards. ATS provides a user-friendly web interface, a customizable Software Development Kit (SDK), and secure, audited smart contracts to streamline the tokenization process. Learn more [here](broken-reference).&#x20;
+Asset Tokenization Studio (ATS) is an open-source solution for tokenizing real-world assets (RWAs) on the Hedera network. It enables issuers to create, manage, and operate digital securities in compliance with global regulatory standards. ATS provides a user-friendly web interface, a customizable Software Development Kit (SDK), and secure, audited smart contracts to streamline the tokenization process. Learn more [here](../open-source-solutions/asset-tokenization-studio-ats/).&#x20;
 
 ### Asynchronous Byzantine Fault Tolerance (aBFT)
 
