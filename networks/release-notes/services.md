@@ -12,7 +12,7 @@ Please visit the [Hedera status page](https://status.hedera.com/) for the latest
 **MAINNET UPDATE SCHEDULED: OCTOBER 16, 2024**
 {% endhint %}
 
-{% hint style="info" %}
+{% hint style="success" %}
 **TESTNET UPDATE SCHEDULED: OCTOBER 2, 2024**
 {% endhint %}
 

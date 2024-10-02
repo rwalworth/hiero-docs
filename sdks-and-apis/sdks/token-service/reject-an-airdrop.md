@@ -2,7 +2,7 @@
 
 ## TokenRejectTransaction
 
-The `TokenRejectTransaction` allows users to reject and return unwanted airdrops to the treasury account without incurring custom fees. This transaction type supports rejecting the full balance of fungible tokens or individual NFT serial numbers with support for up to 10 token rejections in a single transaction. Rejection is _not_ supported if the token has been frozen or paused. Note that the transaction does not dissociate the account from the token. To both reject and dissociate, use [`TokenRejectFlow`](reject-an-airdrop.md#tokenrejectflow) (see below).
+The `TokenRejectTransaction` allows users to reject and return unwanted airdrops to the treasury account without incurring custom fees. This transaction type supports rejecting the full balance of fungible tokens or individual NFT serial numbers with support for up to 10 token rejections in a single transaction. Rejection is _not_ supported if the token has been frozen or paused. Note that the transaction does not dissociate the account from the token. To both reject and dissociate, use [`TokenRejectFlow`](https://docs.hedera.com/hedera/sdks-and-apis/sdks/token-service/reject-an-airdrop#tokenrejectflow) (see below).
 
 {% hint style="info" %}
 * Each rejected token is transferred to the treasury, and the transfer is recorded in the `token_transfer_list` in the transaction record.
@@ -11,19 +11,17 @@ The `TokenRejectTransaction` allows users to reject and return unwanted airdrops
 * The transaction does not decrement `used_auto_associations`, as it does not remove the association with the token. This field tracks the total number of auto-associations made, not the current number of token types associated with the account.
 {% endhint %}
 
-#### Transaction Signing Requirements
+**Transaction Signing Requirements**
 
 * The receiver/owner account key.
 * The transaction fee payer account key.
 
-#### Transaction Fees
+**Transaction Fees**
 
-* Please see the transaction and query [fees](../../../networks/mainnet/fees/#transaction-and-query-fees) table for the base transaction fee.
+* Please see the transaction and query [fees](https://docs.hedera.com/hedera/networks/mainnet/fees#transaction-and-query-fees) table for the base transaction fee.
 * Please use the [Hedera fee estimator](https://hedera.com/fees) to estimate the cost of your transaction fee.
 
-### Methods
-
-<table><thead><tr><th width="268">Method</th><th width="154">Type</th><th width="320">Description</th></tr></thead><tbody><tr><td><code>setOwnerId(accountId)</code></td><td><a href="../specialized-types.md#accountid">AccountId</a></td><td>Sets the ID of the account holding/owning the tokens.</td></tr><tr><td><code>addTokenId(&#x3C;tokenId>)</code></td><td>TokenId</td><td>Adds a token to be rejected. </td></tr><tr><td><code>setTokenIds(tokenIds)</code></td><td>List&#x3C;TokenId></td><td>Adds a list of one or more token IDs to be rejected.</td></tr><tr><td><code>addNftId(&#x3C;nftId>)</code></td><td>TokenId</td><td>Adds a NFT ID to be rejected.</td></tr><tr><td><code>setNftIds(&#x3C;nftIds>)</code></td><td>List&#x3C;NftId></td><td>Adds a list of one or more NFT IDs to be rejected.</td></tr></tbody></table>
+<table><thead><tr><th width="284">SDK Method</th><th width="152">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>setOwnerId(accountId)</code></td><td><a href="https://docs.hedera.com/hedera/sdks-and-apis/sdks/specialized-types#accountid">AccountId</a></td><td>Sets the ID of the account holding/owning the tokens.</td></tr><tr><td><code>addTokenId(&#x3C;tokenId>)</code></td><td>TokenId</td><td>Adds a token to be rejected.</td></tr><tr><td><code>setTokenIds(tokenIds)</code></td><td>List&#x3C;TokenId></td><td>Adds a list of one or more token IDs to be rejected.</td></tr><tr><td><code>addNftId(&#x3C;nftId>)</code></td><td>TokenId</td><td>Adds a NFT ID to be rejected.</td></tr><tr><td><code>setNftIds(&#x3C;nftIds>)</code></td><td>List&#x3C;NftId></td><td>Adds a list of one or more NFT IDs to be rejected.</td></tr></tbody></table>
 
 {% tabs %}
 {% tab title="Java" %}
@@ -52,7 +50,7 @@ System.out.println("The transaction consensus status is " +transactionStatus);
 {% tab title="JavaScript" %}
 ```javascript
 // Create the token reject transaction for fungible token
-const transaction = await new TokenRejectTransaction()
+const transaction = new TokenRejectTransaction()
       .setOwnerId(accountId)
       .addTokenId(tokenId)
       .freezeWith(client);
@@ -77,7 +75,7 @@ console.log("The transaction consensus status " +transactionStatus.toString());
 // Create the token reject transaction for fungible token
 transaction := hedera.NewTokenRejectTransaction().
         SetAccountID(accountId).
-        AddTokenID(tokenId).
+        AddTokenIDs(tokenIds).
         FreezeWith(client)
         
 if err != nil {
@@ -114,19 +112,17 @@ fmt.Printf("The transaction consensus status is %v\n", status)
 
 The `TokenRejectFlow` simplifies the process of rejecting unwanted tokens and dissociating from them in a single `execute()` call. This flow combines both the `TokenRejectTransaction`, which transfers the tokens back to the treasury, and the `TokenDissociateTransaction`, which dissociates the account from the token. It streamlines the process by executing both actions in one single transaction.
 
-#### Transaction Signing Requirements
+**Transaction Signing Requirements**
 
 * The receiver/owner account key.
 * The transaction fee payer account key.
 
-#### Transaction Fees
+**Transaction Fees**
 
-* Please see the transaction and query [fees](../../../networks/mainnet/fees/#transaction-and-query-fees) table for the base transaction fee.
+* Please see the transaction and query [fees](https://docs.hedera.com/hedera/networks/mainnet/fees#transaction-and-query-fees) table for the base transaction fee.
 * Please use the [Hedera fee estimator](https://hedera.com/fees) to estimate the cost of your transaction fee.
 
-### Methods
-
-<table><thead><tr><th width="307">Method</th><th width="158">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>setOwnerId(accountId)</code></td><td><a href="../specialized-types.md#accountid">AccountId</a></td><td>Sets the ID of the account holding/owning the tokens. This is the receiver account that will be rejecting the token.</td></tr><tr><td><code>addTokenId(&#x3C;tokenId>)</code></td><td>TokenId</td><td>Adds a token ID to be rejected and dissociated.</td></tr><tr><td><code>setTokenIds(tokenIds)</code></td><td>List&#x3C;TokenId></td><td>Sets a list of one or more token IDs to be rejected and dissociated.</td></tr><tr><td><code>addNftId(&#x3C;NftId>)</code></td><td>NftId</td><td>Adds a NFT ID to be rejected and dissociated.</td></tr><tr><td><code>setNftIds(&#x3C;nftIds>)</code></td><td>List&#x3C;NftId></td><td>Sets a list of one or more NFT IDs to be rejected and dissociated.</td></tr></tbody></table>
+<table><thead><tr><th width="285">Method</th><th width="143">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>setOwnerId(accountId)</code></td><td><a href="https://docs.hedera.com/hedera/sdks-and-apis/sdks/specialized-types#accountid">AccountId</a></td><td>Sets the ID of the account holding/owning the tokens. This is the receiver account that will be rejecting the token.</td></tr><tr><td><code>addTokenId(&#x3C;tokenId>)</code></td><td>TokenId</td><td>Adds a token ID to be rejected and dissociated.</td></tr><tr><td><code>setTokenIds(tokenIds)</code></td><td>List&#x3C;TokenId></td><td>Sets a list of one or more token IDs to be rejected and dissociated.</td></tr><tr><td><code>addNftId(&#x3C;NftId>)</code></td><td>NftId</td><td>Adds a NFT ID to be rejected and dissociated.</td></tr><tr><td><code>setNftIds(&#x3C;nftIds>)</code></td><td>List&#x3C;NftId></td><td>Sets a list of one or more NFT IDs to be rejected and dissociated.</td></tr></tbody></table>
 
 {% tabs %}
 {% tab title="Java" %}
