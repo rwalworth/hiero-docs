@@ -9,18 +9,34 @@ Please visit the [Hedera status page](https://status.hedera.com/) for the latest
 ## Release v0.54
 
 {% hint style="info" %}
-**MAINNET UPDATE SCHEDULED: OCTOBER 16, 2024**
+**MAINNET UPDATE SCHEDULED: OCTOBER 23, 2024**
 {% endhint %}
+
+{% hint style="success" %}
+**TESTNET UPDATE SCHEDULED: OCTOBER 16, 2024**
+{% endhint %}
+
+### [Build 0.54.2](https://github.com/hashgraph/hedera-services/releases/tag/v0.54.2)
+
+<details>
+
+<summary><strong>What's Changed</strong></summary>
+
+* fix: Cherry-Pick (0.54): Airdrop transfer list size validation by [@mhess-swl](https://github.com/mhess-swl) in [#15937](https://github.com/hashgraph/hedera-services/pull/15937)
+
+**Full Changelog**: [v0.54.1...v0.54.2](https://github.com/hashgraph/hedera-services/compare/v0.54.1...v0.54.2)
+
+</details>
+
+### [Build 0.54.1](https://github.com/hashgraph/hedera-services/releases/tag/v0.54.1)
 
 {% hint style="success" %}
 **TESTNET UPDATE SCHEDULED: OCTOBER 2, 2024**
 {% endhint %}
 
-### [Build 0.54.1](https://github.com/hashgraph/hedera-services/releases/tag/v0.54.1)
-
 <details>
 
-<summary>What's Changed</summary>
+<summary><strong>What's Changed</strong></summary>
 
 * fix: cherry-pick: remove dependencies to 'org.testcontainers' in production code by [@iwsimon](https://github.com/iwsimon) in [#15559](https://github.com/hashgraph/hedera-services/pull/15559)
 * chore: reducer EthTx relayer fees by [@tinker-michaelj](https://github.com/tinker-michaelj) in [#15580](https://github.com/hashgraph/hedera-services/pull/15580)
