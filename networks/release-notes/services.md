@@ -8,13 +8,48 @@ Please visit the [Hedera status page](https://status.hedera.com/) for the latest
 
 ## Release v0.54
 
-{% hint style="info" %}
+{% hint style="success" %}
 **MAINNET UPDATE SCHEDULED: OCTOBER 23, 2024**
 {% endhint %}
 
 {% hint style="success" %}
 **TESTNET UPDATE SCHEDULED: OCTOBER 16, 2024**
 {% endhint %}
+
+### 0.54.2 Release Highlights&#x20;
+
+This release introduces exciting new features and improvements, including HIP-904 for token airdrops, and HIP-1010 for updating custom fee via smart contracts.
+
+\
+**HIPs**
+
+[**HIP-904**](https://hips.hedera.com/hip/hip-904)**: Token Airdrops and Claims**
+
+Implementation: Partial implementation
+
+Delivered in this release:
+
+* TokenAirdrop transaction is similar to crypto transfers, but differs in one fundamental way - when an airdrop is performed and the receiver does not have available or automatic association slots, rather than failing, the transfer will be kept in state as a pending transfer. &#x20;
+* TokenClaimAirdrop transaction introduced for recipients to claim pending airdropped tokens.
+* TokenCancelAirdrop transaction introduced giving senders the ability to cancel unclaimed airdrops.
+
+**Benefits**:&#x20;
+
+* Streamlines token distribution, empowers token creators, developers, and projects by allowing them to distribute tokens more efficiently to a wider audience.\
+
+
+[HIP-1010](https://hips.hedera.com/hip/hip-1010): **Update Token Custom Fee Schedules via Smart Contracts**
+
+Implementation: Full implementation
+
+Delivered in this release:
+
+* updateFungibleTokenCustomFees system contract function for updating custom fees for fungible tokens.
+* updateNonFungibleTokenCustomFees system contract function for updating custom fees for non-fungible tokens.
+
+**Benefits:**&#x20;
+
+* Enables smart contracts to manage token custom fees, providing more dynamic and autonomous token management capabilities.
 
 ### [Build 0.54.2](https://github.com/hashgraph/hedera-services/releases/tag/v0.54.2)
 
