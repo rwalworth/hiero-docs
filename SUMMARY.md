@@ -47,6 +47,7 @@
     * [Hedera Token Service - Part 1: How to Mint NFTs](tutorials/token/hedera-token-service-part-1-how-to-mint-nfts.md)
     * [Hedera Token Service - Part 2: KYC, Update, and Scheduled Transactions](tutorials/token/hedera-token-service-part-2-kyc-update-and-scheduled-transactions.md)
     * [Hedera Token Service - Part 3: How to Pause, Freeze, Wipe, and Delete NFTs](tutorials/token/hedera-token-service-part-3-how-to-pause-freeze-wipe-and-delete-nfts.md)
+    * [Create Your First Frictionless Airdrop Campaign](tutorials/token/create-your-first-frictionless-airdrop-campaign.md)
   * [Local Node](tutorials/local-node/README.md)
     * [How to Run Hedera Local Node in a Cloud Development Environment (CDE)](tutorials/local-node/how-to-run-hedera-local-node-in-a-cloud-development-environment-cde/README.md)
       * [Run a Local Node in Gitpod](tutorials/local-node/how-to-run-hedera-local-node-in-a-cloud-development-environment-cde/gitpod.md)
