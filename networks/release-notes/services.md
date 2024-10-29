@@ -357,6 +357,10 @@ Delivered in this release:
 
 </details>
 
+### **Performance Results**
+
+<figure><img src="../../.gitbook/assets/‎0.54_Performance Measurement Results_Extract.‎001.png" alt=""><figcaption></figcaption></figure>
+
 ## Release v0.53
 
 {% hint style="success" %}
@@ -495,6 +499,10 @@ Planned for delivery in release .54:
 **➡ See the full list of changes** [**here**](https://github.com/hashgraph/hedera-services/releases/tag/v0.53.0)**.**
 
 </details>
+
+### **Performance Results**
+
+<figure><img src="../../.gitbook/assets/‎0.53_Performance Measurement Results_Extract.‎001.png" alt=""><figcaption></figcaption></figure>
 
 ## Release v0.52
 
