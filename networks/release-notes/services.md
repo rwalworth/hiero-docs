@@ -6,6 +6,133 @@ description: Hedera Services release information
 
 Please visit the [Hedera status page](https://status.hedera.com/) for the latest versions supported on each network.
 
+## Release v0.56
+
+{% hint style="info" %}
+**MAINNET UPDATE SCHEDULED: DECEMBER 11, 2024**
+{% endhint %}
+
+{% hint style="info" %}
+**TESTNET UPDATE SCHEDULED: NOVEMBER 19, 2024**
+{% endhint %}
+
+### [**Build 0.56.0**](https://github.com/hashgraph/hedera-services/releases/tag/v0.56.0)
+
+<details>
+
+<summary><strong>What's Changed</strong></summary>
+
+* test: Added a test to submit DAB transactions for JRS test by [@Neeharika-Sompalli](https://github.com/Neeharika-Sompalli) in [#15549](https://github.com/hashgraph/hedera-services/pull/15549)
+* chore: cover HIP-869 test plan by [@tinker-michaelj](https://github.com/tinker-michaelj) in [#15568](https://github.com/hashgraph/hedera-services/pull/15568)
+* test: Use DAB upgrade test in CI runs by [@Neeharika-Sompalli](https://github.com/Neeharika-Sompalli) in [#15618](https://github.com/hashgraph/hedera-services/pull/15618)
+* ci: continuous integration tests and release initial phase 1 changes by [@rbarkerSL](https://github.com/rbarkerSL) in [#15363](https://github.com/hashgraph/hedera-services/pull/15363)
+* perf: increase Health Monitor invocation frequency by [@OlegMazurov](https://github.com/OlegMazurov) in [#15627](https://github.com/hashgraph/hedera-services/pull/15627)
+* feat: created iterface for inline PCES writer by [@timo0](https://github.com/timo0) in [#15629](https://github.com/hashgraph/hedera-services/pull/15629)
+* feat: Add TSS related system transaction and state protobufs (Services) by [@thomas-swirlds-labs](https://github.com/thomas-swirlds-labs) in [#15515](https://github.com/hashgraph/hedera-services/pull/15515)
+* feat: increase version to 0.56 by [@povolev15](https://github.com/povolev15) in [#15765](https://github.com/hashgraph/hedera-services/pull/15765)
+* ci: Remove unnecessary check in node-flow-deploy-release-artifact by [@rbarkerSL](https://github.com/rbarkerSL) in [#15768](https://github.com/hashgraph/hedera-services/pull/15768)
+* feat: Activate smart contract module 0.51 by [@david-bakin-sl](https://github.com/david-bakin-sl) in [#15772](https://github.com/hashgraph/hedera-services/pull/15772)
+* chore: Add missing config files to `previewnet` config dir by [@mhess-swl](https://github.com/mhess-swl) in [#15778](https://github.com/hashgraph/hedera-services/pull/15778)
+* test: Extend HAPI tests for TokenAirdrop with custom fees - royalty fees by [@Evdokia-Georgieva](https://github.com/Evdokia-Georgieva) in [#15518](https://github.com/hashgraph/hedera-services/pull/15518)
+* feat: Added states for TssService by [@Neeharika-Sompalli](https://github.com/Neeharika-Sompalli) in [#15622](https://github.com/hashgraph/hedera-services/pull/15622)
+* chore: remove unnecessary checks for value xfer to system contracts by [@lukelee-sl](https://github.com/lukelee-sl) in [#15774](https://github.com/hashgraph/hedera-services/pull/15774)
+* chore: Cleanup `Signature` by [@timo0](https://github.com/timo0) in [#15570](https://github.com/hashgraph/hedera-services/pull/15570)
+* chore: Add configuration properties for HIP-904 System Contracts by [@stoyanov-st](https://github.com/stoyanov-st) in [#15800](https://github.com/hashgraph/hedera-services/pull/15800)
+* feat: Regenerate keys and update node names for tests by [@anthony-swirldslabs](https://github.com/anthony-swirldslabs) in [#15793](https://github.com/hashgraph/hedera-services/pull/15793)
+* feat: Replaced AddressBook based NetworkInfo implementations by [@Neeharika-Sompalli](https://github.com/Neeharika-Sompalli) in [#15781](https://github.com/hashgraph/hedera-services/pull/15781)
+* chore: Address review comments by [@Neeharika-Sompalli](https://github.com/Neeharika-Sompalli) in [#15826](https://github.com/hashgraph/hedera-services/pull/15826)
+* chore: add node details/address book export validation in `DabEnabledUpgradeTest` by [@tinker-michaelj](https://github.com/tinker-michaelj) in [#15764](https://github.com/hashgraph/hedera-services/pull/15764)
+* fix: Handle non-existent token IDs in token fee schedule updates by [@mhess-swl](https://github.com/mhess-swl) in [#15831](https://github.com/hashgraph/hedera-services/pull/15831)
+* chore: Add Configuration support for GRPC messages by [@thomas-swirlds-labs](https://github.com/thomas-swirlds-labs) in [#15472](https://github.com/hashgraph/hedera-services/pull/15472)
+* feat: use FileChannel for PCES by [@lpetrovic05](https://github.com/lpetrovic05) in [#15604](https://github.com/hashgraph/hedera-services/pull/15604)
+* feat: create inline pces wiring by [@lpetrovic05](https://github.com/lpetrovic05) in [#15785](https://github.com/hashgraph/hedera-services/pull/15785)
+* chore: remove nextNodeId from config.txt by [@edward-swirldslabs](https://github.com/edward-swirldslabs) in [#15791](https://github.com/hashgraph/hedera-services/pull/15791)
+* chore: Make hedera-services also code owner of hedera-app by [@netopyr](https://github.com/netopyr) in [#15911](https://github.com/hashgraph/hedera-services/pull/15911)
+* fix(container): adds resiliency to the deterministic image entrypoint script by [@nathanklick](https://github.com/nathanklick) in [#15914](https://github.com/hashgraph/hedera-services/pull/15914)
+* chore: Correct locations of various TSS protos by [@mhess-swl](https://github.com/mhess-swl) in [#15780](https://github.com/hashgraph/hedera-services/pull/15780)
+* chore: Add constructor for `Bytes` in `Hash` to avoid copying by [@timo0](https://github.com/timo0) in [#15783](https://github.com/hashgraph/hedera-services/pull/15783)
+* fix: Add query handling metrics upload by [@mhess-swl](https://github.com/mhess-swl) in [#15900](https://github.com/hashgraph/hedera-services/pull/15900)
+* fix: Airdrop transfer list size validation by [@JivkoKelchev](https://github.com/JivkoKelchev) in [#15933](https://github.com/hashgraph/hedera-services/pull/15933)
+* ci: Move jenkins checks into its own workflow that executes when node-zxc-build-release artifact completes by [@rbarkerSL](https://github.com/rbarkerSL) in [#15928](https://github.com/hashgraph/hedera-services/pull/15928)
+* ci: Fix invalid workflow introduced by 15928 by [@rbarkerSL](https://github.com/rbarkerSL) in [#15948](https://github.com/hashgraph/hedera-services/pull/15948)
+* ci: Add skipped status as possible triggering conclusion by [@rbarkerSL](https://github.com/rbarkerSL) in [#15956](https://github.com/hashgraph/hedera-services/pull/15956)
+* ci: ensure prepare xts branch launches when node deploy production build finishes by [@rbarkerSL](https://github.com/rbarkerSL) in [#15957](https://github.com/hashgraph/hedera-services/pull/15957)
+* fix: 15959: Add more logging for 12311 by [@artemananiev](https://github.com/artemananiev) in [#15960](https://github.com/hashgraph/hedera-services/pull/15960)
+* chore: remove unused wiring options by [@lpetrovic05](https://github.com/lpetrovic05) in [#15931](https://github.com/hashgraph/hedera-services/pull/15931)
+* build(deps): bump actions/upload-artifact from 4.3.1 to 4.4.3 by [@dependabot](https://github.com/dependabot) in [#15940](https://github.com/hashgraph/hedera-services/pull/15940)
+* build(deps): bump actions/checkout from 4.1.1 to 4.2.1 by [@dependabot](https://github.com/dependabot) in [#15902](https://github.com/hashgraph/hedera-services/pull/15902)
+* ci: Checkout the code with GH\_ACCESS\_TOKEN and persist the credentials by [@rbarkerSL](https://github.com/rbarkerSL) in [#15965](https://github.com/hashgraph/hedera-services/pull/15965)
+* ci: Updated XTS job to check statuses and added gpg key to prepare XTS by [@rbarkerSL](https://github.com/rbarkerSL) in [#15967](https://github.com/hashgraph/hedera-services/pull/15967)
+* ci: Update tag scheme in prepare XTS flow by [@rbarkerSL](https://github.com/rbarkerSL) in [#15968](https://github.com/hashgraph/hedera-services/pull/15968)
+* ci: Add message parameter to forced tag step by [@rbarkerSL](https://github.com/rbarkerSL) in [#15970](https://github.com/hashgraph/hedera-services/pull/15970)
+* fix: support restarting from `RECORDS` -> `BOTH` by [@tinker-michaelj](https://github.com/tinker-michaelj) in [#15904](https://github.com/hashgraph/hedera-services/pull/15904)
+* ci: Fix issue with zxf prepare extended test suite by [@rbarkerSL](https://github.com/rbarkerSL) in [#15974](https://github.com/hashgraph/hedera-services/pull/15974)
+* fix: ensure configuration loading and name resolution is resilient by [@nathanklick](https://github.com/nathanklick) in [#15943](https://github.com/hashgraph/hedera-services/pull/15943)
+* feat: wire skeleton `TssBaseService` handlers to submission-enabled `AppContext` by [@tinker-michaelj](https://github.com/tinker-michaelj) in [#15975](https://github.com/hashgraph/hedera-services/pull/15975)
+* feat: permit unpaid queries when executed from localhost by [@MiroslavGatsanoga](https://github.com/MiroslavGatsanoga) in [#15554](https://github.com/hashgraph/hedera-services/pull/15554)
+* feat: introduce NodeId.of(long) by [@anthony-swirldslabs](https://github.com/anthony-swirldslabs) in [#15952](https://github.com/hashgraph/hedera-services/pull/15952)
+* feat: 15154 Added `createSnapshot` method to State API by [@imalygin](https://github.com/imalygin) in [#15543](https://github.com/hashgraph/hedera-services/pull/15543)
+* fix: 15994: Need more logging in AbstractHashListener by [@artemananiev](https://github.com/artemananiev) in [#15995](https://github.com/hashgraph/hedera-services/pull/15995)
+* build(deps): bump org.gradlex:java-module-dependencies from 1.7 to 1.7.1 in /gradle/plugins by [@dependabot](https://github.com/dependabot) in [#15958](https://github.com/hashgraph/hedera-services/pull/15958)
+* fix: Ensure `getAccountInfo` returns correct EVM address by [@tinker-michaelj](https://github.com/tinker-michaelj) in [#15969](https://github.com/hashgraph/hedera-services/pull/15969)
+* chore: Fix compiler warnings in token service by [@derektriley](https://github.com/derektriley) in [#15265](https://github.com/hashgraph/hedera-services/pull/15265)
+* test: add block contents validator by [@MiroslavGatsanoga](https://github.com/MiroslavGatsanoga) in [#15522](https://github.com/hashgraph/hedera-services/pull/15522)
+* build: update Java Module patching by [@jjohannes](https://github.com/jjohannes) in [#15578](https://github.com/hashgraph/hedera-services/pull/15578)
+* chore: add links to TSS issues by [@tinker-michaelj](https://github.com/tinker-michaelj) in [#15999](https://github.com/hashgraph/hedera-services/pull/15999)
+* build: generalize publishing setup by [@jjohannes](https://github.com/jjohannes) in [#15471](https://github.com/hashgraph/hedera-services/pull/15471)
+* fix: detect post-upgrade txn in presence of pre-upgrade events by [@tinker-michaelj](https://github.com/tinker-michaelj) in [#15834](https://github.com/hashgraph/hedera-services/pull/15834)
+* fix: update the Schema class import statement by [@albertopasqualetto](https://github.com/albertopasqualetto) in [#15927](https://github.com/hashgraph/hedera-services/pull/15927)
+* fix: stabilize `keyRotationDoesNotChangeEvmAddress()` by [@tinker-michaelj](https://github.com/tinker-michaelj) in [#16006](https://github.com/hashgraph/hedera-services/pull/16006)
+* feat: updateNode needs both admin key and council to sign. by [@iwsimon](https://github.com/iwsimon) in [#15988](https://github.com/hashgraph/hedera-services/pull/15988)
+* chore: enable `BLOCKS`-only stream mode by [@tinker-michaelj](https://github.com/tinker-michaelj) in [#15634](https://github.com/hashgraph/hedera-services/pull/15634)
+* test: create fake TSS library for testing by [@MiroslavGatsanoga](https://github.com/MiroslavGatsanoga) in [#15908](https://github.com/hashgraph/hedera-services/pull/15908)
+* chore: Fix ownership of services protobufs by [@netopyr](https://github.com/netopyr) in [#16015](https://github.com/hashgraph/hedera-services/pull/16015)
+* feat: Remove default memo for lazy created accounts and auto created accounts by [@netopyr](https://github.com/netopyr) in [#15302](https://github.com/hashgraph/hedera-services/pull/15302)
+* chore: use `0s` as `@RepeatableHapiTest` valid start offset by [@tinker-michaelj](https://github.com/tinker-michaelj) in [#16028](https://github.com/hashgraph/hedera-services/pull/16028)
+* fix: DefaultKycStatusCall correct returned values from System Contract by [@stoyanov-st](https://github.com/stoyanov-st) in [#15595](https://github.com/hashgraph/hedera-services/pull/15595)
+* chore: Remove hedera-base as code owner by [@netopyr](https://github.com/netopyr) in [#16043](https://github.com/hashgraph/hedera-services/pull/16043)
+* chore: use `fireAndForget()` for freeze period background traffic by [@tinker-michaelj](https://github.com/tinker-michaelj) in [#16031](https://github.com/hashgraph/hedera-services/pull/16031)
+* chore: cherry-pick, Do not update file 102 during the first transaction after a freeze upgrade when DAB is disabled by [@iwsimon](https://github.com/iwsimon) in [#16050](https://github.com/hashgraph/hedera-services/pull/16050)
+* chore: tolerate nextNodeId field in config.txt by [@edward-swirldslabs](https://github.com/edward-swirldslabs) in [#16048](https://github.com/hashgraph/hedera-services/pull/16048)
+* feat: 14726: Proposal for consensus node architecture update by [@rbair23](https://github.com/rbair23) in [#14772](https://github.com/hashgraph/hedera-services/pull/14772)
+* refactor: gossip modules creation by [@mustafauzunn](https://github.com/mustafauzunn) in [#15837](https://github.com/hashgraph/hedera-services/pull/15837)
+* ci: Updating workflow permissions as per step-security recommendations. by [@san-est](https://github.com/san-est) in [#16036](https://github.com/hashgraph/hedera-services/pull/16036)
+* chore: standardize and simplify `ScheduleService` by [@tinker-michaelj](https://github.com/tinker-michaelj) in [#16053](https://github.com/hashgraph/hedera-services/pull/16053)
+* ci: Enable build promotion tagging and XTS completion by [@rbarkerSL](https://github.com/rbarkerSL) in [#15971](https://github.com/hashgraph/hedera-services/pull/15971)
+* feat: Readable and Writable Roster state stores by [@derektriley](https://github.com/derektriley) in [#16120](https://github.com/hashgraph/hedera-services/pull/16120)
+* chore: eliminate duplicated signature verification logic by [@tinker-michaelj](https://github.com/tinker-michaelj) in [#16075](https://github.com/hashgraph/hedera-services/pull/16075)
+* test: add test to validate null admin key for contract can still xfer value by [@lukelee-sl](https://github.com/lukelee-sl) in [#16063](https://github.com/hashgraph/hedera-services/pull/16063)
+* feat: Add logic for `TssMessageHandler` for happy path by [@Neeharika-Sompalli](https://github.com/Neeharika-Sompalli) in [#16062](https://github.com/hashgraph/hedera-services/pull/16062)
+* ci: Temporarily disable Trigger ZXF Deploy Integration. by [@rbarkerSL](https://github.com/rbarkerSL) in [#16122](https://github.com/hashgraph/hedera-services/pull/16122)
+* feat: HIP-904 Token Airdrop System Contract by [@stoyanov-st](https://github.com/stoyanov-st) in [#15912](https://github.com/hashgraph/hedera-services/pull/15912)
+* docs: Provide Design document for HIP-904 System Contracts flows by [@stoyanov-st](https://github.com/stoyanov-st) in [#15435](https://github.com/hashgraph/hedera-services/pull/15435)
+* chore: migrate cryptography from .pfx to .pem files by [@edward-swirldslabs](https://github.com/edward-swirldslabs) in [#16025](https://github.com/hashgraph/hedera-services/pull/16025)
+* ci: Add logic to only delete xts-candidate tag if it already exists by [@rbarkerSL](https://github.com/rbarkerSL) in [#16140](https://github.com/hashgraph/hedera-services/pull/16140)
+* ci: Fix ZXCron Promote Build Candidate Checkout Tagged Code step by [@rbarkerSL](https://github.com/rbarkerSL) in [#16154](https://github.com/hashgraph/hedera-services/pull/16154)
+* ci: Fix bug with deleting xts-candidate tag prior to creation or use by [@rbarkerSL](https://github.com/rbarkerSL) in [#16159](https://github.com/hashgraph/hedera-services/pull/16159)
+* feat: HIP-904 Implement TokenClaimAirdrop System Contract by [@stoyanov-st](https://github.com/stoyanov-st) in [#16054](https://github.com/hashgraph/hedera-services/pull/16054)
+* ci: Specify java major minor and patch versions by [@mishomihov00](https://github.com/mishomihov00) in [#16176](https://github.com/hashgraph/hedera-services/pull/16176)
+* feat: counting get balance throttle by [@netopyr](https://github.com/netopyr) in [#16178](https://github.com/hashgraph/hedera-services/pull/16178)
+* feat: HIP-904 Implement Token Cancel Airdrop System Contract by [@stoyanov-st](https://github.com/stoyanov-st) in [#15996](https://github.com/hashgraph/hedera-services/pull/15996)
+* feat: align state and records for self managed contract keys on create by [@lukelee-sl](https://github.com/lukelee-sl) in [#16095](https://github.com/hashgraph/hedera-services/pull/16095)
+* feat: Update BlockStreamConfig StreamMode default to BOTH by [@derektriley](https://github.com/derektriley) in [#16167](https://github.com/hashgraph/hedera-services/pull/16167)
+* chore: replace usages of AddressBook with Roster in tipset by [@anthony-swirldslabs](https://github.com/anthony-swirldslabs) in [#16102](https://github.com/hashgraph/hedera-services/pull/16102)
+* chore: Address review comments on PR [#420](https://github.com/hashgraph/hedera-services/pull/420) in protobufs by [@Neeharika-Sompalli](https://github.com/Neeharika-Sompalli) in [#16148](https://github.com/hashgraph/hedera-services/pull/16148)
+* feat: throttled tx metrics by [@kimbor](https://github.com/kimbor) in [#16130](https://github.com/hashgraph/hedera-services/pull/16130)
+* feat: Set TSS candidate roster logic by [@mhess-swl](https://github.com/mhess-swl) in [#16131](https://github.com/hashgraph/hedera-services/pull/16131)
+* chore: schedule 0.56 release branch creation by [@kimbor](https://github.com/kimbor) in [#16184](https://github.com/hashgraph/hedera-services/pull/16184)
+* feat: Initial TssVoteHandler by [@derektriley](https://github.com/derektriley) in [#16061](https://github.com/hashgraph/hedera-services/pull/16061)
+
+### New Contributors
+
+* [@albertopasqualetto](https://github.com/albertopasqualetto) made their first contribution in [#15927](https://github.com/hashgraph/hedera-services/pull/15927)
+* [@san-est](https://github.com/san-est) made their first contribution in [#16036](https://github.com/hashgraph/hedera-services/pull/16036)
+* [@mishomihov00](https://github.com/mishomihov00) made their first contribution in [#16176](https://github.com/hashgraph/hedera-services/pull/16176)
+
+**Full Changelog**: [v0.55.1...v0.56.0](https://github.com/hashgraph/hedera-services/compare/v0.55.1...v0.56.0)
+
+</details>
+
 ## Release v0.55
 
 {% hint style="info" %}
