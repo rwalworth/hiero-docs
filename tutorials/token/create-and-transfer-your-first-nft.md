@@ -231,7 +231,7 @@ CID := [][]byte{
 // Mint new NFT
 mintTx, err := hedera.NewTokenMintTransaction().
     SetTokenID(tokenId).
-    SetMetadata(CID).
+    SetMetadatas(CID).
     SetMaxTransactionFee(hedera.HbarFromTinybars(maxTransactionFee)).
     FreezeWith(client)
 
