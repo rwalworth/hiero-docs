@@ -40,6 +40,8 @@ First, we need to create the three accounts that will receive our airdrop and a 
 
 The setup code imports the required functions from the Hedera SDK and the `dotenv` package to load the required environment variables. Further, it creates the accounts for Alice, Bob, and Charlie.
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```javascript
 import {
     Client, PrivateKey, AccountId, AccountCreateTransaction, Hbar, NftId, 
@@ -110,11 +112,109 @@ async function main() {
             .execute(client)
     ).getReceipt(client);
 ```
+{% endtab %}
+
+{% tab title="Go" %}
+```go
+package main
+
+import (
+	"fmt"
+	"log"
+	"os"
+	"time"
+
+	"github.com/hashgraph/hedera-sdk-go/v2"
+	"github.com/joho/godotenv"
+)
+
+func main() {
+	err := godotenv.Load(".env")
+	if err != nil {
+		panic(fmt.Errorf("Unable to load environment variables from .env file. Error:\n%v\n", err))
+	}
+
+	myAccountId, err := hedera.AccountIDFromString(os.Getenv("MY_ACCOUNT_ID"))
+	if err != nil {
+		panic(err)
+	}
+
+	myPrivateKey, err := hedera.PrivateKeyFromString(os.Getenv("MY_PRIVATE_KEY"))
+	if err != nil {
+		panic(err)
+	}
+
+	client := hedera.ClientForTestnet()
+	client.SetOperator(myAccountId, myPrivateKey)
+	client.SetDefaultMaxTransactionFee(hedera.HbarFrom(100, hedera.HbarUnits.Hbar))
+	client.SetDefaultMaxQueryPayment(hedera.HbarFrom(50, hedera.HbarUnits.Hbar))
+
+	// Step 1: Create 4 accounts
+	alicePrivateKey, err := hedera.PrivateKeyGenerateEd25519()
+	if err != nil {
+		log.Fatalf("Error generating private key for Alice: %v", err)
+	}
+	aliceId := createAccount(client, alicePrivateKey, 10, -1) // Unlimited associations
+
+	bobPrivateKey, err := hedera.PrivateKeyGenerateEd25519()
+	if err != nil {
+		log.Fatalf("Error generating private key for Bob: %v", err)
+	}
+	bobId := createAccount(client, bobPrivateKey, 10, 1) // 1 association
+
+	charliePrivateKey, err := hedera.PrivateKeyGenerateEd25519()
+	if err != nil {
+		log.Fatalf("Error generating private key for Charlie: %v", err)
+	}
+	charlieId := createAccount(client, charliePrivateKey, 10, 0) // No associations
+
+	treasuryPrivateKey, err := hedera.PrivateKeyGenerateEd25519()
+	if err != nil {
+		log.Fatalf("Error generating private key for Treasury: %v", err)
+	}
+	treasuryAccount := createAccount(client, treasuryPrivateKey, 10, -1) // Unlimited associations
+
+	fmt.Printf("Alice Account ID: %v\n", aliceId)
+	fmt.Printf("Bob Account ID: %v\n", bobId)
+	fmt.Printf("Charlie Account ID: %v\n", charlieId)
+	fmt.Printf("Treasury Account ID: %v\n", treasuryAccount)
+	// ...
+}
+
+// Helper function to generate a new Hedera account
+func createAccount(client *hedera.Client, newAccountPrivateKey hedera.PrivateKey, initialBalance float64, maxAssociations int32) hedera.AccountID {
+	newAccountPublicKey := newAccountPrivateKey.PublicKey()
+
+	// Create the new account with the generated public key
+	newAccountTx, err := hedera.NewAccountCreateTransaction().
+		SetKey(newAccountPublicKey).
+		SetInitialBalance(hedera.HbarFrom(initialBalance, hedera.HbarUnits.Hbar)).
+		SetMaxAutomaticTokenAssociations(maxAssociations).
+		Execute(client)
+
+	if err != nil {
+		log.Fatalf("Error creating new account: %v", err)
+	}
+
+	receipt, err := newAccountTx.GetReceipt(client)
+	if err != nil {
+		log.Fatalf("Error getting receipt for account creation: %v", err)
+	}
+
+	newAccountId := *receipt.AccountID
+
+	return newAccountId
+}
+```
+{% endtab %}
+{% endtabs %}
 
 ### Step 2: Create a New Token
 
 Let's create a new token called "GameGold" that we will airdrop to our gaming community. We’ll mint `300` tokens in total and distribute them equally among our top three players, Alice, Bob, and Charlie, with each player receiving `100` tokens.
 
+{% tabs %}
+{% tab title="JavaScript" %}
 <pre class="language-javascript"><code class="lang-javascript">    /**
      * Step 2: Create FT and NFT mint
      */
@@ -137,11 +237,50 @@ Let's create a new token called "GameGold" that we will airdrop to our gaming co
         await tokenCreateTx.execute(client)
     ).getReceipt(client);
 </code></pre>
+{% endtab %}
+
+{% tab title="Go" %}
+```go
+	// Step 2: Create FT and mint
+	tokenCreateTx, err := hedera.NewTokenCreateTransaction().
+		SetTokenName("GameGold").
+		SetTokenSymbol("GG").
+		SetDecimals(3).
+		SetInitialSupply(300).
+		SetTreasuryAccountID(treasuryAccount).
+		SetAdminKey(client.GetOperatorPublicKey()).
+		SetFreezeKey(client.GetOperatorPublicKey()).
+		SetSupplyKey(client.GetOperatorPublicKey()).
+		SetMetadataKey(client.GetOperatorPublicKey()).
+		FreezeWith(client)
+
+	if err != nil {
+		log.Fatalf("Error creating fungible token transaction: %v", err)
+	}
+
+	tokenCreateTxSigned := tokenCreateTx.Sign(treasuryPrivateKey)
+	tokenCreateTxReceipt, err := tokenCreateTxSigned.Execute(client)
+	if err != nil {
+		log.Fatalf("Error executing fungible token transaction: %v", err)
+	}
+
+	receipt, err := tokenCreateTxReceipt.GetReceipt(client)
+	if err != nil {
+		log.Fatalf("Error getting receipt for fungible token: %v", err)
+	}
+
+	tokenId := *receipt.TokenID
+	fmt.Printf("Created fungible token with ID: %v\n", tokenId.String())
+```
+{% endtab %}
+{% endtabs %}
 
 ### Step 3: Airdrop Tokens with Frictionless Airdrop
 
-Ok, we are ready to airdrop the `GameGold`  token to the top 3 players Alice, Bob, and Charlie. Each of them receives 100 tokens. The code should print one pending airdrop for Charlie because Alice and Bob had free token association slots. Only Charlie didn't have any free slots so he has to claim the token himself.
+Ok, we are ready to airdrop the `GameGold`  token to the top 3 players Alice, Bob, and Charlie. Each of them receives 100 tokens. The code should print one pending airdrop for Charlie because Alice and Bob had free token association slots. Only Charlie didn't have any free slots, so he had to claim the token himself.
 
+{% tabs %}
+{% tab title="JavaScript" %}
 <pre class="language-javascript"><code class="lang-javascript">    /**
      * Step 3: Airdrop fungible tokens to 3 accounts
      */
@@ -214,6 +353,44 @@ Ok, we are ready to airdrop the `GameGold`  token to the top 3 players Alice, Bo
         charlieBalance.tokens.get(tokenId),
     );
 </code></pre>
+{% endtab %}
+
+{% tab title="Go" %}
+```go
+	// Step 3: Airdrop 100 tokens each to 3 accounts
+	airdropTx, err := hedera.NewTokenAirdropTransaction().
+		AddTokenTransfer(tokenId, treasuryAccount, -100).
+		AddTokenTransfer(tokenId, aliceId, 100).
+		AddTokenTransfer(tokenId, treasuryAccount, -100).
+		AddTokenTransfer(tokenId, bobId, 100).
+		AddTokenTransfer(tokenId, treasuryAccount, -100).
+		AddTokenTransfer(tokenId, charlieId, 100).
+		FreezeWith(client)
+	if err != nil {
+		log.Fatalf("Error creating token airdrop transaction: %v", err)
+	}
+
+	airdropTxSigned := airdropTx.Sign(treasuryPrivateKey)
+	airdropTxReceipt, err := airdropTxSigned.Execute(client)
+	if err != nil {
+		log.Fatalf("Error executing token airdrop transaction: %v", err)
+	}
+	airdropTxRecord, err := airdropTxReceipt.GetRecord(client)
+	if err != nil {
+		log.Fatalf("Error getting record for token airdrop transaction: %v", err)
+	}
+	fmt.Println("Pending airdrop: ", airdropTxRecord.PendingAirdropRecords[0].String())
+	fmt.Println("Airdropped fungible tokens")
+
+	aliceBalance, _ := hedera.NewAccountBalanceQuery().SetAccountID(aliceId).Execute(client)
+	fmt.Println("Alice's balance: ", aliceBalance.Tokens.Get(tokenId))
+	bobBalance, _ := hedera.NewAccountBalanceQuery().SetAccountID(bobId).Execute(client)
+	fmt.Println("Bob's balance: ", bobBalance.Tokens.Get(tokenId))
+	charlieBalance, _ := hedera.NewAccountBalanceQuery().SetAccountID(charlieId).Execute(client)
+	fmt.Println("Charlie's balance: ", charlieBalance.Tokens.Get(tokenId))
+```
+{% endtab %}
+{% endtabs %}
 
 The output we expect here is that Alice and Bob have received 100 units of our token, and the balance for Charlie shows `null`.&#x20;
 
@@ -221,6 +398,8 @@ The output we expect here is that Alice and Bob have received 100 units of our t
 
 Alright, Charlie still needs to claim his tokens. Let's do this first using the `TokenClaimAirdropTransaction` and verify its balance to ensure he has received the 100 units of our `GameGold` token.
 
+{% tabs %}
+{% tab title="JavaScript" %}
 <pre class="language-javascript"><code class="lang-javascript">    /**
      * Step 4: Claim the airdrop for Charlie's account
      */
@@ -245,6 +424,28 @@ Alright, Charlie still needs to claim his tokens. Let's do this first using the 
         charlieBalanceAfterClaim.tokens.get(tokenId).toInt(),
     );
 </code></pre>
+{% endtab %}
+
+{% tab title="Go" %}
+```go
+	// Step 4: Claim the airdrop for Charlie's account
+	tokenClaimTx, err := hedera.NewTokenClaimAirdropTransaction().AddPendingAirdropId(airdropTxRecord.PendingAirdropRecords[0].GetPendingAirdropId()).FreezeWith(client)
+	if err != nil {
+		log.Fatalf("Error creating token claim airdrop transaction: %v", err)
+	}
+	tokenClaimTxSigned := tokenClaimTx.Sign(charliePrivateKey)
+
+	_, err = tokenClaimTxSigned.Execute(client)
+	if err != nil {
+		log.Fatalf("Error executing token claim airdrop transaction: %v", err)
+	}
+	fmt.Println("Claimed airdrop for Charlie's account")
+	time.Sleep(4 * time.Second)
+	charlieBalance, _ = hedera.NewAccountBalanceQuery().SetAccountID(charlieId).Execute(client)
+	fmt.Println("Charlie's balance: ", charlieBalance.Tokens.Get(tokenId))
+```
+{% endtab %}
+{% endtabs %}
 
 ### Step 5: Airdrop NFTs to Alice, Bob, and Charlie
 
@@ -252,6 +453,8 @@ We would like to airdrop Game NFTs to Alice, Bob, and Charlie in this step. Bob 
 
 First, we need to create the NFT collection and mint new NFts. Then, we can airdrop the NFTs. Two pending airdrops should be created for Bob and Charlie as they don't have free auto association slots available.
 
+{% tabs %}
+{% tab title="JavaScript" %}
 <pre class="language-javascript"><code class="lang-javascript"><strong>    /**
 </strong>     * Step 5: Airdrop the NFTs to Alice, Bob, and Charlie
      */
@@ -325,11 +528,89 @@ First, we need to create the NFT collection and mint new NFts. Then, we can aird
     console.log("Pending airdrop for Bob:", newPendingAirdropsNfts[0]);
     console.log("Pending airdrop for Charlie:", newPendingAirdropsNfts[1]);
 </code></pre>
+{% endtab %}
+
+{% tab title="Go" %}
+```go
+	// Step 5: Airdrop the NFTs to Alice, Bob, and Charlie
+	CID := [][]byte{
+		[]byte("ipfs://bafyreiao6ajgsfji6qsgbqwdtjdu5gmul7tv2v3pd6kjgcw5o65b2ogst4/metadata.json"),
+		[]byte("ipfs://bafyreic463uarchq4mlufp7pvfkfut7zeqsqmn3b2x3jjxwcjqx6b5pk7q/metadata.json"),
+		[]byte("ipfs://bafyreihhja55q6h2rijscl3gra7a3ntiroyglz45z5wlyxdzs6kjh2dinu/metadata.json"),
+		[]byte("ipfs://bafyreidb23oehkttjbff3gdi4vz7mjijcxjyxadwg32pngod4huozcwphu/metadata.json"),
+		[]byte("ipfs://bafyreie7ftl6erd5etz5gscfwfiwjmht3b52cevdrf7hjwxx5ddns7zneu/metadata.json"),
+	}
+	nftCreate, err := hedera.NewTokenCreateTransaction().
+		SetTokenName("Game NFT").
+		SetTokenSymbol("GNFT").
+		SetTokenType(hedera.TokenTypeNonFungibleUnique).
+		SetTreasuryAccountID(treasuryAccount).
+		SetSupplyKey(client.GetOperatorPublicKey()).
+		SetAdminKey(client.GetOperatorPublicKey()).
+		FreezeWith(client)
+
+	nftCreateTxSign := nftCreate.Sign(treasuryPrivateKey)
+	nftCreateSubmit, err := nftCreateTxSign.Execute(client)
+	if err != nil {
+		log.Fatalf("Error creating NFT: %v", err)
+	}
+
+	nftCreateReceipt, err := nftCreateSubmit.GetReceipt(client)
+	if err != nil {
+		log.Fatalf("Error getting receipt for NFT creation: %v", err)
+	}
+
+	fmt.Println("Created NFT with ID: 0.0.", nftCreateReceipt.TokenID.Token)
+	nftId := *nftCreateReceipt.TokenID
+	var serialsNfts []int64
+	mintTx, _ := hedera.NewTokenMintTransaction().
+		SetTokenID(nftId).
+		SetMetadatas(CID).
+		FreezeWith(client)
+	mintTxSign := mintTx.Sign(treasuryPrivateKey)
+	mintTxSubmit, err := mintTxSign.Execute(client)
+	if err != nil {
+		log.Fatalf("Error minting NFTs: %v", err)
+	}
+	mintTxReceipt, err := mintTxSubmit.GetReceipt(client)
+	if err != nil {
+		log.Fatalf("Error getting receipt for NFT minting: %v", err)
+	}
+	serialsNfts = mintTxReceipt.SerialNumbers
+	fmt.Printf("Minted NFT serial numbers: %v\n", serialsNfts)
+
+	// Airdrop NFTs
+	nftAirdropTx, err := hedera.NewTokenAirdropTransaction().
+		AddNftTransfer(hedera.NftID{TokenID: nftId, SerialNumber: 1}, treasuryAccount, aliceId).
+		AddNftTransfer(hedera.NftID{TokenID: nftId, SerialNumber: 2}, treasuryAccount, bobId).
+		AddNftTransfer(hedera.NftID{TokenID: nftId, SerialNumber: 3}, treasuryAccount, charlieId).
+		FreezeWith(client)
+	if err != nil {
+		log.Fatalf("Error creating NFT airdrop transaction: %v", err)
+	}
+
+	nftAirdropTxSigned := nftAirdropTx.Sign(treasuryPrivateKey)
+	nftAirdropTxSubmit, err := nftAirdropTxSigned.Execute(client)
+	if err != nil {
+		log.Fatalf("Error executing NFT airdrop transaction: %v", err)
+	}
+	nftAirdropTxRecord, err := nftAirdropTxSubmit.GetRecord(client)
+	if err != nil {
+		log.Fatalf("Error getting record for NFT airdrop transaction: %v", err)
+	}
+	fmt.Println("Pending airdrops length: ", len(nftAirdropTxRecord.PendingAirdropRecords))
+	fmt.Println("Pending airdrop for Bob: ", nftAirdropTxRecord.PendingAirdropRecords[0].String())
+	fmt.Println("Pending airdrop for Charlie: ", nftAirdropTxRecord.PendingAirdropRecords[1].String())
+```
+{% endtab %}
+{% endtabs %}
 
 ### Step 6: Cancel Airdrop for Charlie
 
 When airdropping the NFTs, we realized we made a mistake: Charlie is not actually our third-best player, but Greg is. To fix this, we need to cancel the pending airdrop to Charlie so that the NFT returns to our treasury account. Once the NFT is back, we can airdrop it to Greg, who is the rightful recipient. Let's learn how to use the `TokenCancelAirdropTransaction` to cancel an airdrop for a specific account.
 
+{% tabs %}
+{% tab title="JavaScript" %}
 <pre class="language-javascript"><code class="lang-javascript">    /**
      * Step 6: Cancel the airdrop for Charlie
      * No signature is needed as the operator account is the admin of the token
@@ -338,6 +619,16 @@ When airdropping the NFTs, we realized we made a mistake: Charlie is not actuall
 </strong>        .addPendingAirdropId(newPendingAirdropsNfts[1].airdropId) // Charlie's airdrop
         .execute(client);
 </code></pre>
+{% endtab %}
+
+{% tab title="Go" %}
+<pre class="language-go"><code class="lang-go"><strong>	// Step 6: Cancel Airdrop for Charlie
+</strong>	hedera.NewTokenCancelAirdropTransaction().
+		AddPendingAirdropId(nftAirdropTxRecord.PendingAirdropRecords[1].GetPendingAirdropId()).
+		Execute(client)
+</code></pre>
+{% endtab %}
+{% endtabs %}
 
 ### Step 7: Token Reject Already Received Airdrop
 
@@ -349,6 +640,8 @@ The `reject` functionality can be used to return an already claimed or a success
 
 Here's the code for step 7. The rejected `GameGold` tokens will be returned to the treasury account.&#x20;
 
+{% tabs %}
+{% tab title="JavaScript" %}
 <pre class="language-javascript"><code class="lang-javascript">    /**
      * Step 7: Reject the fungible tokens for Charlie
      */
@@ -376,6 +669,33 @@ Here's the code for step 7. The rejected `GameGold` tokens will be returned to t
 
 void main();
 </code></pre>
+{% endtab %}
+
+{% tab title="Go" %}
+```go
+	// Step 7: Reject the fungible tokens for Charlie
+	tokenRejectTx, err := hedera.NewTokenRejectTransaction().
+		AddTokenID(tokenId).
+		SetOwnerID(charlieId).
+		FreezeWith(client)
+	if err != nil {
+		log.Fatalf("Error creating token reject transaction: %v", err)
+	}
+	tokenRejectTxSigned := tokenRejectTx.Sign(charliePrivateKey)
+	_, err = tokenRejectTxSigned.Execute(client)
+	if err != nil {
+		log.Fatalf("Error executing token reject transaction: %v", err)
+	}
+	fmt.Println("Rejected fungible tokens for Charlie")
+
+	time.Sleep(4 * time.Second)
+	charlieBalance, _ = hedera.NewAccountBalanceQuery().SetAccountID(charlieId).Execute(client)
+	fmt.Println("Charlie's balance: ", charlieBalance.Tokens.Get(tokenId))
+	client.Close()
+}
+```
+{% endtab %}
+{% endtabs %}
 
 And that's it. The next section examines the fees for each of the parties involved a bit more thoroughly.
 
@@ -394,7 +714,7 @@ By understanding these costs and who is responsible for them, you can build effi
 
 <details>
 
-<summary>.env file example</summary>
+<summary><strong><code>.env</code> file example</strong></summary>
 
 ```
 MY_ACCOUNT_ID=0.0.1234
@@ -406,7 +726,7 @@ HEDERA_NETWORK=testnet
 
 <details>
 
-<summary>JavaScript</summary>
+<summary><strong>JavaScript</strong></summary>
 
 ```javascript
 import {
@@ -707,7 +1027,274 @@ void main();
 
 </details>
 
+<details>
 
+<summary><strong>Go</strong></summary>
+
+```go
+package main
+
+import (
+	"fmt"
+	"log"
+	"os"
+	"time"
+
+	"github.com/hashgraph/hedera-sdk-go/v2"
+	"github.com/joho/godotenv"
+)
+
+func main() {
+	err := godotenv.Load(".env")
+	if err != nil {
+		panic(fmt.Errorf("Unable to load environment variables from .env file. Error:\n%v\n", err))
+	}
+
+	myAccountId, err := hedera.AccountIDFromString(os.Getenv("MY_ACCOUNT_ID"))
+	if err != nil {
+		panic(err)
+	}
+
+	myPrivateKey, err := hedera.PrivateKeyFromString(os.Getenv("MY_PRIVATE_KEY"))
+	if err != nil {
+		panic(err)
+	}
+
+	client := hedera.ClientForTestnet()
+	client.SetOperator(myAccountId, myPrivateKey)
+	client.SetDefaultMaxTransactionFee(hedera.HbarFrom(100, hedera.HbarUnits.Hbar))
+	client.SetDefaultMaxQueryPayment(hedera.HbarFrom(50, hedera.HbarUnits.Hbar))
+
+	// Step 1: Create 4 accounts
+	alicePrivateKey, err := hedera.PrivateKeyGenerateEd25519()
+	if err != nil {
+		log.Fatalf("Error generating private key for Alice: %v", err)
+	}
+	aliceId := createAccount(client, alicePrivateKey, 10, -1) // Unlimited associations
+
+	bobPrivateKey, err := hedera.PrivateKeyGenerateEd25519()
+	if err != nil {
+		log.Fatalf("Error generating private key for Bob: %v", err)
+	}
+	bobId := createAccount(client, bobPrivateKey, 10, 1) // 1 association
+
+	charliePrivateKey, err := hedera.PrivateKeyGenerateEd25519()
+	if err != nil {
+		log.Fatalf("Error generating private key for Charlie: %v", err)
+	}
+	charlieId := createAccount(client, charliePrivateKey, 10, 0) // No associations
+
+	treasuryPrivateKey, err := hedera.PrivateKeyGenerateEd25519()
+	if err != nil {
+		log.Fatalf("Error generating private key for Treasury: %v", err)
+	}
+	treasuryAccount := createAccount(client, treasuryPrivateKey, 10, -1) // Unlimited associations
+
+	fmt.Printf("Alice Account ID: %v\n", aliceId)
+	fmt.Printf("Bob Account ID: %v\n", bobId)
+	fmt.Printf("Charlie Account ID: %v\n", charlieId)
+	fmt.Printf("Treasury Account ID: %v\n", treasuryAccount)
+
+	// Step 2: Create FT and mint
+	tokenCreateTx, err := hedera.NewTokenCreateTransaction().
+		SetTokenName("GameGold").
+		SetTokenSymbol("GG").
+		SetDecimals(3).
+		SetInitialSupply(300).
+		SetTreasuryAccountID(treasuryAccount).
+		SetAdminKey(client.GetOperatorPublicKey()).
+		SetFreezeKey(client.GetOperatorPublicKey()).
+		SetSupplyKey(client.GetOperatorPublicKey()).
+		SetMetadataKey(client.GetOperatorPublicKey()).
+		FreezeWith(client)
+
+	if err != nil {
+		log.Fatalf("Error creating fungible token transaction: %v", err)
+	}
+
+	tokenCreateTxSigned := tokenCreateTx.Sign(treasuryPrivateKey)
+	tokenCreateTxReceipt, err := tokenCreateTxSigned.Execute(client)
+	if err != nil {
+		log.Fatalf("Error executing fungible token transaction: %v", err)
+	}
+
+	receipt, err := tokenCreateTxReceipt.GetReceipt(client)
+	if err != nil {
+		log.Fatalf("Error getting receipt for fungible token: %v", err)
+	}
+
+	tokenId := *receipt.TokenID
+	fmt.Printf("Created fungible token with ID: %v\n", tokenId.String())
+
+	// Step 3: Airdrop 100 tokens each to 3 accounts
+	airdropTx, err := hedera.NewTokenAirdropTransaction().
+		AddTokenTransfer(tokenId, treasuryAccount, -100).
+		AddTokenTransfer(tokenId, aliceId, 100).
+		AddTokenTransfer(tokenId, treasuryAccount, -100).
+		AddTokenTransfer(tokenId, bobId, 100).
+		AddTokenTransfer(tokenId, treasuryAccount, -100).
+		AddTokenTransfer(tokenId, charlieId, 100).
+		FreezeWith(client)
+	if err != nil {
+		log.Fatalf("Error creating token airdrop transaction: %v", err)
+	}
+
+	airdropTxSigned := airdropTx.Sign(treasuryPrivateKey)
+	airdropTxReceipt, err := airdropTxSigned.Execute(client)
+	if err != nil {
+		log.Fatalf("Error executing token airdrop transaction: %v", err)
+	}
+	airdropTxRecord, err := airdropTxReceipt.GetRecord(client)
+	if err != nil {
+		log.Fatalf("Error getting record for token airdrop transaction: %v", err)
+	}
+	fmt.Println("Pending airdrop: ", airdropTxRecord.PendingAirdropRecords[0].String())
+	fmt.Println("Airdropped fungible tokens")
+
+	aliceBalance, _ := hedera.NewAccountBalanceQuery().SetAccountID(aliceId).Execute(client)
+	fmt.Println("Alice's balance: ", aliceBalance.Tokens.Get(tokenId))
+	bobBalance, _ := hedera.NewAccountBalanceQuery().SetAccountID(bobId).Execute(client)
+	fmt.Println("Bob's balance: ", bobBalance.Tokens.Get(tokenId))
+	charlieBalance, _ := hedera.NewAccountBalanceQuery().SetAccountID(charlieId).Execute(client)
+	fmt.Println("Charlie's balance: ", charlieBalance.Tokens.Get(tokenId))
+
+	// Step 4: Claim the airdrop for Charlie's account
+	tokenClaimTx, err := hedera.NewTokenClaimAirdropTransaction().AddPendingAirdropId(airdropTxRecord.PendingAirdropRecords[0].GetPendingAirdropId()).FreezeWith(client)
+	if err != nil {
+		log.Fatalf("Error creating token claim airdrop transaction: %v", err)
+	}
+	tokenClaimTxSigned := tokenClaimTx.Sign(charliePrivateKey)
+
+	_, err = tokenClaimTxSigned.Execute(client)
+	if err != nil {
+		log.Fatalf("Error executing token claim airdrop transaction: %v", err)
+	}
+	fmt.Println("Claimed airdrop for Charlie's account")
+	time.Sleep(4 * time.Second)
+	charlieBalance, _ = hedera.NewAccountBalanceQuery().SetAccountID(charlieId).Execute(client)
+	fmt.Println("Charlie's balance: ", charlieBalance.Tokens.Get(tokenId))
+
+	// Step 5: Airdrop the NFTs to Alice, Bob, and Charlie
+	CID := [][]byte{
+		[]byte("ipfs://bafyreiao6ajgsfji6qsgbqwdtjdu5gmul7tv2v3pd6kjgcw5o65b2ogst4/metadata.json"),
+		[]byte("ipfs://bafyreic463uarchq4mlufp7pvfkfut7zeqsqmn3b2x3jjxwcjqx6b5pk7q/metadata.json"),
+		[]byte("ipfs://bafyreihhja55q6h2rijscl3gra7a3ntiroyglz45z5wlyxdzs6kjh2dinu/metadata.json"),
+		[]byte("ipfs://bafyreidb23oehkttjbff3gdi4vz7mjijcxjyxadwg32pngod4huozcwphu/metadata.json"),
+		[]byte("ipfs://bafyreie7ftl6erd5etz5gscfwfiwjmht3b52cevdrf7hjwxx5ddns7zneu/metadata.json"),
+	}
+	nftCreate, err := hedera.NewTokenCreateTransaction().
+		SetTokenName("Game NFT").
+		SetTokenSymbol("GNFT").
+		SetTokenType(hedera.TokenTypeNonFungibleUnique).
+		SetTreasuryAccountID(treasuryAccount).
+		SetSupplyKey(client.GetOperatorPublicKey()).
+		SetAdminKey(client.GetOperatorPublicKey()).
+		FreezeWith(client)
+
+	nftCreateTxSign := nftCreate.Sign(treasuryPrivateKey)
+	nftCreateSubmit, err := nftCreateTxSign.Execute(client)
+	if err != nil {
+		log.Fatalf("Error creating NFT: %v", err)
+	}
+
+	nftCreateReceipt, err := nftCreateSubmit.GetReceipt(client)
+	if err != nil {
+		log.Fatalf("Error getting receipt for NFT creation: %v", err)
+	}
+
+	fmt.Println("Created NFT with ID: 0.0.", nftCreateReceipt.TokenID.Token)
+	nftId := *nftCreateReceipt.TokenID
+	var serialsNfts []int64
+	mintTx, _ := hedera.NewTokenMintTransaction().
+		SetTokenID(nftId).
+		SetMetadatas(CID).
+		FreezeWith(client)
+	mintTxSign := mintTx.Sign(treasuryPrivateKey)
+	mintTxSubmit, err := mintTxSign.Execute(client)
+	if err != nil {
+		log.Fatalf("Error minting NFTs: %v", err)
+	}
+	mintTxReceipt, err := mintTxSubmit.GetReceipt(client)
+	if err != nil {
+		log.Fatalf("Error getting receipt for NFT minting: %v", err)
+	}
+	serialsNfts = mintTxReceipt.SerialNumbers
+	fmt.Printf("Minted NFT serial numbers: %v\n", serialsNfts)
+
+	// Airdrop NFTs
+	nftAirdropTx, err := hedera.NewTokenAirdropTransaction().
+		AddNftTransfer(hedera.NftID{TokenID: nftId, SerialNumber: 1}, treasuryAccount, aliceId).
+		AddNftTransfer(hedera.NftID{TokenID: nftId, SerialNumber: 2}, treasuryAccount, bobId).
+		AddNftTransfer(hedera.NftID{TokenID: nftId, SerialNumber: 3}, treasuryAccount, charlieId).
+		FreezeWith(client)
+	if err != nil {
+		log.Fatalf("Error creating NFT airdrop transaction: %v", err)
+	}
+
+	nftAirdropTxSigned := nftAirdropTx.Sign(treasuryPrivateKey)
+	nftAirdropTxSubmit, err := nftAirdropTxSigned.Execute(client)
+	if err != nil {
+		log.Fatalf("Error executing NFT airdrop transaction: %v", err)
+	}
+	nftAirdropTxRecord, err := nftAirdropTxSubmit.GetRecord(client)
+	if err != nil {
+		log.Fatalf("Error getting record for NFT airdrop transaction: %v", err)
+	}
+	fmt.Println("Pending airdrops length: ", len(nftAirdropTxRecord.PendingAirdropRecords))
+	fmt.Println("Pending airdrop for Bob: ", nftAirdropTxRecord.PendingAirdropRecords[0].String())
+	fmt.Println("Pending airdrop for Charlie: ", nftAirdropTxRecord.PendingAirdropRecords[1].String())
+
+	// Step 6: Cancel Airdrop for Charlie
+	hedera.NewTokenCancelAirdropTransaction().
+		AddPendingAirdropId(nftAirdropTxRecord.PendingAirdropRecords[1].GetPendingAirdropId()).
+		Execute(client)
+
+	// Step 7: Reject the fungible tokens for Charlie
+	tokenRejectTx, err := hedera.NewTokenRejectTransaction().
+		AddTokenID(tokenId).
+		SetOwnerID(charlieId).
+		FreezeWith(client)
+	if err != nil {
+		log.Fatalf("Error creating token reject transaction: %v", err)
+	}
+	tokenRejectTxSigned := tokenRejectTx.Sign(charliePrivateKey)
+	_, err = tokenRejectTxSigned.Execute(client)
+	if err != nil {
+		log.Fatalf("Error executing token reject transaction: %v", err)
+	}
+	fmt.Println("Rejected fungible tokens for Charlie")
+
+	time.Sleep(4 * time.Second)
+	charlieBalance, _ = hedera.NewAccountBalanceQuery().SetAccountID(charlieId).Execute(client)
+	fmt.Println("Charlie's balance: ", charlieBalance.Tokens.Get(tokenId))
+	client.Close()
+}
+
+// Helper function to generate a new Hedera account
+func createAccount(client *hedera.Client, newAccountPrivateKey hedera.PrivateKey, initialBalance float64, maxAssociations int32) hedera.AccountID {
+	newAccountPublicKey := newAccountPrivateKey.PublicKey()
+	newAccountTx, err := hedera.NewAccountCreateTransaction().
+		SetKey(newAccountPublicKey).
+		SetInitialBalance(hedera.HbarFrom(initialBalance, hedera.HbarUnits.Hbar)).
+		SetMaxAutomaticTokenAssociations(maxAssociations).
+		Execute(client)
+
+	if err != nil {
+		log.Fatalf("Error creating new account: %v", err)
+	}
+
+	receipt, err := newAccountTx.GetReceipt(client)
+	if err != nil {
+		log.Fatalf("Error getting receipt for account creation: %v", err)
+	}
+
+	newAccountId := *receipt.AccountID
+
+	return newAccountId
+}
+```
+
+</details>
 
 ***
 
