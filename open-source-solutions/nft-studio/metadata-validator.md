@@ -1,18 +1,18 @@
 # Metadata Validator
 
-The [Metadata Validator](https://www.nfttoolkit.app/metadata-validator/) is built to check your NFT metadata against the [HIP-412](https://hips.hedera.com/hip/hip-412) _(NFT Token Metadata JSON Schema v2)_ standards, ensuring proper representation. You can validate metadata by uploading a CSV file, a single JSON file, or a zip file containing multiple JSON files. The tool identifies errors or missing fields, allowing for easy corrections and ensuring compliance with standards. This tutorial will guide you through uploading, validating, and correcting your NFT metadata for seamless compliance.
+The [Metadata Validator](https://nft-studio.hashgraph.com/metadata-validator/) is built to check your NFT metadata against the [HIP-412](https://hips.hedera.com/hip/hip-412) _(NFT Token Metadata JSON Schema v2)_ standards, ensuring proper representation. You can validate metadata by uploading a CSV file, a single JSON file, or a zip file containing multiple JSON files. The tool identifies errors or missing fields, allowing for easy corrections and ensuring compliance with standards. This tutorial will guide you through uploading, validating, and correcting your NFT metadata for seamless compliance.
 
-<table data-view="cards"><thead><tr><th align="center"></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td align="center"><a href="https://nftstudio.hashgraph.com/metadata-validator/"><strong>Metadata Validator Web App</strong></a></td><td><a href="../../.gitbook/assets/nft-metadata-validator-icon.png">nft-metadata-validator-icon.png</a></td><td><a href="https://nftstudio.hashgraph.com/metadata-validator/">https://nftstudio.hashgraph.com/metadata-validator/</a></td></tr><tr><td align="center"><a href="https://github.com/hedera-dev/metadata-validator"><strong>Metadata Validator Repo</strong></a></td><td><a href="../../.gitbook/assets/github-cards-icon.png">github-cards-icon.png</a></td><td><a href="https://github.com/hedera-dev/metadata-validator">https://github.com/hedera-dev/metadata-validator</a></td></tr><tr><td align="center"><p><a href="https://hips.hedera.com/hip/hip-412"><strong>HIP-412: Metadata Standard</strong></a></p><p><br></p></td><td><a href="../../.gitbook/assets/nft-studio-hedera-hip-icon.png">nft-studio-hedera-hip-icon.png</a></td><td><a href="https://hips.hedera.com/hip/hip-412">https://hips.hedera.com/hip/hip-412</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th align="center"></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td align="center"><a href="https://nft-studio.hashgraph.com/metadata-validator/"><strong>Metadata Validator Web App</strong></a></td><td><a href="../../.gitbook/assets/nft-metadata-validator-icon.png">nft-metadata-validator-icon.png</a></td><td><a href="https://nft-studio.hashgraph.com/metadata-validator/">https://nft-studio.hashgraph.com/metadata-validator/</a></td></tr><tr><td align="center"><a href="https://github.com/hedera-dev/metadata-validator"><strong>Metadata Validator Repo</strong></a></td><td><a href="../../.gitbook/assets/github-cards-icon.png">github-cards-icon.png</a></td><td><a href="https://github.com/hedera-dev/metadata-validator">https://github.com/hedera-dev/metadata-validator</a></td></tr><tr><td align="center"><p><a href="https://hips.hedera.com/hip/hip-412"><strong>HIP-412: Metadata Standard</strong></a></p><p><br></p></td><td><a href="../../.gitbook/assets/nft-studio-hedera-hip-icon.png">nft-studio-hedera-hip-icon.png</a></td><td><a href="https://hips.hedera.com/hip/hip-412">https://hips.hedera.com/hip/hip-412</a></td></tr></tbody></table>
 
 ***
 
 ## How to Use the NFT Metadata Validator
 
-{% embed url="https://youtu.be/IZagdeOd6kA?si=rAJgqf-zqCr94SWt" %}
+{% embed url="https://youtu.be/Ovyrcc1oLGw?si=6Hb7U5OT1cIvEfb-" %}
 
 ### Step 1: Download the Example Files
 
-[Download](https://nftstudio.hashgraph.com/metadata-validator/) the example files. These files contain sample NFT metadata in various formats (zip, JSON, CSV) and will help you understand how to use the tool to validate your metadata.
+[Download](https://nft-studio.hashgraph.com/metadata-validator/examples/examples.zip) the example files. These files contain sample NFT metadata in various formats (zip, JSON, CSV) and will help you understand how to use the tool to validate your metadata.
 
 <figure><img src="../../.gitbook/assets/nft-studio-example-files-download-buttons.png" alt=""><figcaption></figcaption></figure>
 
@@ -118,7 +118,7 @@ Before proceeding with your NFTs, ensure all required fields are present and mee
 
 ## Additional Resources
 
-* [**Download Metadata CSV Template**](https://www.nfttoolkit.app/metadata-validator/templates/csv-template.csv)
+* [**Download Metadata CSV Template**](https://nft-studio.hashgraph.com/metadata-validator/templates/csv-template.csv)
 * [**HashScan Network Explorer**](https://hashscan.io/)
 * [**Hedera Testnet HBAR Faucet**](https://portal.hedera.com/faucet)&#x20;
 * [**Hedera Developer Portal Account**](https://portal.hedera.com/)

@@ -1,6 +1,6 @@
 # NFT Rarity Inspector
 
-The [NFT Rarity Inspector](https://nftstudio.hashgraph.com/nft-rarity-inspector/) allows users to upload a `.zip` file to verify NFT metadata and check for compliance with [HIP-412 standards](https://hips.hedera.com/hip/hip-412). It calculates a rarity score by analyzing the NFT's traits, features, and properties compared to the entire collection. Once the inspection is complete, each NFT is assigned a rarity score based on its uniqueness, helping artists, collectors, and traders understand its value. The higher the score, the rarer and more unique the NFT, making it more valuable than those with lower scores.
+The [NFT Rarity Inspector](https://nft-studio.hashgraph.com/nft-rarity-inspector/) allows users to upload a `.zip` file to verify NFT metadata and check for compliance with [HIP-412 standards](https://hips.hedera.com/hip/hip-412). It calculates a rarity score by analyzing the NFT's traits, features, and properties compared to the entire collection. Once the inspection is complete, each NFT is assigned a rarity score based on its uniqueness, helping artists, collectors, and traders understand its value. The higher the score, the rarer and more unique the NFT, making it more valuable than those with lower scores.
 
 <table data-card-size="large" data-view="cards"><thead><tr><th align="center"></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td align="center"><a href="https://nft-studio.hashgraph.com/nft-rarity-inspector/"><strong>NFT Rarity Inspector Web App</strong></a></td><td><a href="../../.gitbook/assets/nft-studio-rarity-inspector.png">nft-studio-rarity-inspector.png</a></td><td><a href="https://nft-studio.hashgraph.com/nft-rarity-inspector/">https://nft-studio.hashgraph.com/nft-rarity-inspector/</a></td></tr><tr><td align="center"><a href="https://github.com/hedera-dev/nft-rarity-inspector"><strong>NFT Rarity Inspector Repo</strong></a></td><td><a href="../../.gitbook/assets/github-cards-icon.png">github-cards-icon.png</a></td><td><a href="https://github.com/hedera-dev/rarity-inspector">https://github.com/hedera-dev/rarity-inspector</a></td></tr></tbody></table>
 
@@ -10,7 +10,7 @@ The [NFT Rarity Inspector](https://nftstudio.hashgraph.com/nft-rarity-inspector/
 
 ## How to Use the NFT Rarity Inspector
 
-{% embed url="https://youtu.be/ArUZpMQlM2c?si=_uwfqtf4j1mhjpXL" %}
+{% embed url="https://www.youtube.com/watch?v=k6K4V0zZWJE" %}
 
 ### Step 1: Upload NFT Collection File
 
@@ -82,7 +82,7 @@ The NFT Rarity Inspector is designed to support various stages of your NFT proje
 
 ## Additional Resources
 
-* [**Other Tools NFT Studio**](https://nftstudio.hashgraph.com/)
+* [**Other Tools NFT Studio**](https://nft-studio.hashgraph.com/)
 * [**HashScan Network Explorer**](https://hashscan.io/)
 * [**Hedera Testnet HBAR Faucet**](https://portal.hedera.com/faucet)
 * [**Hedera Developer Portal Account**](https://portal.hedera.com/)

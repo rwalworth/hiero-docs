@@ -1,6 +1,6 @@
 # NFT Token Holders List Builder
 
-The [NFT Token Holders List Builder](https://nftstudio.hashgraph.com/token-holders-list-builder/) streamlines the process of compiling a list of wallet accounts based on specific token ownership criteria, making airdrops and community engagement more targeted and efficient. You can specify one or more token IDs to filter eligible accounts and set conditions like minimum token holdings, duration of ownership, or even a specific start date for holding the NFT. This tool enables you to easily build a tailored list of accounts that qualify for your new token distribution or NFT collection drop.
+The [NFT Token Holders List Builder](https://nft-studio.hashgraph.com/token-holders-list-builder/) streamlines the process of compiling a list of wallet accounts based on specific token ownership criteria, making airdrops and community engagement more targeted and efficient. You can specify one or more token IDs to filter eligible accounts and set conditions like minimum token holdings, duration of ownership, or even a specific start date for holding the NFT. This tool enables you to easily build a tailored list of accounts that qualify for your new token distribution or NFT collection drop.
 
 <table data-card-size="large" data-view="cards"><thead><tr><th align="center"></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td align="center"><a href="https://nft-studio.hashgraph.com/token-holders-list-builder/"><strong>NFT Token Holders List Builder Web App</strong></a></td><td><a href="https://nft-studio.hashgraph.com/token-holders-list-builder/">https://nft-studio.hashgraph.com/token-holders-list-builder/</a></td><td><a href="../../.gitbook/assets/nft-token-holders-list-builder-icon .png">nft-token-holders-list-builder-icon .png</a></td></tr><tr><td align="center"><a href="https://github.com/hedera-dev/token-holders-list-builder"><strong>NFT Token Holders List Builder Repo</strong></a></td><td><a href="https://github.com/hedera-dev/nft-token-holders-list-builder">https://github.com/hedera-dev/nft-token-holders-list-builder</a></td><td><a href="../../.gitbook/assets/github-cards-icon.png">github-cards-icon.png</a></td></tr></tbody></table>
 
@@ -8,7 +8,7 @@ The [NFT Token Holders List Builder](https://nftstudio.hashgraph.com/token-holde
 
 ## How to Use the NFT Token Holders List Builder
 
-{% embed url="https://youtu.be/9l8TNQzWbxQ?si=K7_qIfzy12GhVm-4" %}
+{% embed url="https://www.youtube.com/watch?v=A4dDPF-e8TY" %}
 
 ### Enter the Token ID and Parameters &#x20;
 

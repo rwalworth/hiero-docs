@@ -1,6 +1,6 @@
 # Airdrop List Verifier
 
-The [Airdrop List Verifier](https://www.nfttoolkit.app/airdrop-list-verifier/) is a tool that streamlines organizing airdrops for Hedera tokens. By inputting a token ID and a list of account IDs, users can quickly verify which accounts are either associated with the token or have available auto-association slots. This tutorial will guide you through generating a refined list of eligible accounts, enabling efficient and targeted airdrops.
+The [Airdrop List Verifier](https://nft-studio.hashgraph.com/airdrop-list-verifier/) is a tool that streamlines organizing airdrops for Hedera tokens. By inputting a token ID and a list of account IDs, users can quickly verify which accounts are either associated with the token or have available auto-association slots. This tutorial will guide you through generating a refined list of eligible accounts, enabling efficient and targeted airdrops.
 
 <table data-card-size="large" data-view="cards"><thead><tr><th align="center"></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td align="center"><a href="https://nft-studio.hashgraph.com/airdrop-list-verifier/"><strong>Airdrop List Verifier Web App</strong></a></td><td><a href="https://nft-studio.hashgraph.com/airdrop-list-verifier/">https://nft-studio.hashgraph.com/airdrop-list-verifier/</a></td><td><a href="../../.gitbook/assets/nft-studio-airdrop-list-verifier-icon.png">nft-studio-airdrop-list-verifier-icon.png</a></td></tr><tr><td align="center"><a href="https://github.com/hedera-dev/airdrop-list-verifier"><strong>Airdrop List Verifier Repo</strong></a></td><td><a href="https://github.com/hedera-dev/airdrop-list-verifier">https://github.com/hedera-dev/airdrop-list-verifier</a></td><td><a href="../../.gitbook/assets/github-cards-icon.png">github-cards-icon.png</a></td></tr></tbody></table>
 
@@ -8,7 +8,7 @@ The [Airdrop List Verifier](https://www.nfttoolkit.app/airdrop-list-verifier/) i
 
 ## How to Use the Airdrop List Verifier
 
-{% embed url="https://youtu.be/1u1N1M-lorU?si=kJiJ3OO_Y_fPDIZj" %}
+{% embed url="https://youtu.be/3nzizeimiy0?si=bclmRAF1ewzQh5g-" %}
 
 ### **Enter the Token and Account Details**
 
