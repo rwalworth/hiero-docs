@@ -139,6 +139,19 @@ Please visit the [Hedera status page](https://status.hedera.com/) for the latest
 **MAINNET UPDATE SCHEDULED: NOVEMBER 13, 2024**
 {% endhint %}
 
+### [Build 0.55.2](https://github.com/hashgraph/hedera-services/releases/tag/v0.55.2)
+
+<details>
+
+<summary><strong>What's Changed</strong></summary>
+
+* chore: 16356 cherry pick java version fixes by [@rbarkerSL](https://github.com/rbarkerSL) in [#16358](https://github.com/hashgraph/hedera-services/pull/16358)
+* feat: Cherry-Pick (0.55): Define throttle for GetBalance queries by [@vtronkov](https://github.com/vtronkov) in [#16339](https://github.com/hashgraph/hedera-services/pull/16339)
+
+**Full Changelog**: [v0.55.1...v0.55.2](https://github.com/hashgraph/hedera-services/compare/v0.55.1...v0.55.2)
+
+</details>
+
 ### [Build 0.55.1](https://github.com/hashgraph/hedera-services/releases/tag/v0.55.1)
 
 {% hint style="success" %}
