@@ -8,6 +8,58 @@ For the latest versions supported on each network, please visit the Hedera statu
 
 ## Latest Releases
 
+## [V0.117.0](https://github.com/hashgraph/hedera-mirror-node/releases/tag/v0.117.0)
+
+This is a smaller release as we focus on reworking the web3 module to use the modularized EVM library. All of the `ReadableKVState` classes are now implemented and the EVM properties are mapped. The next release should have most of the remaining pieces in place to start testing.
+
+## [V0.116.0](https://github.com/hashgraph/hedera-mirror-node/releases/tag/v0.116.0)
+
+[HIP-991](https://hips.hedera.com/hip/hip-991) Permissionless revenue-generating Topic Ids for Topic Operators design was completed this sprint and relevant tasks created. Once this HIP is scheduled for inclusion in consensus nodes we'll proceed with implementing the design.
+
+[HIP-904](https://hips.hedera.com/hip/hip-904) Friction-less Airdrops saw the final tasks completed. Some of these tasks were cherry-picked to 0.115 like the NFT support in the REST APIs. In addition, we saw additional airdrop performance tests added to k6 and acceptance test coverage increased.
+
+Work continues on integrating the modularized EVM library into the web3 module. There were eight pull requests focused on adding the necessary key value state implementations to plug into this new library.
+
+Citus saw some some important work including the addition of automated backup. This will remain off by default until some upstream issues are resolved. We also upgraded Stackgres from 1.11 to 1.13 which contains some important fixes. See breaking changes for more details on upgrading.
+
+### Breaking Changes
+
+For the `hedera-mirror` Helm chart, if you're using Citus via Stackgres it has a minor version upgrade. Please follow the Stackgres upgrade [runbook](https://github.com/hashgraph/hedera-mirror-node/blob/main/docs/runbook/stackgres-upgrade.md) after upgrading the Helm release.
+
+If you're using the `hedera-mirror-common` Helm chart, there are some breaking changes to be aware of. Loki, Prometheus Operator, and Traefik all had major version upgrades that require manual steps. Run the below commands to ensure the CRDs are updated appropriately. Also note Loki had a schema change that will require its volume be manually deleted and recreated.
+
+```
+kubectl apply --server-side --force-conflicts -f https://raw.githubusercontent.com/prometheus-operator/prometheus-operator/v0.76.0/example/prometheus-operator-crd/monitoring.coreos.com_alertmanagerconfigs.yaml
+kubectl apply --server-side --force-conflicts -f https://raw.githubusercontent.com/prometheus-operator/prometheus-operator/v0.76.0/example/prometheus-operator-crd/monitoring.coreos.com_alertmanagers.yaml
+kubectl apply --server-side --force-conflicts -f https://raw.githubusercontent.com/prometheus-operator/prometheus-operator/v0.76.0/example/prometheus-operator-crd/monitoring.coreos.com_podmonitors.yaml
+kubectl apply --server-side --force-conflicts -f https://raw.githubusercontent.com/prometheus-operator/prometheus-operator/v0.76.0/example/prometheus-operator-crd/monitoring.coreos.com_probes.yaml
+kubectl apply --server-side --force-conflicts -f https://raw.githubusercontent.com/prometheus-operator/prometheus-operator/v0.76.0/example/prometheus-operator-crd/monitoring.coreos.com_prometheusagents.yaml
+kubectl apply --server-side --force-conflicts -f https://raw.githubusercontent.com/prometheus-operator/prometheus-operator/v0.76.0/example/prometheus-operator-crd/monitoring.coreos.com_prometheuses.yaml
+kubectl apply --server-side --force-conflicts -f https://raw.githubusercontent.com/prometheus-operator/prometheus-operator/v0.76.0/example/prometheus-operator-crd/monitoring.coreos.com_prometheusrules.yaml
+kubectl apply --server-side --force-conflicts -f https://raw.githubusercontent.com/prometheus-operator/prometheus-operator/v0.76.0/example/prometheus-operator-crd/monitoring.coreos.com_scrapeconfigs.yaml
+kubectl apply --server-side --force-conflicts -f https://raw.githubusercontent.com/prometheus-operator/prometheus-operator/v0.76.0/example/prometheus-operator-crd/monitoring.coreos.com_servicemonitors.yaml
+kubectl apply --server-side --force-conflicts -f https://raw.githubusercontent.com/prometheus-operator/prometheus-operator/v0.76.0/example/prometheus-operator-crd/monitoring.coreos.com_thanosrulers.yaml
+kubectl apply --server-side --force-conflicts -k https://github.com/traefik/traefik-helm-chart/traefik/crds/
+helm upgrade common hedera/hedera-mirror-common ...
+kubectl delete crds ingressroutes.traefik.containo.us ingressroutetcps.traefik.containo.us ingressrouteudps.traefik.containo.us middlewares.traefik.containo.us middlewaretcps.traefik.containo.us serverstransports.traefik.containo.us tlsoptions.traefik.containo.us tlsstores.traefik.containo.us traefikservices.traefik.containo.us
+```
+
+## [V0.115.0](https://github.com/hashgraph/hedera-mirror-node/releases/tag/v0.115.0)
+
+[HIP-904](https://hips.hedera.com/hip/hip-904) Friction-less Airdrops saw the final piece of functionality land in this release. NFT support was added to the `/api/v1/accounts/{id}/airdrops/outstanding` and `/api/v1/accounts/{id}/airdrops/pending` REST APIs.
+
+Starting a mirror node from scratch has been a frequent pain point for new mirror node operators. To help ease this process, a new database [bootstrap](https://github.com/hashgraph/hedera-mirror-node/blob/main/docs/database/bootstrap.md) mechanism was added. A full mirror node database snapshot is now available in a public, requester pays GCS [bucket](https://console.cloud.google.com/storage/browser/mirrornode-db-export) for download. Documentation and scripts have been provided that help with downloading and importing that snapshot into your local database. This bootstrap process is currently in alpha and feedback is appreciated. In future releases, we'll work to automate the snapshot generation every release, offer a minimal snapshot without HCS data, and make the process more streamlined.
+
+## [V0.114.0](https://github.com/hashgraph/hedera-mirror-node/releases/tag/v0.114.0)
+
+This release contains the two new REST APIs for [HIP-904](https://hips.hedera.com/hip/hip-904) token airdrops. The new `/api/v1/accounts/{sender}/airdrops/outstanding` REST API lists the outstanding airdrops sent by the sender which have not been claimed by recipients. The new `/api/v1/accounts/{receiver}/airdrops/pending` REST API lists the pending airdrops that the receiver has not yet claimed. Both of these APIs are still under development and only return fungible token airdrops at this time. In a subsequent release, non-fungible token airdrop support will be added.
+
+Our new Citus database saw a lot of performance optimizations enabling us to finally switch our production instances over. The stateproof REST API saw an optimization to reduce the number of partitions it scans. Likewise, the contract APIs `/contracts/{id}/results/logs`, `/contracts/results`, and `/contracts/logs` were heavily optimized. Finally, the change to populate the next link when the implicit timestamp range was hit also made it in.
+
+The long-running effort to refactor the web3 tests to be more maintainable and reduce execution time was completed. In all 10 pull requests were merged to close out this project. This lays the foundation for the next web3 project we're going to tackle: integration of the new modularized consensus node library.
+
+The monitor component now supports TLS connections to consensus nodes. A new `hedera.mirror.monitor.nodeValidation.tls` property was added with a default of `PLAINTEXT` to control this behavior. Set it to `BOTH` or `TLS` to connect to the consensus node's secure port. Note that this is currently less secure than it should be since we don't verify certificate hash information in the address book due to a limitation in the SDK.
+
 ## [V0.113.0](https://github.com/hashgraph/hedera-mirror-node/releases/tag/v0.113.0)
 
 Full ingest support for the new [HIP-904](https://hips.hedera.com/hip/hip-904) token airdrop transactions was implemented. In the future, two new airdrop REST APIs will be added to support querying for outstanding and pending airdrops.
