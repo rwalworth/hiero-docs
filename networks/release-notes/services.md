@@ -141,7 +141,7 @@ Please visit the [Hedera status page](https://status.hedera.com/) for the latest
 
 ### [Build 0.55.2](https://github.com/hashgraph/hedera-services/releases/tag/v0.55.2)
 
-{% hint style="info" %}
+{% hint style="success" %}
 **TESTNET UPDATE SCHEDULED: NOVEMBER 5, 2024**
 {% endhint %}
 
