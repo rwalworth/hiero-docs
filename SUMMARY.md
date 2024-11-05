@@ -142,6 +142,8 @@
   * [Hedera Wallet Snap By MetaMask](open-source-solutions/hedera-wallet-snap-by-metamask/README.md)
     * [Hedera Wallet Snap Documentation](https://docs.tuum.tech/hedera-wallet-snap/basics/introduction)
     * [Tutorial: MetaMask Snaps – What Are They and How to Use Them](open-source-solutions/hedera-wallet-snap-by-metamask/metamask-hedera-wallet-snap-tutorial.md)
+  * [Interoperability and Bridging](open-source-solutions/interoperability-and-bridging/README.md)
+    * [LayerZero](open-source-solutions/interoperability-and-bridging/layerzero.md)
   * [NFT Studio](open-source-solutions/nft-studio/README.md)
     * [Airdrop List Verifier](open-source-solutions/nft-studio/airdrop-list-verifier.md)
     * [Metadata Validator](open-source-solutions/nft-studio/metadata-validator.md)
