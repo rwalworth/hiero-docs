@@ -17,7 +17,7 @@ If you're looking to test your application (or just experiment), please visit [T
 Transactions on the Hedera Mainnet are currently throttled. You will receive a `"BUSY"` response if the number of transactions submitted to the network exceeds the threshold value.
 {% endhint %}
 
-#### Network Throttles
+## Main Network Throttles
 
 | Network Request Types           | Throttle (tps)                                                                                                                                                                                                                                                                                                       |
 | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
