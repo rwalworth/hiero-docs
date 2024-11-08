@@ -1,4 +1,4 @@
-# Gas and Fees
+# Copy of Gas and Fees
 
 ## Gas
 
@@ -6,7 +6,7 @@ When executing smart contracts, the EVM requires the amount of work paid in gas.
 
 ### **Weibar**
 
-The EVM returns gas information in Weibar (introduced in [HIP-410](https://hips.hedera.com/hip/hip-410)). One weibar is `10^-18th` HBAR, which translates to 1 tinybar is `10^10` weibars. As noted in HIP-410, this maximizes compatibility with third-party tools that expect ether units to be operated on in fractions of `10^18`, also known as a Wei.
+The EVM returns gas information in Weibar (introduced in [HIP-410](https://hips.hedera.com/hip/hip-410)). One weibar is 10^-18th HBAR, which translates to 1 tinybar is 10^10 weibars. As noted in HIP-410, this maximizes compatibility with third-party tools that expect ether units to be operated on in fractions of 10^18, also known as a Wei.
 
 ## **Gas Schedule and Fee Calculation**
 
@@ -32,7 +32,7 @@ If insufficient gas is submitted, the transaction will fail during precheck and 
 
 ### **EVM Opcode Gas**
 
-The EVM opcode gas is required to execute the defined opcodes for the smart contract call. The gas charges for processing native EVM opcodes (and precompiles) are the same as defined by the Ethereum network and listed [here](https://www.evm.codes/).&#x20;
+In general, the gas charges for processing native EVM opcodes (and precompiles) are the same as defined by the Ethereum network and are summarized in chart form in this GitHub project. The gas required to execute the defined opcodes for the smart contract call.
 
 * **Fixed Execution Cost**: Each opcode has a fixed cost, measured in gas, to be paid upon execution. This cost is the same for all executions, though it may change with new hard forks.
 * **Dynamic Execution Cost**: Some operations have variable costs based on parameters or context, such as whether the account or storage slot is "cold" (accessed for the first time in the transaction) or "warm" (already accessed).
@@ -57,7 +57,7 @@ The gas requirements for HTS view functions can be calculated in a slightly modi
 * **Base gas cost** = (1000000 + 852000 - 1) \* 1000 / 852000 = <mark style="color:blue;">2173</mark>
 * **Total Gas Cost** =  <mark style="color:blue;">2173</mark> x 1.2 = 2607 gas
 
-**Final gas cost total** =  **2607** **gas**&#x20;
+**Final gas cost total** = <mark style="background-color:yellow;">**2607**</mark>** gas**&#x20;
 
 {% hint style="info" %}
 **Example System Contracts:**
@@ -66,7 +66,7 @@ The gas requirements for HTS view functions can be calculated in a slightly modi
 * [Pseudo Random Number Generator (PRNG)](https://github.com/hashgraph/hedera-smart-contracts/blob/main/contracts/system-contracts/pseudo-random-number-generator/PrngSystemContract.sol)
 * [Exchange Rate](https://github.com/hashgraph/hedera-smart-contracts/blob/main/contracts/system-contracts/exchange-rate/ExchangeRateSystemContract.sol)
 
-**Learn More:** To dive deeper into the precise steps for calculating gas fees on Hedera, check out our detailed gas calculation [reference](https://github.com/hashgraph/hedera-services/blob/develop/hedera-node/docs/design/services/smart-contract-service/system-contract-gas-calc.md#system-contracts). System contract functions for determining gas charges [table](https://github.com/hashgraph/hedera-services/blob/develop/hedera-node/docs/design/services/smart-contract-service/system-contract-gas-calc.md#example).&#x20;
+**Learn More:** To dive deeper into the precise steps for calculating gas fees on Hedera, check out our detailed gas calculation [reference](https://github.com/hashgraph/hedera-services/blob/develop/hedera-node/docs/design/services/smart-contract-service/system-contract-gas-calc.md#system-contracts).
 {% endhint %}
 
 ### Gas Limit
