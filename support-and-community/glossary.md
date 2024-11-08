@@ -363,23 +363,33 @@ In the context of Hedera, Ed25519 is one of the signature schemes supported for 
 
 ### **EIP (Ethereum Improvement Proposal)**
 
+***
+
 A standard for proposing changes and new features to the Ethereum protocol. Some EIPs are relevant for Hedera's EVM compatibility and can be referenced [here](https://eips.ethereum.org/).&#x20;
+
+### ERC-1363
+
+***
+
+The [ERC-1363](https://erc1363.org/) payable token standard is an extension interface for ERC-20 tokens that supports executing code on a recipient contract after transfers or code on a spender contract after approvals in a single transaction. The following standard allows for the implementation of a standard API for token interaction with smart contracts.&#x20;
 
 ### ERC-20
 
 ***
 
-A technical standard for fungible tokens created using the Ethereum blockchain. A fungible token is interchangeable with another token—where the well-known non-fungible tokens (NFTs) are not interchangeable. ERC-20 allows developers to create smart-contract-enabled tokens that can be used with other products and services. These tokens represent an asset, right, ownership, access, cryptocurrency, or anything else that is not unique in and of itself but can be transferred. Check out the details of the ERC-20 standards [here](https://ethereum.org/en/developers/docs/standards/tokens/erc-20/).
+A technical standard for fungible tokens created using the Ethereum blockchain. A fungible token is interchangeable with another token—where the well-known non-fungible tokens (NFTs) are not interchangeable. ERC-20 allows developers to create smart-contract-enabled tokens that can be used with other products and services. These tokens represent an asset, right, ownership, access, cryptocurrency, or anything else that is not unique in and of itself but can be transferred. Check out the details of the ERC-20 standards [here](https://ethereum.org/en/developers/docs/standards/tokens/erc-20/). Hedera supports the creation and management of custom tokens through the [Hedera Token Service (HTS)](glossary.md#hedera-token-service-hts).&#x20;
 
-Hedera supports the creation and management of custom tokens through the [Hedera Token Service (HTS)](glossary.md#hedera-token-service-hts).&#x20;
+### ERC-3643
+
+***
+
+The ERC-3643 protocol is an open-source suite of smart contracts that enables the issuance, management, and transfer of permissioned tokens. Its built-in decentralized identity framework ensures that only users meeting pre-defined conditions can become token holders, even on permissionless blockchains. This standard was formalized in the Ethereum Improvement Proposal (EIP) [ERC-3643](https://eips.ethereum.org/EIPS/eip-3643).
 
 ### ERC-721
 
 ***
 
-A type of token standard — a template or format that other developers agree to follow. Following the same standards makes writing code easier, more predictable, and reusable. Each ERC-721 token is unique and not interchangeable with any other token - hence the term non-fungible. This unique characteristic allows ERC-721 tokens to represent ownership of unique items like a particular piece of real estate or a specific piece of art. Check out the details of the ERC-721 standard [here](https://ethereum.org/en/developers/docs/standards/tokens/erc-721/).
-
-Hedera supports the creation and management of both [fungible](glossary.md#fungible-token) and [non-fungible tokens](glossary.md#non-fungible-token-nft) using the [ERC-721 token standard](https://eips.ethereum.org/EIPS/eip-721).&#x20;
+A type of token standard — a template or format that other developers agree to follow. Following the same standards makes writing code easier, more predictable, and reusable. Each ERC-721 token is unique and not interchangeable with any other token - hence the term non-fungible. This unique characteristic allows ERC-721 tokens to represent ownership of unique items like a particular piece of real estate or a specific piece of art. Check out the details of the ERC-721 standard [here](https://ethereum.org/en/developers/docs/standards/tokens/erc-721/). Hedera supports the creation and management of both [fungible](glossary.md#fungible-token) and [non-fungible tokens](glossary.md#non-fungible-token-nft) using the [ERC-721 token standard](https://eips.ethereum.org/EIPS/eip-721).&#x20;
 
 ### Ether (ETH)
 
@@ -392,6 +402,12 @@ The [native cryptocurrency](glossary.md#native-cryptocurrency) for Ethereum.
 ***
 
 An open-source, [decentralized](glossary.md#decentralization) blockchain platform with [smart contract](glossary.md#smart-contract) functionality. Ether (ETH) is the native cryptocurrency of Ethereum. Developers can use Ethereum or an [Ethereum Virtual Machine (EVM)](glossary.md#ethereum-virtual-machine-evm) to create and run [decentralized applications](glossary.md#decentralized-application-dapp) containing smart contract functionality, as well as issue new crypto assets, known as [tokens](glossary.md#token).
+
+### Ethereum Request for Comments (ERC)
+
+***
+
+A technical standard used on the Ethereum blockchain to propose improvements, define protocols, or establish guidelines for functionality within Ethereum’s ecosystem. Each ERC proposal is publicly accessible and open for feedback from the developer community. If widely adopted, these proposals become formal standards that enhance the interoperability, usability, and security of Ethereum-based applications and tokens.[ ERC-20](glossary.md#erc-20) and [ERC-721](glossary.md#erc-721) are popular examples, defining standards for fungible and non-fungible tokens, respectively, and are instrumental in providing a common interface for token-related smart contracts.
 
 ### Ethereum Virtual Machine (EVM)
 
