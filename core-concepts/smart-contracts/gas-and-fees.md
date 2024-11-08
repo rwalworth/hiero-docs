@@ -21,7 +21,7 @@ Gas is used to charge fees to pay for work performed by the network when a smart
 A transaction submitted to the smart contract service must be sent with enough gas to cover intrinsic gas. With the Cancun fork of the EVM update, intrinsic gas is calculated as:
 
 ```bash
-21000 + 4 (number of zeros bytes) + 16 (number of non-zeros bytes)= intrinsic gas
+21000 + 4 * (number of zeros bytes) + 16 * (number of non-zeros bytes)= intrinsic gas
 ```
 
 * **21,000**: Base gas cost for any transaction. The minimum amount of gas required for every transaction submitted to the network&#x20;

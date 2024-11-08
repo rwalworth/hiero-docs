@@ -102,8 +102,6 @@
     * [Creating Smart Contracts](core-concepts/smart-contracts/creating-smart-contracts.md)
     * [Compiling Smart Contracts](core-concepts/smart-contracts/compiling-smart-contracts.md)
     * [Gas and Fees](core-concepts/smart-contracts/gas-and-fees.md)
-    * [Copy of Gas and Fees](core-concepts/smart-contracts/gas-and-fees-1.md)
-    * [Copy of Copy of Gas and Fees](core-concepts/smart-contracts/gas-and-fees-2.md)
     * [JSON-RPC Relay](core-concepts/smart-contracts/json-rpc-relay.md)
     * [Deploying Smart Contracts](core-concepts/smart-contracts/deploying-smart-contracts.md)
     * [Smart Contract Addresses](core-concepts/smart-contracts/smart-contract-addresses.md)
