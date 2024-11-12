@@ -507,7 +507,7 @@
         * [Network Response Messages](sdks-and-apis/deprecated/sdks/readme-1-1/network-response-messages.md)
 * [Support & Community](support-and-community/README.md)
   * [Glossary](support-and-community/glossary.md)
-  * [Hello Future Hackathon 2.0](https://hellofuturehackathon.dev/?utm\_source=landing\_page\&utm\_medium=docs\&utm\_campaign=hack\_navigation)
+  * [Hello Future Hackathon 2.0](https://hellofuturehackathon.dev/?utm\_source=docs\&utm\_campaign=hack\_navigation)
   * [Discord](https://hedera.com/discord)
   * [GitHub](https://github.com/hashgraph)
   * [Stack Overflow](https://stackoverflow.com/questions/tagged/hedera-hashgraph)
