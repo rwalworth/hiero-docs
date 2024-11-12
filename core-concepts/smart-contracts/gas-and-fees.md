@@ -12,7 +12,7 @@ The EVM returns gas information in Weibar (introduced in [HIP-410](https://hips.
 
 Gas is used to charge fees to pay for work performed by the network when a smart contract transaction is submitted. Specifically, transactions of type, `ContractCall`, `ContractCreate` and `EthereumTransactions` have fees charged denominated in gas. Other smart contracts-related transactions `ContractDelete`, `ContractGetInfo` etc., are only accessed by the normal Hedera-related network, node, and service fees denominated in HBAR. Gas fees paid for EVM transactions on Hedera can be composed of three different kinds of gas costs:
 
-* **Intrinsic Gas**: The minimum amount of gas required to execute a transaction. It is a fixed gas cost that is independent of the specific operations or computations performed within the transaction.
+* **Intrinsic Gas**: The minimum amount of gas required to execute a transaction.
 * **EVM opcode Gas**: The gas required to execute the defined [opcodes](../../support-and-community/glossary.md#opcodes) for the smart contract call.
 * **Hedera System Contract Gas**: The required gas that is associated with a Hedera-defined transaction, like using the Hedera Token Service system contract that allows you to burn (`TokenBurnTransaction`) or mint (`TokenMintTransaction`) a token.
 
@@ -24,7 +24,7 @@ A transaction submitted to the smart contract service must be sent with enough g
 21000 + 4 * (number of zeros bytes) + 16 * (number of non-zeros bytes)= intrinsic gas
 ```
 
-* **21,000**: Base gas cost for any transaction. The minimum amount of gas required for every transaction submitted to the network&#x20;
+* **21,000**: The base gas cost for any transaction.
 * **4 \*** (number of zero bytes): The cost of each zero byte in the transaction payload.
 * **16 \*** (number of non-zero bytes): The cost for each non-zero byte in the transaction payload.
 
@@ -32,12 +32,21 @@ If insufficient gas is submitted, the transaction will fail during precheck and 
 
 ### **EVM Opcode Gas**
 
-The EVM opcode gas is required to execute the defined opcodes for the smart contract call. The gas charges for processing native EVM opcodes (and precompiles) are the same as defined by the Ethereum network and listed [here](https://www.evm.codes/).&#x20;
+Execution costs in the EVM include both fixed and dynamic components. The _fixed execution cost_ is the base cost applied each time the opcode is executed, while the _dynamic execution cost_ varies based on parameters, such as whether the storage slot is "cold" (accessed for the first time in the transaction) or "warm" (already accessed).
 
-* **Fixed Execution Cost**: Each opcode has a fixed cost, measured in gas, to be paid upon execution. This cost is the same for all executions, though it may change with new hard forks.
-* **Dynamic Execution Cost**: Some operations have variable costs based on parameters or context, such as whether the account or storage slot is "cold" (accessed for the first time in the transaction) or "warm" (already accessed).
+**Example**: For the `SLOAD` opcode, which loads data from storage:
 
-See the [reference](https://www.evm.codes/) to learn about the specific costs per opcode and fork.
+* **Fixed Cost**: 100 gas units (base cost per execution)
+* **Dynamic Cost (Cold Access)**: 2,100 gas units (first-time access to the storage slot)
+* **Dynamic Cost (Warm Access)**: 100 gas units (subsequent access within the transaction)
+
+If `SLOAD` accesses a storage slot twice within the same transaction, the **total gas cost** would be calculated as follows:
+
+1. **First Access (Cold)** = 100 + 2,100 = 2,200 gas
+2. **Second Access (Warm)** =  100 + 100 = 200 gas
+3. **Final Gas Cost Total = 2,200 + 200 = 2,400 gas**
+
+Here's an interactive opcode [reference](https://www.evm.codes/) supported in the Cancun fork.&#x20;
 
 ### **Hedera System Contract Gas**
 
@@ -54,8 +63,8 @@ Hedera system contract gas fees apply only when using a native Hedera service. T
 
 The gas requirements for HTS view functions can be calculated in a slightly modified manner. The transaction type of `getTokenInfo` can be used and a nominal price need not be calculated. This implies that converting the fee into HBAR is not necessary as the canonical price ($0.0001) can be directly converted into gas by using the conversion factor of 852 tinycents. Add 20% markup. Thus gas cost is:
 
-* **Base gas cost** = (1000000 + 852000 - 1) \* 1000 / 852000 = <mark style="color:blue;">2173</mark>
-* **Total Gas Cost** =  <mark style="color:blue;">2173</mark> x 1.2 = 2607 gas
+* **Base gas cost** = (1000000 + 852000 - 1) \* 1000 / 852000 = <mark style="color:blue;">2173</mark> gas
+* **Total Gas Cost** =  <mark style="color:blue;">2173</mark> x 1.2 = **2607** **gas**
 
 **Final gas cost total** =  **2607** **gas**&#x20;
 
@@ -66,14 +75,14 @@ The gas requirements for HTS view functions can be calculated in a slightly modi
 * [Pseudo Random Number Generator (PRNG)](https://github.com/hashgraph/hedera-smart-contracts/blob/main/contracts/system-contracts/pseudo-random-number-generator/PrngSystemContract.sol)
 * [Exchange Rate](https://github.com/hashgraph/hedera-smart-contracts/blob/main/contracts/system-contracts/exchange-rate/ExchangeRateSystemContract.sol)
 
-**Learn More:** To dive deeper into the precise steps for calculating gas fees on Hedera, check out our detailed gas calculation [reference](https://github.com/hashgraph/hedera-services/blob/develop/hedera-node/docs/design/services/smart-contract-service/system-contract-gas-calc.md#system-contracts). System contract functions for determining gas charges [table](https://github.com/hashgraph/hedera-services/blob/develop/hedera-node/docs/design/services/smart-contract-service/system-contract-gas-calc.md#example).&#x20;
+**Learn More:** Our detailed gas calculation [reference](https://github.com/hashgraph/hedera-services/blob/develop/hedera-node/docs/design/services/smart-contract-service/system-contract-gas-calc.md#system-contracts) explains the precise steps for calculating gas fees on Hedera.&#x20;
 {% endhint %}
 
 ### Gas Limit
 
 The gas limit is the maximum amount of gas you are willing to pay for an operation.
 
-The current opcode gas fees are reflective of the [0.22 Hedera Service release](https://docs.hedera.com/hedera/networks/release-notes/services#v0.22).
+The current opcode gas fees are reflective as of the [0.22 Hedera Service release](https://docs.hedera.com/hedera/networks/release-notes/services#v0.22).
 
 | Operation                                                               | Cancun Cost (Gas)                              | Current Hedera (Gas)                           |
 | ----------------------------------------------------------------------- | ---------------------------------------------- | ---------------------------------------------- |
