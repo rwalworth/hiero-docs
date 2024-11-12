@@ -139,6 +139,14 @@ Please visit the [Hedera status page](https://status.hedera.com/) for the latest
 **MAINNET UPDATE SCHEDULED: NOVEMBER 13, 2024**
 {% endhint %}
 
+### Release Highlights
+
+#### **Notable Change**
+
+**Throttle for `AccountBalanceQuery`**
+
+* A new throttle for `AccountBalanceQuery` requests to manage and optimize query load on the network.
+
 ### [Build 0.55.2](https://github.com/hashgraph/hedera-services/releases/tag/v0.55.2)
 
 {% hint style="success" %}
@@ -289,12 +297,11 @@ Please visit the [Hedera status page](https://status.hedera.com/) for the latest
 **TESTNET UPDATE SCHEDULED: OCTOBER 16, 2024**
 {% endhint %}
 
-### 0.54.2 Release Highlights&#x20;
+### Release Highlights&#x20;
 
 This release introduces exciting new features and improvements, including HIP-904 for token airdrops, and HIP-1010 for updating custom fee via smart contracts.
 
-\
-**HIPs**
+#### **HIPs**
 
 [**HIP-904**](https://hips.hedera.com/hip/hip-904)**: Token Airdrops and Claims**
 
@@ -311,7 +318,7 @@ Delivered in this release:
 * Streamlines token distribution, empowers token creators, developers, and projects by allowing them to distribute tokens more efficiently to a wider audience.\
 
 
-[HIP-1010](https://hips.hedera.com/hip/hip-1010): **Update Token Custom Fee Schedules via Smart Contracts**
+[**HIP-1010**](https://hips.hedera.com/hip/hip-1010)**: Update Token Custom Fee Schedules via Smart Contracts**
 
 Implementation: Full implementation
 
