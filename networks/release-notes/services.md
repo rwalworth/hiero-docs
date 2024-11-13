@@ -135,8 +135,12 @@ Please visit the [Hedera status page](https://status.hedera.com/) for the latest
 
 ## Release v0.55
 
-{% hint style="info" %}
+{% hint style="success" %}
 **MAINNET UPDATE SCHEDULED: NOVEMBER 13, 2024**
+{% endhint %}
+
+{% hint style="success" %}
+**TESTNET UPDATE SCHEDULED: NOVEMBER 5, 2024**
 {% endhint %}
 
 ### Release Highlights
@@ -148,10 +152,6 @@ Please visit the [Hedera status page](https://status.hedera.com/) for the latest
 * A new throttle for `AccountBalanceQuery` requests to manage and optimize query load on the network.
 
 ### [Build 0.55.2](https://github.com/hashgraph/hedera-services/releases/tag/v0.55.2)
-
-{% hint style="success" %}
-**TESTNET UPDATE SCHEDULED: NOVEMBER 5, 2024**
-{% endhint %}
 
 <details>
 
