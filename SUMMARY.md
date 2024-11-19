@@ -116,7 +116,7 @@
     * [Smart Contract Rent](core-concepts/smart-contracts/smart-contract-rent.md)
     * [Smart Contract Security](core-concepts/smart-contracts/security.md)
   * [Tokens](core-concepts/tokens/README.md)
-    * [Seamless HTS Token Access Through the EVM Interface](core-concepts/tokens/seamless-hts-token-access-through-the-evm-interface.md)
+    * [Access HTS Tokens Through the EVM](core-concepts/tokens/access-hts-tokens-through-the-evm.md)
   * [Staking](core-concepts/staking/README.md)
     * [Staking Program](core-concepts/staking/staking.md)
     * [Stake HBAR](core-concepts/staking/stake-hbar.md)
