@@ -13,8 +13,21 @@ Please visit the [Hedera status page](https://status.hedera.com/) for the latest
 {% endhint %}
 
 {% hint style="info" %}
-**TESTNET UPDATE SCHEDULED: TBA**
+**TESTNET UPDATE SCHEDULED: NOVEMBER 21, 2024**
 {% endhint %}
+
+### [**Build 0.56.5**](https://github.com/hashgraph/hedera-services/releases/tag/v0.56.5)
+
+<details>
+
+<summary><strong>What's Changed</strong></summary>
+
+* fix: correct a missing conversion between AddressBook cert hash hex-string-as-bytes and actual SHA2-384 hash bytes for Node entries. by [@jsync-swirlds](https://github.com/jsync-swirlds) in [#16659](https://github.com/hashgraph/hedera-services/pull/16659)
+* chore: Do stricter validation of X.509 gossip cert in DAB transactions by [@tinker-michaelj](https://github.com/tinker-michaelj) in [#16666](https://github.com/hashgraph/hedera-services/pull/16666)
+
+**Full Changelog**: [v0.56.4...v0.56.5](https://github.com/hashgraph/hedera-services/compare/v0.56.4...v0.56.5)
+
+</details>
 
 ### [**Build 0.56.0**](https://github.com/hashgraph/hedera-services/releases/tag/v0.56.0)
 
