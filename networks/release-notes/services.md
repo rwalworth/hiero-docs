@@ -13,7 +13,7 @@ Please visit the [Hedera status page](https://status.hedera.com/) for the latest
 {% endhint %}
 
 {% hint style="info" %}
-**TESTNET UPDATE SCHEDULED: NOVEMBER 21, 2024**
+**TESTNET UPDATE SCHEDULED: NOVEMBER 26, 2024**
 {% endhint %}
 
 ### [**Build 0.56.5**](https://github.com/hashgraph/hedera-services/releases/tag/v0.56.5)
@@ -1479,7 +1479,7 @@ We **strongly** encourage all contract authors to set an auto-renew account for 
 This release also brings two peripheral improvements:
 
 1. It will become possible to schedule a `CryptoApproveAllowance` transaction.
-2. Mirror node operators will be able to use the daily `NodeStakeUpdate` export to track the current values of [several key staking properties](https://github.com/hashgraph/hedera-protobufs/blob/main/services/node\_stake\_update.proto#L45). Please review the linked protobuf comments for more details on these properties.
+2. Mirror node operators will be able to use the daily `NodeStakeUpdate` export to track the current values of [several key staking properties](https://github.com/hashgraph/hedera-protobufs/blob/main/services/node_stake_update.proto#L45). Please review the linked protobuf comments for more details on these properties.
 
 <figure><img src="../../.gitbook/assets/0.30_results.001.png" alt=""><figcaption></figcaption></figure>
 
@@ -1509,7 +1509,7 @@ Note there are four HIP-514 functions that will be part of release 0.30, as foll
 
 ### Deprecations
 
-Please note this [important deprecation](https://github.com/hashgraph/hedera-protobufs/blob/main/services/crypto\_get\_info.proto#L141) that will change how clients fetch token associations and balances after the November release in this year. At that time, mirror nodes will become the exclusive source of token association metadata. This is because [HIP-367](https://hips.hedera.com/hip/hip-367) made token associations unlimited, so in the long run it will not be efficient for consensus nodes to serve this information.
+Please note this [important deprecation](https://github.com/hashgraph/hedera-protobufs/blob/main/services/crypto_get_info.proto#L141) that will change how clients fetch token associations and balances after the November release in this year. At that time, mirror nodes will become the exclusive source of token association metadata. This is because [HIP-367](https://hips.hedera.com/hip/hip-367) made token associations unlimited, so in the long run it will not be efficient for consensus nodes to serve this information.
 
 <figure><img src="../../.gitbook/assets/0.29.2.png" alt=""><figcaption></figcaption></figure>
 
@@ -1534,7 +1534,7 @@ This release also includes some bug fixes and smaller improvements; notably, it:
 1. Extends [`ContractCallLocal` support](https://github.com/hashgraph/hedera-services/issues/3632) to the ERC-20 and ERC-721 functions `allowance`, `getApproved`, and `isApprovedForAll`.
 2. Permits staking to contract accounts.
 
-![](../../.gitbook/assets/0.28.0\_results.001.jpeg)
+![](../../.gitbook/assets/0.28.0_results.001.jpeg)
 
 ## [v0.27](https://github.com/hashgraph/hedera-services/releases)
 
@@ -1570,7 +1570,7 @@ This will set the stage for the second phase of staking, in which a node’s con
 
 Observant readers might recall that an earlier [alpha release](https://github.com/hashgraph/hedera-services/releases/tag/v0.27.0-alpha.5) of Services 0.27 _also_ enabled [HIP-423 (Long Term Scheduled Transactions)](https://hips.hedera.com/hip/hip-423). This is a complex feature with some deep implications, and we have decided to defer for one more release before going to production.
 
-![](<../../.gitbook/assets/0.27.4\_results copy.001.jpeg>)
+![](<../../.gitbook/assets/0.27.4_results copy.001.jpeg>)
 
 ## [v0.26](https://github.com/hashgraph/hedera-services/releases)
 
@@ -1652,7 +1652,7 @@ This upgrade also creates two new system accounts 0.0.800 and 0.0.801 that will 
 
 One change to the Hedera API (HAPI) is that we now have enough evidence to conclude the experimental `getAccountNftInfos` and `getTokenNftInfos` queries do not have a favorable cost/benefit ratio, and these queries are now [permanently disabled](https://hashgraph.github.io/hedera-protobufs/#proto.TokenService).
 
-![](<../../.gitbook/assets/Performance Measurement Results\_Extract.001 (4).jpeg>)
+![](<../../.gitbook/assets/Performance Measurement Results_Extract.001 (4).jpeg>)
 
 ## [v0.23](https://github.com/hashgraph/hedera-services/releases/tag/v0.23.0)
 
@@ -1668,7 +1668,7 @@ Hedera Services 0.23 fleshes out our smart contract service via the implementati
 
 Please note two issues fixed in this release. [First](https://github.com/hashgraph/hedera-services/issues/2841), in release 0.22, the nodes returned the `bytes ledger_id` stipulated by [HIP-33](https://hips.hedera.com/hip/hip-33) as a UTF-8 encoding of a hex string. The returned bytes are now the big-endian representation of the ledger's numeric id. [Second](https://github.com/hashgraph/hedera-services/issues/2857), prior to this release, the record of a `dissociateToken` from a deleted token did not list the discarded balance of the dissociated account if the token's treasury was missing. This is now fixed.
 
-![](<../../.gitbook/assets/Performance Measurement Results\_Extract.001 (2).jpeg>)
+![](<../../.gitbook/assets/Performance Measurement Results_Extract.001 (2).jpeg>)
 
 ## [v0.22](https://github.com/hashgraph/hedera-services/releases/tag/v0.22.1)
 
@@ -1695,7 +1695,7 @@ There are two other HIP's included in this release not related to the smart cont
 
 While we are gaining momentum in our smart contracts roadmap, we are also deeply committed to improving the developer experience, and welcome issues and ideas in our [GitHub repository](https://github.com/hashgraph/hedera-services) and [Discord](https://hedera.com/discord)!
 
-![](<../../.gitbook/assets/Performance Measurement Results\_Extract.001 (1).jpeg>)
+![](<../../.gitbook/assets/Performance Measurement Results_Extract.001 (1).jpeg>)
 
 ## [v0.21.0](https://github.com/hashgraph/hedera-services/releases/tag/v0.21.0-rc.1)
 
@@ -1735,10 +1735,10 @@ The main deliverables in this release are improved automation for node operators
 
 Please also note the following deprecations in the Hedera API protobufs:
 
-* The [<mark style="color:purple;">`ContractUpdateTransactionBody.fileID`</mark> <mark style="color:purple;">field</mark>](https://github.com/hashgraph/hedera-protobufs/blob/main/services/contract\_update.proto#L82), which is redundant given the existence of the [<mark style="color:purple;">`ContractGetBytecode`</mark> <mark style="color:purple;">quer</mark>y](https://github.com/hashgraph/hedera-protobufs/blob/main/services/smart\_contract\_service.proto#L63).
-* The [<mark style="color:purple;">`ContractCallLocalQuery.maxResultSize`</mark> <mark style="color:purple;">field</mark>](https://github.com/hashgraph/hedera-protobufs/blob/main/services/contract\_call\_local.proto#L136), as this limit is now simply a side-effect of the given gas limit.
+* The [<mark style="color:purple;">`ContractUpdateTransactionBody.fileID`</mark> <mark style="color:purple;">field</mark>](https://github.com/hashgraph/hedera-protobufs/blob/main/services/contract_update.proto#L82), which is redundant given the existence of the [<mark style="color:purple;">`ContractGetBytecode`</mark> <mark style="color:purple;">quer</mark>y](https://github.com/hashgraph/hedera-protobufs/blob/main/services/smart_contract_service.proto#L63).
+* The [<mark style="color:purple;">`ContractCallLocalQuery.maxResultSize`</mark> <mark style="color:purple;">field</mark>](https://github.com/hashgraph/hedera-protobufs/blob/main/services/contract_call_local.proto#L136), as this limit is now simply a side-effect of the given gas limit.
 
-![](../../.gitbook/assets/Performance%20Measurement%20Results\_Extract.001%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\).jpeg)
+![](../../.gitbook/assets/Performance%20Measurement%20Results_Extract.001%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\).jpeg)
 
 ## [v0.19.4](https://github.com/hashgraph/hedera-services/releases/tag/v0.19.4)
 
