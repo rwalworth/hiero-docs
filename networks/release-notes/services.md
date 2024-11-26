@@ -312,6 +312,10 @@ Please visit the [Hedera status page](https://status.hedera.com/) for the latest
 
 </details>
 
+### **Performance Results**
+
+<figure><img src="../../.gitbook/assets/‎0.55_Performance Measurement Results_Extract.‎001.png" alt=""><figcaption></figcaption></figure>
+
 ## **R**elease v0.54
 
 {% hint style="success" %}
