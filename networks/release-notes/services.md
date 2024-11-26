@@ -12,9 +12,21 @@ Please visit the [Hedera status page](https://status.hedera.com/) for the latest
 **MAINNET UPDATE SCHEDULED: DECEMBER 11, 2024**
 {% endhint %}
 
-{% hint style="info" %}
+{% hint style="success" %}
 **TESTNET UPDATE SCHEDULED: NOVEMBER 26, 2024**
 {% endhint %}
+
+### [Build 0.56.6](https://github.com/hashgraph/hedera-services/releases/tag/v0.56.6)
+
+<details>
+
+<summary><strong>What's Changed</strong></summary>
+
+* chore: Cherry Pick: Modify and mount default block streams output directory by [@mhess-swl](https://github.com/mhess-swl) in [#16753](https://github.com/hashgraph/hedera-services/pull/16753)
+
+**Full Changelog**: [v0.56.5...v0.56.6](https://github.com/hashgraph/hedera-services/compare/v0.56.5...v0.56.6)
+
+</details>
 
 ### [**Build 0.56.5**](https://github.com/hashgraph/hedera-services/releases/tag/v0.56.5)
 
@@ -300,7 +312,7 @@ Please visit the [Hedera status page](https://status.hedera.com/) for the latest
 
 </details>
 
-## Release v0.54
+## **R**elease v0.54
 
 {% hint style="success" %}
 **MAINNET UPDATE SCHEDULED: OCTOBER 23, 2024**

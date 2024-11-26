@@ -26,7 +26,7 @@ Once all details are entered, click **"Build List."** The verifier will process 
 
 The Airdrop List Verifier can be applied in different scenarios, such as:
 
-* _C_ommunity Reward Drops
+* _&#x43;_&#x6F;mmunity Reward Drops
   * Verify the eligibility of community members based on their token associations before distributing rewards or exclusive NFTs.
 * New Token Launches
   * Before launching a new token, filter potential recipients who already hold related tokens or meet certain criteria (e.g., association with other collections).
