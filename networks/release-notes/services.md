@@ -4,7 +4,7 @@ description: Hedera Services release information
 
 # Hedera Services
 
-Please visit the [Hedera status page](https://status.hedera.com/) for the latest versions supported on each network.
+Visit the [Hedera status page](https://status.hedera.com/) for the latest versions supported on each network.
 
 ## Release v0.56
 
