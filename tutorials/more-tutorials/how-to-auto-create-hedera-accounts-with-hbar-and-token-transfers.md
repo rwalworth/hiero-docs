@@ -16,8 +16,8 @@ In this tutorial, a treasury account will be created to transfer HTS tokens to B
 
 ## **Prerequisites**
 
-* Get a [Hedera Testnet](https://portal.hedera.com/register) account [here](../../getting-started/introduction.md).&#x20;
-* Set up your environment and create a client [here](../../getting-started/environment-set-up.md).&#x20;
+* Get a [Hedera Testnet](https://portal.hedera.com/register) account [here](broken-reference).&#x20;
+* Set up your environment and create a client [here](broken-reference).&#x20;
 
 <details>
 

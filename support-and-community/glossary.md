@@ -84,6 +84,12 @@ In the context of Hedera, aBFT means that the network can reach [consensus](glos
 
 A snapshot of the state of all accounts within the Hedera Network at the time of their creation. These files, which are stored and made accessible by mirror nodes, include details such as account balances and account status information. They are created at regular intervals and can be used to independently verify the state of the network.
 
+### BIP-39
+
+***
+
+The BIP-39 standard utilizes a 2048-word list, from which 12, 15, 18, 21, or 24 words are randomly selected to form the seed phrase. Each word corresponds to a specific number, and the combination of these numbers generates a unique private key.
+
 ### Bitcoin (BTC)
 
 ***
@@ -1125,6 +1131,14 @@ In distributed ledger technology, a transaction (tx or TX) refers to an exchange
 ***
 
 A fee associated with a transaction that compensates the Hedera network for processing and maintaining the transaction in a consensus state.&#x20;
+
+### Transaction Hash
+
+***
+
+A transaction hash is a unique identifier generated when a transaction is submitted on a DLT network like Hedera. It is essentially a string of characters that represents the cryptographic hash of a transaction. This hash allows users to track and verify the transaction on the blockchain explorer. Each transaction hash is unique and serves as proof that the transaction has been successfully recorded on the ledger.
+
+For example, in the context of Hedera, when you submit a transaction (such as transferring HBAR), the network will return a transaction hash that can be used to verify its status or look up its details on explorers like HashScan.
 
 ### Transactions Per Second (TPS)
 

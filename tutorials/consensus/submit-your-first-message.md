@@ -13,7 +13,7 @@ In short, HCS offers the validity of the order of events and transparency into t
 We recommend you complete the following introduction to get a basic understanding of Hedera transactions. This example does not build upon the previous examples.
 
 * Get a [Hedera testnet account](https://portal.hedera.com/register).
-* Set up your environment [here](../../getting-started/environment-set-up.md).
+* Set up your environment [here](broken-reference).
 
 ✅ _You can find a full_ [_code check_](submit-your-first-message.md#code-check) _for this tutorial at the bottom of this page._
 

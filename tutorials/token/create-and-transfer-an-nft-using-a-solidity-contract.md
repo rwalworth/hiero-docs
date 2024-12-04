@@ -18,7 +18,7 @@ Besides creating NFTs using Hedera SDK, you can use a Solidity Contract to creat
 We recommend you complete the following introduction to get a basic understanding of Hedera transactions. This example does not build upon the previous examples.
 
 * Get a [Hedera testnet account](https://portal.hedera.com/register).
-* Set up your environment [here](../../getting-started/environment-set-up.md).
+* Set up your environment [here](broken-reference).
 
 If you are interested in creating, minting, and transferring NFTs using Hedera SDKs you can find the example [here](https://docs.hedera.com/guides/getting-started/try-examples/create-and-transfer-your-first-nft).
 
