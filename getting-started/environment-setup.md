@@ -61,8 +61,8 @@ Once your workspace is fully launched, you will see the instructions to enter va
 
 > 🟣 _Please enter values requested, or accept defaults, in the interactive prompts below._
 
-1. Follow the prompts in the Gitpod console to configure your `.env` file. Refer to the [<mark style="background-color:purple;">**Prompts**</mark>](environment-setup.md#prompts) expandable in [Step 2](environment-setup.md#step-2-create-your-.env-file) for guidance on completing your .env file setup.
-2. Refer to [Step 3](environment-setup.md#step-3-progress-metrics) for guidance on managing metrics. Learn how to disable them in Gitpod if you prefer not to store your progress metrics [on-chain](../support-and-community/glossary.md#on-chain).
+1. Follow the prompts in the Gitpod console to configure your `.env` file. Refer to the [<mark style="background-color:yellow;">Prompts</mark>](environment-setup.md#prompts) expandable in [Step 2](environment-setup.md#step-2-create-your-.env-file) for guidance on completing your .env file setup.
+2. Refer to [Step 3](environment-setup.md#step-3-progress-metrics-optional) for guidance on managing metrics. Learn how to disable them in Gitpod if you prefer not to store your progress metrics [on-chain](../support-and-community/glossary.md#on-chain).
 3. Once everything is set up, head to the [Next Steps](environment-setup.md#next-steps-choose-your-developer-learning-path) section to choose your learning path and start building.
 {% endhint %}
 
@@ -119,7 +119,7 @@ In your project root directory, run:
 
 <details>
 
-<summary>  <mark style="background-color:purple;"><strong>Prompts</strong></mark><strong> ⬇</strong></summary>
+<summary>  <mark style="background-color:yellow;"><strong>Prompts</strong></mark><strong> ⬇</strong></summary>
 
 1.  **Enter a** [**BIP-39**](../support-and-community/glossary.md#bip-39) **seed phrase**&#x20;
 
@@ -178,7 +178,7 @@ We **highly advise against** using a private key with mainnet funds.
 
 Your progress will captured as metrics and published to the Hedera network for you to share with others! If you would like to disable publishing the metrics to the public ledger and viewable in a network explorer, please change `metricsHcsDisabled` value to `true` in the `logger.json` file located in the root directory. The metrics are enabled by default with the value `false`.
 
-**Example `logger.json` file with metrics:**
+Example `logger.json` file:
 
 {% tabs %}
 {% tab title="Enabled (default)" %}

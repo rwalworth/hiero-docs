@@ -26,7 +26,7 @@ Before you begin, you should have **completed** the following tutorials:
 
 * [x] [Create and Fund Your Hedera Testnet Account](../create-and-fund-your-hedera-testnet-account.md)
 * [x] [Environment Setup](../environment-setup.md)&#x20;
-* [x] [Configure RPC Connection](../../tutorials/more-tutorials/json-rpc-connections/) ( _not required for Gitpod_ )
+* [x] [Configure RPC Connection](../../tutorials/more-tutorials/json-rpc-connections/) ( not required for Gitpod )
 
 ***
 
@@ -75,7 +75,7 @@ The Hedera JSON-RPC Relay connects your dApps to Hedera’s EVM-compatible nodes
 {% hint style="info" %}
 #### Next: Code Walkthrough
 
-In the next code walkthrough step, you can follow along or skip ahead to [Step 3](deploy-a-contract.md#step-3-deploy-contract-and-verify-on-hashscan) to execute and deploy the contract. If you decide to skip ahead, [compile the smart contract ](deploy-a-contract.md#compile-the-smart-contract)first.&#x20;
+In the next code walkthrough step, you can follow along or skip ahead to [Step 3](deploy-a-contract.md#step-3-deploy-contract-and-verify-on-hashscan-mirror-node-explorer) to execute and deploy the contract. If you decide to skip ahead, [compile the smart contract ](deploy-a-contract.md#compile-the-smart-contract)first.&#x20;
 {% endhint %}
 
 ***

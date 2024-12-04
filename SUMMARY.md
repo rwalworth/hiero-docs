@@ -2,7 +2,7 @@
 
 * [Welcome to Hedera — let’s build the future](README.md)
 * [Getting Started](getting-started/README.md)
-  * [Create and Fund a Hedera Testnet Account](getting-started/create-and-fund-your-hedera-testnet-account.md)
+  * [Create and Fund Your Hedera Testnet Account](getting-started/create-and-fund-your-hedera-testnet-account.md)
   * [Environment Setup](getting-started/environment-setup.md)
   * [Web2 Developers](getting-started/web2-developers/README.md)
     * [Transfer HBAR](getting-started/web2-developers/transfer-hbar.md)
