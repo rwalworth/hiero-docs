@@ -155,6 +155,7 @@
     * [Token Balance Snapshot](open-source-solutions/nft-studio/token-balance-snapshot.md)
     * [Hedera NFT SDK](https://github.com/hashgraph/hedera-nft-sdk)
   * [Oracle Networks](open-source-solutions/oracle-networks/README.md)
+    * [Chainlink Price Feeds](https://github.com/hedera-dev/hedera-example-chainlink-price-feeds)
     * [Pyth Oracles](open-source-solutions/oracle-networks/pyth-network-oracle.md)
     * [Supra Oracles](open-source-solutions/oracle-networks/supra-oracles.md)
   * [Stablecoin Studio](open-source-solutions/stablecoin-studio/README.md)
