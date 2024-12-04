@@ -13,8 +13,20 @@ Visit the [Hedera status page](https://status.hedera.com/) for the latest versio
 {% endhint %}
 
 {% hint style="success" %}
-**TESTNET UPDATE SCHEDULED: NOVEMBER 26, 2024**
+**TESTNET UPDATE SCHEDULED: DECEMBER 4, 2024**
 {% endhint %}
+
+### [Build 0.56.7](https://github.com/hashgraph/hedera-services/releases/tag/v0.56.7)
+
+<details>
+
+<summary><strong>What's Changed</strong></summary>
+
+* chore: Cherry-Pick (0.56): Increase CryptoGetAccountBalance throttle by [@kimbor](https://github.com/kimbor) in [#16852](https://github.com/hashgraph/hedera-services/pull/16852)
+
+**Full Changelog**: [v0.56.6...v0.56.7](https://github.com/hashgraph/hedera-services/compare/v0.56.6...v0.56.7)
+
+</details>
 
 ### [Build 0.56.6](https://github.com/hashgraph/hedera-services/releases/tag/v0.56.6)
 
