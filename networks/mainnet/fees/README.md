@@ -42,16 +42,20 @@ All fees are subject to change. The fees below reflect a base price for the tran
 
 ### Schedule Transaction
 
-<table><thead><tr><th width="491">Operations</th><th>USD ($)</th></tr></thead><tbody><tr><td>ScheduleCreate</td><td>$0.01</td></tr><tr><td>ScheduleSign</td><td>$0.001</td></tr><tr><td>ScheduleDelete</td><td>$0.001</td></tr><tr><td>ScheduleGetInfo</td><td>$0.0001</td></tr></tbody></table>
+<table><thead><tr><th width="488">Operations</th><th>USD ($)</th></tr></thead><tbody><tr><td>ScheduleCreate</td><td>$0.01</td></tr><tr><td>ScheduleSign</td><td>$0.001</td></tr><tr><td>ScheduleDelete</td><td>$0.001</td></tr><tr><td>ScheduleGetInfo</td><td>$0.0001</td></tr></tbody></table>
 
 ### File Service
 
-<table><thead><tr><th width="495">Operations</th><th>USD ($)</th></tr></thead><tbody><tr><td>FileCreate</td><td>$0.05</td></tr><tr><td>FileUpdate</td><td>$0.05</td></tr><tr><td>FileDelete</td><td>$0.007</td></tr><tr><td>FileAppend</td><td>$0.05</td></tr><tr><td>FileGetContents</td><td>$0.0001</td></tr><tr><td>FileGetInfo</td><td>$0.0001</td></tr></tbody></table>
+<table><thead><tr><th width="490">Operations</th><th>USD ($)</th></tr></thead><tbody><tr><td>FileCreate</td><td>$0.05</td></tr><tr><td>FileUpdate</td><td>$0.05</td></tr><tr><td>FileDelete</td><td>$0.007</td></tr><tr><td>FileAppend</td><td>$0.05</td></tr><tr><td>FileGetContents</td><td>$0.0001</td></tr><tr><td>FileGetInfo</td><td>$0.0001</td></tr></tbody></table>
 
 ### Smart Contract Service
 
-<table><thead><tr><th width="501">Operations</th><th>USD ($)</th></tr></thead><tbody><tr><td>ContractCreate</td><td>$1.0</td></tr><tr><td>ContractUpdate</td><td>$0.026</td></tr><tr><td>ContractDelete</td><td>$0.007</td></tr><tr><td>ContractCall</td><td>$0.05</td></tr><tr><td>ContractCallLocal</td><td>$0.001</td></tr><tr><td>ContractGetByteCode</td><td>$0.05</td></tr><tr><td>GetBySolidityID</td><td>$0.0001</td></tr><tr><td>ContractGetInfo</td><td>$0.0001</td></tr><tr><td>ContractGetRecords</td><td>$0.0001</td></tr><tr><td>ContractAutoRenew</td><td>$0.026</td></tr></tbody></table>
+<table><thead><tr><th width="493">Operations</th><th>USD ($)</th></tr></thead><tbody><tr><td>ContractCreate</td><td>$1.0</td></tr><tr><td>ContractUpdate</td><td>$0.026</td></tr><tr><td>ContractDelete</td><td>$0.007</td></tr><tr><td>ContractCall</td><td>$0.05</td></tr><tr><td>ContractCallLocal</td><td>$0.001</td></tr><tr><td>ContractGetByteCode</td><td>$0.05</td></tr><tr><td>GetBySolidityID</td><td>$0.0001</td></tr><tr><td>ContractGetInfo</td><td>$0.0001</td></tr><tr><td>ContractGetRecords</td><td>$0.0001</td></tr><tr><td>ContractAutoRenew</td><td>$0.026</td></tr></tbody></table>
+
+### Node Service
+
+<table><thead><tr><th width="494">Operations</th><th>USD ($)</th></tr></thead><tbody><tr><td>NodeCreate</td><td>$0.001</td></tr><tr><td>NodeUpdate</td><td>$0.001</td></tr><tr><td>NodeDelete</td><td>$0.001</td></tr></tbody></table>
 
 ### Miscellaneous
 
-<table><thead><tr><th width="508">Operations</th><th>USD ($)</th></tr></thead><tbody><tr><td>EthereumTransaction</td><td>$0.0001</td></tr><tr><td>PrngTransaction</td><td>$0.001</td></tr><tr><td>GetVersion</td><td>$0.001</td></tr><tr><td>GetByKey</td><td>$0.0001</td></tr><tr><td>TransactionGetReceipt</td><td>$0.0000</td></tr><tr><td>TransactionGetRecord</td><td>$0.0001</td></tr></tbody></table>
+<table><thead><tr><th width="497">Operations</th><th>USD ($)</th></tr></thead><tbody><tr><td>EthereumTransaction</td><td>$0.0001</td></tr><tr><td>PrngTransaction</td><td>$0.001</td></tr><tr><td>GetVersion</td><td>$0.001</td></tr><tr><td>GetByKey</td><td>$0.0001</td></tr><tr><td>TransactionGetReceipt</td><td>$0.0000</td></tr><tr><td>TransactionGetRecord</td><td>$0.0001</td></tr></tbody></table>
