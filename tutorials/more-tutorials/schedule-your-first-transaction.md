@@ -10,18 +10,8 @@ In this tutorial, you'll learn how to create and sign a scheduled transaction. S
 
 We recommend you complete the following introduction to get a basic understanding of Hedera transactions. This example does not build upon the previous examples.
 
-* Get a [Hedera testnet account](broken-reference).
-* Set up your environment [here](broken-reference).
-
-***
-
-## Table of Contents
-
-1. [Create Transaction](schedule-your-first-transaction.md#1.-create-a-transaction-to-schedule)
-2. [Schedule Transaction](schedule-your-first-transaction.md#2.-schedule-the-transfer-transaction)
-3. [Submit Signatures](schedule-your-first-transaction.md#3.-submit-signatures)
-4. [Verify Schedule was Triggered](schedule-your-first-transaction.md#4.-verify-the-schedule-was-triggered)
-5. [Verify Scheduled Transaction Executed](schedule-your-first-transaction.md#5.-verify-the-scheduled-transaction-executed)
+1. Get a [Hedera testnet account](../../getting-started/create-and-fund-your-hedera-testnet-account.md).
+2. Set up your environment [here](../../getting-started/environment-setup.md).
 
 ***
 

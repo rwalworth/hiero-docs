@@ -8,17 +8,8 @@ In this tutorial, you will learn how to create a simple smart contract on Hedera
 
 We recommend you complete the following introduction to get a basic understanding of Hedera transactions. This example does not build upon the previous examples.
 
-* Get a [Hedera testnet account](broken-reference).
-* Set up your environment [here](broken-reference).
-
-***
-
-## Table of Contents
-
-1. [Create Smart Contract](deploy-your-first-smart-contract.md#1.-create-a-hello-hedera-smart-contract)
-2. [Store Bytecode on Hedera](deploy-your-first-smart-contract.md#2.-store-the-smart-contract-bytecode-on-hedera)
-3. [Deploy Hedera Smart Contract](deploy-your-first-smart-contract.md#3.-deploy-a-hedera-smart-contract)
-4. [Call Contract Functions](deploy-your-first-smart-contract.md#4.-call-contract-functions)
+1. Get a [Hedera testnet account](../../getting-started/create-and-fund-your-hedera-testnet-account.md).
+2. Set up your environment [here](../../getting-started/environment-setup.md).
 
 ***
 

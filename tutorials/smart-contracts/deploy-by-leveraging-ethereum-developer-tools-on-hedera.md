@@ -6,7 +6,7 @@ Learning how to properly use new developer tools requires time and effort. Many 
 
 The most common EVM-based tools and workflows across Web3 ecosystems are built on the JSON-RPC specification. You can continue to utilize the following familiar Ethereum tooling, Web3JS, Truffle, Ethers, and Hardhat, to build on Hedera, thanks to the JSON-RPC Relay. As an Ethereum developer, your workflow does not have to change.
 
-<table data-header-hidden><thead><tr><th width="219"></th><th width="124" align="center"></th><th width="142" align="center"></th><th width="117" align="center"></th><th align="center"></th></tr></thead><tbody><tr><td><br></td><td align="center"><strong>web3js</strong></td><td align="center"><strong>Truffle</strong></td><td align="center"><strong>ethers</strong></td><td align="center"><strong>Hardhat</strong></td></tr><tr><td>Transfer HBARS</td><td align="center">✅</td><td align="center">✅</td><td align="center">✅</td><td align="center">✅</td></tr><tr><td>Contract Deployment</td><td align="center">✅</td><td align="center">✅</td><td align="center">✅</td><td align="center">✅</td></tr><tr><td>Can use the contract instance after deploy without re-initialization</td><td align="center">✅</td><td align="center">✅</td><td align="center">⚠️</td><td align="center">⚠️</td></tr><tr><td>Contract View Function Call</td><td align="center">✅</td><td align="center">✅</td><td align="center">✅</td><td align="center">✅</td></tr><tr><td>Contract Function Call</td><td align="center">✅</td><td align="center">✅</td><td align="center">✅</td><td align="center">✅</td></tr></tbody></table>
+<table><thead><tr><th width="219"></th><th width="124" align="center">web3js</th><th width="142" align="center">Truffle</th><th width="117" align="center">ethers</th><th align="center">Hardhat</th></tr></thead><tbody><tr><td>Transfer HBARS</td><td align="center">✅</td><td align="center">✅</td><td align="center">✅</td><td align="center">✅</td></tr><tr><td>Contract Deployment</td><td align="center">✅</td><td align="center">✅</td><td align="center">✅</td><td align="center">✅</td></tr><tr><td>Can use the contract instance after deploy without re-initialization</td><td align="center">✅</td><td align="center">✅</td><td align="center">⚠️</td><td align="center">⚠️</td></tr><tr><td>Contract View Function Call</td><td align="center">✅</td><td align="center">✅</td><td align="center">✅</td><td align="center">✅</td></tr><tr><td>Contract Function Call</td><td align="center">✅</td><td align="center">✅</td><td align="center">✅</td><td align="center">✅</td></tr></tbody></table>
 
 You can transfer HBAR, deploy contracts, and perform contract calls bringing even greater usability to the developer community.
 
@@ -109,15 +109,7 @@ Hashio provides the URLs for each Hedera environment, which allows you to intera
 
 Import your newly created ECDSA-based Hedera account into MetaMask using your private key from above.
 
-<div>
-
-<figure><img src="../../.gitbook/assets/import accounts mm1.png" alt=""><figcaption><p>Use your private key to import your Hedera account into Metamask</p></figcaption></figure>
-
- 
-
-<figure><img src="../../.gitbook/assets/import accounts mm2.png" alt=""><figcaption><p>Your Hedera Account in Metamask</p></figcaption></figure>
-
-</div>
+<div><figure><img src="../../.gitbook/assets/import accounts mm1.png" alt=""><figcaption><p>Use your private key to import your Hedera account into Metamask</p></figcaption></figure> <figure><img src="../../.gitbook/assets/import accounts mm2.png" alt=""><figcaption><p>Your Hedera Account in Metamask</p></figcaption></figure></div>
 
 ## Summary
 

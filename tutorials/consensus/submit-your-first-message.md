@@ -12,19 +12,10 @@ In short, HCS offers the validity of the order of events and transparency into t
 
 We recommend you complete the following introduction to get a basic understanding of Hedera transactions. This example does not build upon the previous examples.
 
-* Get a [Hedera testnet account](https://portal.hedera.com/register).
-* Set up your environment [here](broken-reference).
+1. Get a [Hedera testnet account](../../getting-started/create-and-fund-your-hedera-testnet-account.md).
+2. Set up your environment [here](../../getting-started/environment-setup.md).
 
 ✅ _You can find a full_ [_code check_](submit-your-first-message.md#code-check) _for this tutorial at the bottom of this page._
-
-***
-
-## Table of Contents
-
-1. [Create Topic](submit-your-first-message.md#id-1.-create-your-first-topic)
-2. [Subscribe to Topic](submit-your-first-message.md#id-2.-subscribe-to-a-topic)
-3. [Submit Message](submit-your-first-message.md#id-3.-submit-a-message)
-4. [Code Check](submit-your-first-message.md#code-check)
 
 ***
 

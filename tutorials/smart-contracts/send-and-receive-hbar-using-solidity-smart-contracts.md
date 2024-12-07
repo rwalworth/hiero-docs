@@ -18,18 +18,8 @@ Throughout the tutorial, you also learn how to check the HBAR balance of the con
 
 We recommend you complete the following introduction to get a basic understanding of Hedera transactions. This example does not build upon the previous examples.
 
-* Get a [Hedera testnet account](broken-reference).
-* Set up your environment [here](broken-reference).
-
-***
-
-## Table of Contents
-
-1. [Create Accounts and Deploy a Contract](send-and-receive-hbar-using-solidity-smart-contracts.md#create-accounts-and-deploy-a-contract)
-2. [Get HBAR to ➡ Contract](send-and-receive-hbar-using-solidity-smart-contracts.md#getting-hbar-to-the-contract)
-3. [Get HBAR from ⬅ Contract](send-and-receive-hbar-using-solidity-smart-contracts.md#getting-hbar-from-the-contract)
-4. [Summary](send-and-receive-hbar-using-solidity-smart-contracts.md#summary)
-5. [Additional Resources](send-and-receive-hbar-using-solidity-smart-contracts.md#additional-resources)
+1. Get a [Hedera testnet account](../../getting-started/create-and-fund-your-hedera-testnet-account.md).
+2. Set up your environment [here](../../getting-started/environment-setup.md).
 
 ***
 

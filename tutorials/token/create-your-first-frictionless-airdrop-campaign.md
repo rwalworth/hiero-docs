@@ -19,8 +19,8 @@ Now that we have a basic understanding of the transaction types, let’s move on
 
 We recommend you complete the following introduction to get a basic understanding of Hedera transactions. This example does not build upon the previous examples.
 
-* Get a [Hedera testnet account](https://docs.hedera.com/hedera/getting-started/introduction).
-* Set up your environment [here](https://docs.hedera.com/hedera/getting-started/environment-set-up).
+* Get a [Hedera testnet account](../../getting-started/create-and-fund-your-hedera-testnet-account.md).
+* Set up your environment [here](../../getting-started/environment-setup.md).
 * `.env` file with this additional variable added:
   * <pre><code><strong>HEDERA_NETWORK=testnet
     </strong></code></pre>

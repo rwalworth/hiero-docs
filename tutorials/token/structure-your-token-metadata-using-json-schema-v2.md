@@ -22,15 +22,6 @@ We recommend you complete one of the two tutorials below that teach you how to c
 
 ***
 
-## Table of Contents
-
-1. [Connect Metadata](structure-your-token-metadata-using-json-schema-v2.md#how-do-you-connect-metadata-to-a-token)
-2. [Metadata Schema](structure-your-token-metadata-using-json-schema-v2.md#what-does-the-token-metadata-json-schema-v2-look-like)
-3. [Verify Metadata](structure-your-token-metadata-using-json-schema-v2.md#how-to-verify-your-token-metadata-is-correct)
-4. [Video Tutorial](structure-your-token-metadata-using-json-schema-v2.md#want-to-learn-more-about-token-metadata)
-
-***
-
 ## How do you connect metadata to a token?
 
 It's essential to understand that the token metadata JSON schema V2 requires you to store metadata using a storage solution, centralized or decentralized, such as IPFS or Arweave.
@@ -222,13 +213,13 @@ The `attributes` field consists of an array of `attribute` objects. This is the 
 }
 </code></pre>
 
-**Extra resources:** You can find all information about the `attributes` field in the detailed [schema specification](https://github.com/hashgraph/hedera-improvement-proposal/blob/main/HIP/hip-412.md#attributestrait\_type).
+**Extra resources:** You can find all information about the `attributes` field in the detailed [schema specification](https://github.com/hashgraph/hedera-improvement-proposal/blob/main/HIP/hip-412.md#attributestrait_type).
 {% endtab %}
 
 {% tab title="localization" %}
 The standard also allows for localization. Each locale links to another metadata file containing localized metadata and files. This allows for a clean metadata structure. Don't define a new localization object for a localized metadata file to avoid infinite looping when parsing an NFT's metadata file.&#x20;
 
-Note that the `localization.uri` property contains `{locale}`. The `{locale}` part references a locale in the `locales` array. You should use two-letter language codes according to the [ISO 639-1 standard](https://en.wikipedia.org/wiki/List\_of\_ISO\_639-1\_codes) to define languages.
+Note that the `localization.uri` property contains `{locale}`. The `{locale}` part references a locale in the `locales` array. You should use two-letter language codes according to the [ISO 639-1 standard](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) to define languages.
 
 ```json
 {

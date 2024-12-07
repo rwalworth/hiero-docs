@@ -21,16 +21,6 @@ This guide provides step-by-step instructions on how to configure and use a Hede
 
 ***
 
-## Table of Contents
-
-1. [Set Up Mirror Node](how-to-configure-a-mirror-node-and-query-specific-data.md#set-up-mirror-node)
-2. [Configure Mirror Node](how-to-configure-a-mirror-node-and-query-specific-data.md#configure-mirror-node)
-3. [Start Mirror Node](how-to-configure-a-mirror-node-and-query-specific-data.md#start-mirror-node)
-4. [Query Mirror Node](how-to-configure-a-mirror-node-and-query-specific-data.md#query-output-verification)
-5. [Additional Resources](how-to-configure-a-mirror-node-and-query-specific-data.md#additional-resources)
-
-***
-
 ## Set Up Mirror Node
 
 Clone the Hedera mirror node repository and navigate to the project directory:
@@ -104,7 +94,7 @@ Here's a breakdown of what each section of the configuration file does:
 * **`importer`**: This sub-section defines settings for the Mirror node's importer, which is responsible for retrieving transaction data from the network and storing it in a local database for querying.
 * **`importer.network: DEMO`**: This specifies that the importer should connect to a bucket with demo data. It's the easiest way to experiment with the mirror node and importer. If you want to connect to the `TESTNET`, `MAINNET`, or `PREVIEWNET`, you need to follow this [tutorial](../../core-concepts/mirror-nodes/run-your-own-beta-mirror-node/).
 * **`importer.retention`**: This sub-section specifies the retention period and frequency for importing data. In this case, the importer will clean data that is older than 90 days every 60 seconds. If you omit the `frequency` key, the default behavior for cleaning data is once a day.&#x20;
-* **`importer.retention.include`**: This specifies the database tables that should be included in the imported data. The tables specified are **`transaction`** and **`crypto_transfer`**. You can find all tables in the [GitHub repository](https://github.com/hashgraph/hedera-mirror-node/blob/main/hedera-mirror-importer/src/main/resources/db/migration/v2/V2.0.0\_\_create\_tables.sql) for the mirror node.
+* **`importer.retention.include`**: This specifies the database tables that should be included in the imported data. The tables specified are **`transaction`** and **`crypto_transfer`**. You can find all tables in the [GitHub repository](https://github.com/hashgraph/hedera-mirror-node/blob/main/hedera-mirror-importer/src/main/resources/db/migration/v2/V2.0.0__create_tables.sql) for the mirror node.
 * **`parser`**: This sub-section defines settings for the data parser, which determines the data that gets stored in the database or the data that should be filtered.
 * **`parser.exclude`**: This specifies the entities or transaction types that should be excluded from the imported data. In this case, the **`parser.exclude.entity`** with ID **`0.0.111478`** is excluded.
 * **`parser.include`**: This specifies the entities or transaction types that should be included from the imported data. In this case, the **`parser.include.entity`** with ID **`0.0.111478`** is included, and two specific transaction types (**`CRYPTOTRANSFER`** and **`CRYPTOCREATEACCOUNT`**) are included via **`parser.include.transaction`**.\

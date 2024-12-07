@@ -54,16 +54,6 @@ _**Note**: The Graph CLI will be installed globally, so you can run the command 
 
 ***
 
-## Table of Contents
-
-1. [Project Setup](deploy-a-subgraph-using-the-graph-and-json-rpc.md#project-setup)
-2. [Project Configuration](deploy-a-subgraph-using-the-graph-and-json-rpc.md#project-configuration)
-3. [Deploy Subgraph](deploy-a-subgraph-using-the-graph-and-json-rpc.md#deploy-subgraph)
-4. [Code Check](deploy-a-subgraph-using-the-graph-and-json-rpc.md#code-check)
-5. [Additional Resources](deploy-a-subgraph-using-the-graph-and-json-rpc.md#additional-resources)
-
-***
-
 ## Project Setup
 
 Open a terminal window and navigate to the directory where you want your subgraph project stored. Clone the `hedera-subgraph-example` repo, change directories, and install dependencies:

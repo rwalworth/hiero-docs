@@ -16,15 +16,6 @@ We recommend you complete the "Submit Your First Message" tutorial [here](submit
 
 ***
 
-## Table of Contents
-
-1. [Create Private Topic](submit-message-to-private-topic.md#1.-create-a-private-topic)
-2. [Subscribe to Topic](submit-message-to-private-topic.md#2.-subscribe-to-a-topic)
-3. [Submit Message](submit-message-to-private-topic.md#3.-submit-a-message)
-4. [Code Check](submit-message-to-private-topic.md#code-check)
-
-***
-
 ## 1. Create a private topic
 
 To create a private topic, you will use [_<mark style="color:purple;">**`setSubmitKey()`**</mark>_](https://docs.hedera.com/hedera/sdks-and-apis/sdks/consensus-service/create-a-topic#methods) to set a Submit Key. This key needs to sign all messages someone sends to the topic. A message will be rejected if you don't sign the message or sign with an incorrect key. The cost of creating a private topic is the same as a public topic: [**$0.01**](https://docs.hedera.com/hedera/networks/mainnet/fees#consensus-service).

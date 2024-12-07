@@ -14,7 +14,7 @@ You can find more examples using Truffle, Web3JS, and Hardhat in [this GitHub re
 
 ## **Prerequisites**
 
-* Get a[ ](https://portal.hedera.com/register)[Hedera testnet account](https://portal.hedera.com/register)&#x20;
+* Get a[ ](https://portal.hedera.com/register)[Hedera testnet account](../../getting-started/create-and-fund-your-hedera-testnet-account.md)&#x20;
 * This[ Codesandbox](https://codesandbox.io/s/hedera-example-json-rpc-truffle-q6kibt?file=/create-account.js) is already setup for you to try this example
   * Fork the sandbox
   * Remember to provide your testnet account credentials for the _**operator**_ in the _**.env**_ file
@@ -22,15 +22,6 @@ You can find more examples using Truffle, Web3JS, and Hardhat in [this GitHub re
     * _**npm install -g truffle**_ (this installation may take a few minutes)
     * _**node create-account.js**_
 * Get[ ](https://github.com/ed-marquez/hedera-example-staking)[the example code from GitHub](https://github.com/ed-marquez/hedera-example-json-rpc-truffle)
-
-***
-
-## Table of Contents
-
-1. [Create an ECDSA Account](deploy-smart-contracts-on-hedera-using-truffle.md#create-an-account-that-has-ecdsa-keys)
-2. [Compile Smart Contract](deploy-smart-contracts-on-hedera-using-truffle.md#compile-a-smart-contract-using-truffle)
-3. [Deploy Smart Contract](deploy-smart-contracts-on-hedera-using-truffle.md#deploy-the-smart-contract-to-hedera-using-truffle)
-4. [Additional Resources](deploy-smart-contracts-on-hedera-using-truffle.md#additional-resources)
 
 ***
 

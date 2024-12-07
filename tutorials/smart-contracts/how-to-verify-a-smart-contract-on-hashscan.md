@@ -24,18 +24,6 @@ _**📣 Note**: This is an initial release. API functionalities will see enhance
 
 ***
 
-## Table of Contents
-
-1. [Find the Contract](how-to-verify-a-smart-contract-on-hashscan.md#step-1-find-the-contract-on-hashscan)
-2. [Import Source Files](how-to-verify-a-smart-contract-on-hashscan.md#step-2-import-source-files)
-3. [Verify Contract](how-to-verify-a-smart-contract-on-hashscan.md#step-3-verify-contract)
-4. [Verification Match](how-to-verify-a-smart-contract-on-hashscan.md#step-4-verification-match)
-5. [View Verified Contract](how-to-verify-a-smart-contract-on-hashscan.md#step-5-view-verified-contract)
-6. [Re-Verify Smart Contract](how-to-verify-a-smart-contract-on-hashscan.md#step-6-re-verify-smart-contract)
-7. [Additional Resources](how-to-verify-a-smart-contract-on-hashscan.md#additional-resources)
-
-***
-
 ## Step 1: Find the Contract on HashScan
 
 Open a web browser and navigate to [HashScan](https://hashscan.io/). Make sure you are on the correct Hedera network (Mainnet, Testnet, or Previewnet), and search for the deployed contract address in the search bar at the top of the page. In the _**Contract Bytecode**_ section click on _**Verify Contract**_. The source code file importer popup window will open.
