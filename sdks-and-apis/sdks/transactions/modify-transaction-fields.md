@@ -61,14 +61,16 @@ transaction := hedera.NewAccountCreateTransaction(). //Any transaction can be ap
 
 ## Get transaction properties
 
-<table><thead><tr><th width="438">Method</th><th>Type</th></tr></thead><tbody><tr><td><code>getTransactionID()</code></td><td>TransactionID</td></tr><tr><td><code>getTransactionValidDuration()</code></td><td>Duration</td></tr><tr><td><code>getTransactionMemo()</code></td><td>String</td></tr><tr><td><code>getNodeAccountId()</code></td><td>AccountID</td></tr><tr><td><code>getMaxTransactionFee()</code></td><td>Hbar</td></tr><tr><td><code>getTransactionHash()</code></td><td>byte[ ]</td></tr><tr><td><code>getTransactionHashPerNode()</code></td><td>Map&#x3C;AccountId, byte [ ]></td></tr><tr><td><code>getSignatures()</code></td><td>Map&#x3C;AccountId, Map&#x3C;PublicKey, byte [ ]>></td></tr></tbody></table>
+<table><thead><tr><th width="340">Method</th><th>Type</th></tr></thead><tbody><tr><td><code>getTransactionID()</code></td><td>TransactionID</td></tr><tr><td><code>getTransactionValidDuration()</code></td><td>Duration</td></tr><tr><td><code>getTransactionMemo()</code></td><td>String</td></tr><tr><td><code>getNodeAccountId()</code></td><td>AccountID</td></tr><tr><td><code>getMaxTransactionFee()</code></td><td>Hbar</td></tr><tr><td><code>getTransactionHash()</code></td><td>byte[ ]</td></tr><tr><td><code>getTransactionHashPerNode()</code></td><td>Map&#x3C;AccountId, byte [ ]></td></tr><tr><td><code>getSignatures()</code></td><td>Map&#x3C;AccountId, Map&#x3C;PublicKey, byte [ ]>></td></tr></tbody></table>
 
 {% tabs %}
 {% tab title="Java" %}
 ```java
 //Create the transaction and set the transaction properties
 Transaction transaction = new AccountCreateTransaction() //Any transaction can be applied here
-    .setInitialBalance(Hbar.fromTinybars(1000))
+    .setKey(ecdsaPublicKey)
+    .setAlias(ecdsaPublicKey.toEvmAddress())
+    .setInitialBalance(new Hbar(1))
     .setMaxTransactionFee(new Hbar(50)) //Set the max transaction fee to 50 hbar
     .setNodeAccountId(new AccountId(3)) //Set the node ID to submit the transaction to
     .setTransactionMemo("Transaction memo"); //Add a transaction memo
@@ -82,7 +84,9 @@ Hbar maxTransactionFee = transaction.getMaxTransactionFee();
 ```javascript
 //Create the transaction and set the transaction properties
 const transaction = await new AccountCreateTransaction() //Any transaction can be applied here
-    .setInitialBalance(Hbar.fromTinybars(1000))
+    .setKey(ecdsaPublicKey)
+    .setAlias(ecdsaPublicKey.toEvmAddress())
+    .setInitialBalance(new Hbar(1))
     .setMaxTransactionFee(new Hbar(50)) //Set the max transaction fee to 50 hbar
     .setNodeAccountId(new AccountId(3)) //Set the node ID to submit the transaction to
     .setTransactionMemo("Transaction memo"); //Add a transaction memo
@@ -95,10 +99,12 @@ const maxTransactionFee = transaction.getMaxTransactionFee();
 ```go
 //Create the transaction and set the transaction properties
 transaction := hedera.NewAccountCreateTransaction(). //Any transaction can be applied here
-    SetKey(newKey.PublicKey()).
-    SetInitialBalance(hedera.NewHbar(100)). 
+    SetKey(ecdsaPublicKey).
+    SetAlias(ecdsaPublicKey.ToEvmAddress()).
+    SetInitialBalance(hedera.NewHbar(1)).
     SetMaxTransactionFee(hedera.NewHbar(2)). //Set the max transaction fee to 2 hbar
     SetTransactionMemo("Transaction memo") //Add a transaction memo
+    Freeze()
 
 maxtransactionFee := transaction.GetMaxTransactionFee()
 //v2.0.0         

@@ -313,7 +313,7 @@ npm run deploy-local
 
 When you run the `deploy-local` command, your console will prompt you to provide a `Version Label`. Enter any version number you'd like. This is just a way to keep track of different versions of your subgraph. For instance, if you started with version v0.0.1 today, but then made some changes and wanted to deploy an upgraded version, you bump up the version number to v0.0.2.
 
-_For example: ✔ Version Label (e.g. v0.0.1) · <mark style="background-color:yellow;">v0.0.1</mark>_
+For example: ✔ Version Label (e.g. v0.0.1) · <mark style="background-color:yellow;">v0.0.1</mark>
 
 <details>
 
