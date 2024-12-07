@@ -187,13 +187,13 @@ async function contractDeployFcn(bytecode, gasLim) {
 
 ## **Getting HBAR to the Contract**
 
-### **The receive**_**/**_**fallback** Functions
+### **The \_receive**_**/**_**fallback**\_\*\* Functions\*\*
 
-In this scenario, you (Operator) transfer 10 HBAR to the contract by triggering either the receive or fallback functions of the contract. As described in this [Solidity by Example](https://solidity-by-example.org/sending-ether/) page, the receive function is called when msg.data is empty, otherwise the fallback function is called.
+In this scenario, you (Operator) transfer 10 HBAR to the contract by triggering either the _**receive**_ or _**fallback**_ functions of the contract. As described in this [Solidity by Example](https://solidity-by-example.org/sending-ether/) page, the _**receive**_ function is called when _**msg.data**_ is empty, otherwise the _**fallback**_ function is called.
 
-In this case, the helper function contractExecuteNoFcn pays HBAR to the contract by using [ContractExecuteTransaction()](https://docs.hedera.com/hedera/sdks-and-apis/sdks/smart-contracts/call-a-smart-contract-function) and specifying a .setPayableAmount() without calling any specific contract function – thus triggering fallback. Note from the Solidity code that receive and fallback are external and payable functions.
+In this case, the helper function _**contractExecuteNoFcn**_ pays HBAR to the contract by using [**ContractExecuteTransaction()**](https://docs.hedera.com/hedera/sdks-and-apis/sdks/smart-contracts/call-a-smart-contract-function) and specifying a _**.setPayableAmount()**_ without calling any specific contract function – thus triggering _**fallback**_. Note from the Solidity code that _**receive**_ and _**fallback**_ are _**external**_ and _**payable**_ functions.
 
-The helper function contractCallQueryFcn checks the HBAR balance of the contract by calling the getBalance function of the contract – this call is done using [ContractCallQuery()](https://docs.hedera.com/hedera/sdks-and-apis/sdks/smart-contracts/call-a-smart-contract-function-1).
+The helper function _**contractCallQueryFcn**_ checks the HBAR balance of the contract by calling the _**getBalance**_ function of the contract – this call is done using [**ContractCallQuery()**](https://docs.hedera.com/hedera/sdks-and-apis/sdks/smart-contracts/call-a-smart-contract-function-1).
 
 ```javascript
 	console.log(`
@@ -259,11 +259,11 @@ _====================================================_
 
 ### **Executing a Payable Function**
 
-Now, you (Operator) transfer 21 HBAR to the contract by calling a specific contract function (tokenAssociate) that is payable using the [ContractExecuteTransaction()](https://docs.hedera.com/hedera/sdks-and-apis/sdks/smart-contracts/call-a-smart-contract-function) class and specifying a .setPayableAmount(). This is done with the helper function contractExecuteFcn.
+Now, you (Operator) transfer 21 HBAR to the contract by calling a specific contract function (_**tokenAssociate**_) that is _**payable**_ using the [**ContractExecuteTransaction()**](https://docs.hedera.com/hedera/sdks-and-apis/sdks/smart-contracts/call-a-smart-contract-function) class and specifying a _**.setPayableAmount()**_. This is done with the helper function _**contractExecuteFcn**_.
 
-In this scenario, contractParamsBuilderFcn is used to build the parameters that will be passed to the contract function – that is, the contract and token IDs which are then converted to Solidity addresses.
+In this scenario, _**contractParamsBuilderFcn**_ is used to build the parameters that will be passed to the contract function – that is, the contract and token IDs which are then converted to Solidity addresses.
 
-From the Solidity code, note that the tokenAssociate function associates the contract to the HTS token from the first step, and requires more than 20 HBAR to execute (just for fun).
+From the Solidity code, note that the _**tokenAssociate**_ function associates the contract to the HTS token from the first step, and requires more than 20 HBAR to execute (just for fun).
 
 ```javascript
 	// Transfer HBAR to the contract using .setPayableAmount SPECIFYING a contract function (tokenAssociate)
@@ -322,7 +322,7 @@ async function contractExecuteFcn(cId, gasLim, fcnName, params, amountHbar) {
 
 </details>
 
-### **Using `TransferTransaction`** in the SDK
+### **Using \_TransferTransaction**\_\*\* in the SDK\*\*
 
 Lastly in this scenario, the Treasury transfers 30 HBAR to the contract using [**TransferTransaction()**](https://docs.hedera.com/hedera/sdks-and-apis/sdks/cryptocurrency/transfer-cryptocurrency)**.** This is done with the helper function _**hbar2ContractSdkFcn**_. This scenario is just a quick recap and reminder of [Part 1 of the series](https://hedera.com/blog/how-to-send-and-receive-hbar-using-smart-contracts-part-1-using-the-sdk), so be sure to give that a read for more details.
 
@@ -354,8 +354,8 @@ async function hbar2ContractSdkFcn(sender, receiver, amount, pKey) {
 
 <summary><strong>Console Output ✅</strong></summary>
 
-* 30 ℏ from Treasury to contract (via SDK): SUCCESS
-* Contract balance (getBalance fcn): 61 ℏ
+* _30 ℏ from Treasury to contract (via SDK): SUCCESS_
+* _Contract balance (getBalance fcn): 61 ℏ_
 
 </details>
 
@@ -369,7 +369,7 @@ This tutorial focuses on implementation. For additional background and details o
 
 ### **Contract Transfers HBAR to Alice**
 
-The helper function **contractExecuteFcn** executes the **transferHbar** function of the contract. The helper function **contractParamsBuilderFcn** now builds the contract function parameters from the receiver ID (Alice’s) and the amount of HBAR to be sent. Also note from the previous section that the contract function is executed with a **gasLimit** of only 50,000 gas.
+The helper function _**contractExecuteFcn**_ executes the _**transferHbar**_ function of the contract. The helper function _**contractParamsBuilderFcn**_ now builds the contract function parameters from the receiver ID (Alice’s) and the amount of HBAR to be sent. Also note from the previous section that the contract function is executed with a _**gasLimit**_ of only 50,000 gas.
 
 ```javascript
 	console.log(`
@@ -435,7 +435,7 @@ The same helper function from before now executes the _**sendHbar**_ function of
 
 ### **Contract Calls HBAR to Alice**
 
-Just like above, the helper function **contractExecuteFcn** executes the **sendHbar** function of the contract.
+Just like above, the helper function _**contractExecuteFcn**_ executes the _**sendHbar**_ function of the contract.
 
 Examine the transaction history for the contract and the operator in the mirror node explorer, [HashScan](https://hashscan.io/#/mainnet/dashboard). You can also obtain additional information of interest using the [mirror node REST API](https://docs.hedera.com/hedera/sdks-and-apis/rest-api). Additional context for that API is provided in [this blog post](https://hedera.com/blog/how-to-look-up-transaction-history-on-hedera-using-mirror-nodes-back-to-the-basics).
 

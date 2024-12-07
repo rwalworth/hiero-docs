@@ -72,11 +72,11 @@ _**Console Output:**_
 
 **IMPORTANT NOTE**: Private keys for Testnet are displayed here for educational purposes only. Never share your private key(s) with others, as that may result in lost funds, or loss of control over your account.
 
-The next step is to deploy a smart contract using Truffle and the newly created Hedera account. Copy the value from “**New private key (RAW EVM)**” in the console output and paste it into the **ETH\_PRIVATE\_KEY** variable in the **.env** file (if you cloned the repository, you may need to rename the file from **.env\_sample** to **.env**).
+The next step is to deploy a smart contract using Truffle and the newly created Hedera account. Copy the value from “_**New private key (RAW EVM)**_” in the console output and paste it into the _**ETH\_PRIVATE\_KEY**_ variable in the _**.env**_ file (if you cloned the repository, you may need to rename the file from _**.env\_sample**_ to _**.env**_).
 
 #### Helper Functions
 
-The functions **autoCreateAccountFcn()** and **mirrorQueryFcn()** perform the auto account creation and mirror query, respectively.
+The functions _**autoCreateAccountFcn()**_ and _**mirrorQueryFcn()**_ perform the auto account creation and mirror query, respectively.
 
 ```javascript
 async function autoCreateAccountFcn(senderAccountId, receiverAccountId, hbarAmount) {

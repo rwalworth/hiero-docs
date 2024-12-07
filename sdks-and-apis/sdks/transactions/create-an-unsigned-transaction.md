@@ -9,9 +9,8 @@ These methods allow you to build a transaction that requires further processing 
 ```java
 //Create an unsigned transaction 
 AccountCreateTransaction transaction = new AccountCreateTransaction()
-    .setKey(ecdsaPublicKey)
-    .setAlias(ecdsaPublicKey.toEvmAddress())
-    .setInitialBalance(new Hbar(1));
+    .setKey(newPublicKey)
+    .setInitialBalance(Hbar.fromTinybars(1000));
 
 //Freeze the transaction for signing
 //The transaction cannot be modified after this point
@@ -27,9 +26,8 @@ System.out.println(freezeTransaction);
 ```java
 //Create an unsigned transaction 
 const transaction = new AccountCreateTransaction()
-    .setKey(ecdsaPublicKey)
-    .setAlias(ecdsaPublicKey.toEvmAddress())
-    .setInitialBalance(new Hbar(1));
+    .setKey(newPublicKey)
+    .setInitialBalance(Hbar.fromTinybars(1000));
 
 //Freeze the transaction for signing
 //The transaction cannot be modified after this point
@@ -45,10 +43,8 @@ console.log(freezeTransaction);
 ```go
 //Create an unsigned transaction 
 transaction := hedera.NewAccountCreateTransaction().
-    SetKey(ecdsaPublicKey).
-    SetAlias(ecdsaPublicKey.ToEvmAddress()).
-    SetInitialBalance(hedera.NewHbar(1)).
-    Freeze()
+    SetKey(newKey.PublicKey()).
+    SetInitialBalance(hedera.NewHbar(1000))
     
 //Freeze the transaction for signing
 //The transaction cannot be modified after this point
