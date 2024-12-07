@@ -109,11 +109,11 @@ Visit the [HashPack web app](https://wallet.hashpack.app/) and follow these step
 
 <div><figure><img src="../.gitbook/assets/hashpack-testnet-new-flow-create-new-wallet-login.png" alt="" width="375"><figcaption></figcaption></figure> <figure><img src="../.gitbook/assets/hashpack-testnet-new-flow-testnet-checked.png" alt="" width="375"><figcaption></figcaption></figure></div>
 
-3. Select **ECDSA Account** to create an ECDSA testnet account.
+4. Select **ECDSA Account** to create an ECDSA testnet account.
 
 <div><figure><img src="../.gitbook/assets/hashpack-testnet-new-flow-advanced creation.png" alt="" width="375"><figcaption></figcaption></figure> <figure><img src="../.gitbook/assets/hashpack-testnet-new-flow-seed-phrase.png" alt="" width="375"><figcaption></figcaption></figure></div>
 
-4. Verify your new account seed phrase and save your recovery keys.
+5. Verify your new account seed phrase and save your recovery keys.
 
 <div><figure><img src="../.gitbook/assets/hashpack-testnet-new-flow-seed-verify.png" alt="" width="375"><figcaption></figcaption></figure> <figure><img src="../.gitbook/assets/hashpack-testnet-new-flow-save-recovery-info.png" alt="" width="375"><figcaption></figcaption></figure></div>
 
