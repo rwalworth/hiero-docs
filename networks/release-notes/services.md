@@ -16,6 +16,24 @@ Visit the [Hedera status page](https://status.hedera.com/) for the latest versio
 **TESTNET UPDATE SCHEDULED: DECEMBER 4, 2024**
 {% endhint %}
 
+### Release Highlights - Hedera 0.56&#x20;
+
+#### HIPs
+
+**HIP-869 Dynamic Address Book—Stage 1**: This release includes the implementation of HIP-869, enabling the Dynamic Address Book. Node operators can now update node details and address books via Hedera transactions. This streamlines network operations and enables node operators to manage their associated node entries directly in the Address Book.\
+\
+**HIP-904 System Contract Functions**:  Implements the System Contract Functions section within [HIP-904](http://hips.hedera.com/hip/hip-904#system-contract-functions).  Introduces Hedera Token Service (HTS) support for the airdrop-related capabilities. These functions are implemented as system contract functions, making it possible for smart contracts to issue Frictionless Airdrops, Token Reject, and AutomaticToken Association configurations for efficient management.\
+\
+**HIP-632 - `isAuthorized()`**: The `isAuthorized()` function introduced in [HIP-632](https://hips.hedera.com/hip/hip-632) extends the Hedera Account Service (HAS) System Contract, enabling smart contracts to authenticate signatures against Hedera accounts. This provides functionality akin to the validation step following Ethereum's `ECRECOVER`, without recovering public keys. It supports ECDSA, ED25519, and complex keys such as  threshold keys, though ECDSA is recommended for compatibility and interoperability with Ethereum. This builds on the previous functionality of `isAuthorizedRaw()` released in 0.52.\
+\
+**Other Notable Changes:**\
+\
+**Block Streams - Dev Access Preview:** Block Streams is a new output stream that will replace Hedera’s existing event and record streams into a single stream of verifiable data.  This consolidated approach not only simplifies data consumption but also enhances Hedera's capabilities with the inclusion of state data. \
+\
+Starting with version 0.56, consensus nodes will publish preview block stream files alongside the existing record stream, which remains the authoritative source of truth for Hedera. This preview allows the community to explore, test, and provide feedback on this new feature, paving the way for its future adoption.\
+\
+**Migration from `.pfx` to `.pem` Cryptography Files**: Consensus node cryptography system was migrated from using `.pfx` files to more manageable `.pem` files.
+
 ### [Build 0.56.7](https://github.com/hashgraph/hedera-services/releases/tag/v0.56.7)
 
 <details>
