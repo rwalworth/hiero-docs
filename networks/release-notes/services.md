@@ -6,6 +6,37 @@ description: Hedera Services release information
 
 Visit the [Hedera status page](https://status.hedera.com/) for the latest versions supported on each network.
 
+## Release v0.57
+
+{% hint style="info" %}
+**MAINNET UPDATE SCHEDULED: JANUARY 15, 2025**
+{% endhint %}
+
+{% hint style="info" %}
+**TESTNET UPDATE SCHEDULED: DECEMBER 17, 2024**
+{% endhint %}
+
+### [Build 0.57.1](https://github.com/hashgraph/hedera-services/releases/tag/v0.57.1)
+
+<details>
+
+<summary><strong>What's Changed</strong></summary>
+
+* ci: Fix cron jobs to use github token for gh cli calls and specify java version by [@rbarkerSL](https://github.com/rbarkerSL) in [#16175](https://github.com/hashgraph/hedera-services/pull/16175)
+* build(deps): bump actions/setup-java from 4.0.0 to 4.5.0 by [@dependabot](https://github.com/dependabot) in [#16168](https://github.com/hashgraph/hedera-services/pull/16168)
+* build(deps): bump actions/setup-python from 5.0.0 to 5.3.0 by [@dependabot](https://github.com/dependabot) in [#16169](https://github.com/hashgraph/hedera-services/pull/16169)
+* build(deps): bump actions/cache from 4.0.1 to 4.1.2 by [@dependabot](https://github.com/dependabot) in [#16101](https://github.com/hashgraph/hedera-services/pull/16101)
+* refactor: create event creator modules by [@mustafauzunn](https://github.com/mustafauzunn) in [#16138](https://github.com/hashgraph/hedera-services/pull/16138)
+* refactor: gossip module names and extract FallenBehindManager to gossip module by [@mustafauzunn](https://github.com/mustafauzunn) in [#16113](https://github.com/hashgraph/hedera-services/pull/16113)
+* ci: disable release 0.53 regression by [@JeffreyDallas](https://github.com/JeffreyDallas) in [#16188](https://github.com/hashgraph/hedera-services/pull/16188)
+* feat: HIP-904 Reject Tokens System Contract implementation by [@stoyanov-st](https://github.com/stoyanov-st) in [#16118](https://github.com/hashgraph/hedera-services/pull/16118)
+* feat: HIP 904 SetUnlimitedAutoAssociations System Contract Implementation by [@stoyanov-st](https://github.com/stoyanov-st) in [#16141](https://github.com/hashgraph/hedera-services/pull/16141)
+* fix: LegacyConfigPropertiesLoader should not suppress ParseException by [@leninmehedy](https://github.com/leninmehedy) in [#16133](https://github.com/hashgraph/hedera-services/pull/16133)
+
+**Full Changelog**: [v0.56.7...v0.57.1](https://github.com/hashgraph/hedera-services/compare/v0.56.7...v0.57.1)
+
+</details>
+
 ## Release v0.56
 
 {% hint style="info" %}
