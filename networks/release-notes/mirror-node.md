@@ -8,6 +8,14 @@ Visit the [Hedera status page](https://status.hedera.com/) for the latest versio
 
 ## Latest Releases
 
+## [V0.119.0](https://github.com/hashgraph/hedera-mirror-node/releases/tag/v0.119.0)
+
+The `/api/v1/contracts/call` API that simulates smart contract executions now supports the [Ethereum Cancun](https://ethereum.org/en/roadmap/dencun/) upgrade. Additionally, there were a number of tasks completed integrating the latest modularized EVM library.
+
+The helm chart gained support for the Kubernetes [Gateway API](https://kubernetes.io/docs/concepts/services-networking/gateway/). The Gateway API provides a newer alternative to the existing Ingress support in the chart. Our Gateway API support is still preliminary since we can't use it in production environments until Google adds support for `GrpcRoute` and `RegularExpression` path matching in GKE.
+
+This release fixes a critical bug with the handling of claimed token airdrops. Now claimed airdrops will implicitly create a token association and properly track token balances. Any existing airdrops are corrected via a database migration. The same fixes were back-ported to `v0.118.1`.
+
 ## [V0.118.0](https://github.com/hashgraph/hedera-mirror-node/releases/tag/v0.118.0)
 
 A new developer quick start [guide](https://github.com/hashgraph/hedera-mirror-node/blob/main/docs/development.md) was added by a community member. This document is intended to help new contributors quickly setup their local development environment for the mirror node. Please try it out and hopefully make your first contribution!
