@@ -99,6 +99,8 @@
     * [Understanding Hedera for EVM Developers](core-concepts/smart-contracts/hederas-evm-equivalence-goals-and-exceptions.md)
     * [Creating Smart Contracts](core-concepts/smart-contracts/creating-smart-contracts.md)
     * [Compiling Smart Contracts](core-concepts/smart-contracts/compiling-smart-contracts.md)
+    * [System Smart Contracts](core-concepts/smart-contracts/system-smart-contracts/README.md)
+      * [Hedera Account Service](core-concepts/smart-contracts/system-smart-contracts/hedera-account-service.md)
     * [Gas and Fees](core-concepts/smart-contracts/gas-and-fees.md)
     * [JSON-RPC Relay](core-concepts/smart-contracts/deploying-smart-contracts/json-rpc-relay.md)
     * [Deploying Smart Contracts](core-concepts/smart-contracts/deploying-smart-contracts.md)
