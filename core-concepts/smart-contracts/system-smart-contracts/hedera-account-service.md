@@ -18,8 +18,6 @@ By addressing these use cases, HIP-632 provides a seamless way for developers to
 * Operates similarly to Ethereum's `ECRECOVER` for single key structure but supports both secp256k1 (Ethereum) and ED25519 (Hedera) cryptography.
 * Returns `true` if the signature is valid and linked to the account, otherwise `false`.
 
-<table><thead><tr><th width="171">Parameter</th><th>Description</th></tr></thead><tbody><tr><td><strong>address</strong></td><td>A 20-byte identifier used to represent an account on the Hedera network or an EVM-compatible account.</td></tr><tr><td><strong>messaHash</strong></td><td>A cryptographic hash of the <code>message</code>, calculated using an algorithm like SHA-256 or Keccak-256. This is typically what is signed instead of the raw message.</td></tr><tr><td><strong>signatureBlob</strong></td><td>A concatenation of the digital signature components, typically including <code>r</code>, <code>s</code>, and <code>v</code> values for ECDSA, or the equivalent data for ED25519 signatures.</td></tr></tbody></table>
-
 #### **isAuthorized (address, message, signatureBlob)**
 
 * Extends **isAuthorizedRaw** by validating that the specific Hedera account (referenced by either an account number alias or EVM address alias) is authorized to execute the transaction.
@@ -27,7 +25,7 @@ By addressing these use cases, HIP-632 provides a seamless way for developers to
 * Provides a way to confirm authorization based on Hedera’s advanced account-based key management.
 * Returns `true` if the signature is valid and linked to the account, otherwise `false`.
 
-<table><thead><tr><th width="170">Parameter</th><th>Description</th></tr></thead><tbody><tr><td><strong>address</strong></td><td>A 20-byte identifier used to represent an account on the Hedera network or an EVM-compatible account.</td></tr><tr><td><strong>message</strong></td><td>The original plaintext data or payload that the signature is derived from. This is the information that was signed to produce the signature.</td></tr><tr><td><strong>signatureBlob</strong></td><td>A concatenation of the digital signature components, typically including <code>r</code>, <code>s</code>, and <code>v</code> values for ECDSA, or the equivalent data for ED25519 signatures.</td></tr></tbody></table>
+<table><thead><tr><th width="171">Parameter</th><th>Description</th></tr></thead><tbody><tr><td><strong>address</strong></td><td>A 20-byte identifier used to represent an account on the Hedera network or an EVM-compatible account.</td></tr><tr><td><strong>message</strong></td><td>The original plaintext data or payload that the signature is derived from. This is the information that was signed to produce the signature.</td></tr><tr><td><strong>messaHash</strong></td><td>A cryptographic hash of the <code>message</code>, calculated using an algorithm like SHA-256 or Keccak-256. This is typically what is signed instead of the raw message.</td></tr><tr><td><strong>signatureBlob</strong></td><td>A concatenation of the digital signature components, typically including <code>r</code>, <code>s</code>, and <code>v</code> values for ECDSA, or the equivalent data for ED25519 signatures.</td></tr></tbody></table>
 
 #### Behavior and Cost
 
@@ -40,3 +38,15 @@ Gas fee schedule and calculation
 {% endembed %}
 
 **Reference**: [HIP-632](https://hips.hedera.com/hip/hip-632)
+
+***
+
+## 📣 ECRECOVER Support for ECDSA Hedera Accounts
+
+EVM developers should note that `ECRECOVER` natively supports ECDSA accounts on Hedera. Aliases for these accounts, derived using Keccak-256(publicKey), are fully compatible with Ethereum's `ECRECOVER` logic. This enables seamless interaction with ECDSA accounts on Hedera using `ECRECOVER`, just like standard Ethereum accounts.
+
+To verify an ECDSA signature, developers can call `ECRECOVER(messageHash, r, s, v)` in Ethereum smart contracts. If the recovered address matches the alias of a Hedera account, the signer is confirmed to control the account. No special integration is needed—`ECRECOVER` functions as a standard EVM precompiled contract on Hedera
+
+{% hint style="info" %}
+**Note**: This functionality is specific to ECDSA accounts with Keccak-256(publicKey) aliases. For ED25519 accounts, Hedera offers alternative authorization methods, such as `isAuthorized()` or `isAuthorizedRaw()`, to verify control of an account. For details, refer to the [Hedera Account Service System Contract](https://github.com/hashgraph/hedera-smart-contracts/tree/main/contracts/system-contracts/hedera-account-service).
+{% endhint %}
