@@ -789,6 +789,10 @@ Uses for a nonce: authentication, initialization vectors, hashing, indexing, sma
 
 Within a distributed ledger, a nonce is proof of work for an encrypted (or hashed) block. Transaction verification and other data contained within that block can then be verified via the added nonce.
 
+### Non-View Functions
+
+Smart contract functions that modify the blockchain's state, such as updating variables, transferring tokens, or executing approvals. These functions require a transaction, consume gas fees, and result in permanent state changes on successful execution.
+
 ## O
 
 ### Off-Chain
