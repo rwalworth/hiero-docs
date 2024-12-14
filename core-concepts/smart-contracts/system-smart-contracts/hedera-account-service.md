@@ -1,5 +1,17 @@
 # Hedera Account Service
 
+## 📣 ECRECOVER Support for ECDSA Hedera Accounts
+
+EVM developers should note that `ECRECOVER` natively supports ECDSA accounts on Hedera. Aliases for these accounts, derived using Keccak-256(publicKey), are fully compatible with Ethereum's `ECRECOVER` logic. This enables seamless interaction with ECDSA accounts on Hedera using `ECRECOVER`, just like standard Ethereum accounts.
+
+To verify an ECDSA signature, developers can call `ECRECOVER(messageHash, r, s, v)` in Ethereum smart contracts. If the recovered address matches the alias of a Hedera account, the signer is confirmed to control the account. No special integration is needed—`ECRECOVER` functions as a standard EVM precompiled contract on Hedera
+
+{% hint style="info" %}
+**Note**: This functionality is specific to ECDSA accounts with Keccak-256(publicKey) aliases. For ED25519 accounts, Hedera offers alternative authorization methods, such as `isAuthorized()` or `isAuthorizedRaw()`, to verify control of an account. For details, refer to the [Hedera Account Service System Contract](https://github.com/hashgraph/hedera-smart-contracts/tree/main/contracts/system-contracts/hedera-account-service). See below for details on these two precompile functions.
+{% endhint %}
+
+***
+
 ## Signature Validation Precompiles (HIP-632)
 
 To extend Hedera’s compatibility with Ethereum’s EVM, [HIP-632](https://hips.hedera.com/hip/hip-632) introduced two new precompile functions for signature validation: `isAuthorizedRaw` and `isAuthorized`. These precompiles enable smart contracts on Hedera to validate both ED25519 and ECDSA (secp256k1) Hedera account signatures, making it easier for developers to build applications that operate across Hedera-native and EVM-based ecosystems.&#x20;
@@ -41,12 +53,4 @@ Gas fee schedule and calculation
 
 ***
 
-## 📣 ECRECOVER Support for ECDSA Hedera Accounts
-
-EVM developers should note that `ECRECOVER` natively supports ECDSA accounts on Hedera. Aliases for these accounts, derived using Keccak-256(publicKey), are fully compatible with Ethereum's `ECRECOVER` logic. This enables seamless interaction with ECDSA accounts on Hedera using `ECRECOVER`, just like standard Ethereum accounts.
-
-To verify an ECDSA signature, developers can call `ECRECOVER(messageHash, r, s, v)` in Ethereum smart contracts. If the recovered address matches the alias of a Hedera account, the signer is confirmed to control the account. No special integration is needed—`ECRECOVER` functions as a standard EVM precompiled contract on Hedera
-
-{% hint style="info" %}
-**Note**: This functionality is specific to ECDSA accounts with Keccak-256(publicKey) aliases. For ED25519 accounts, Hedera offers alternative authorization methods, such as `isAuthorized()` or `isAuthorizedRaw()`, to verify control of an account. For details, refer to the [Hedera Account Service System Contract](https://github.com/hashgraph/hedera-smart-contracts/tree/main/contracts/system-contracts/hedera-account-service).
-{% endhint %}
+##
