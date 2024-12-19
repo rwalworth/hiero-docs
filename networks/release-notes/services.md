@@ -13,8 +13,20 @@ Visit the [Hedera status page](https://status.hedera.com/) for the latest versio
 {% endhint %}
 
 {% hint style="success" %}
-**TESTNET UPDATE SCHEDULED: DECEMBER 17, 2024**
+**TESTNET UPDATE SCHEDULED: DECEMBER 19, 2024**
 {% endhint %}
+
+### [Build 0.57.3](https://github.com/hashgraph/hedera-services/releases/tag/v0.57.3)
+
+<details>
+
+<summary><strong>What's Changed</strong></summary>
+
+* fix: tokenClaimAirdrop throws NPE on null sender or receiver by [@kimbor](https://github.com/kimbor) in [#17096](https://github.com/hashgraph/hedera-services/pull/17096)
+
+**Full Changelog**: [v0.57.2...v0.57.3](https://github.com/hashgraph/hedera-services/compare/v0.57.2...v0.57.3)
+
+</details>
 
 ### [Build 0.57.2](https://github.com/hashgraph/hedera-services/releases/tag/v0.57.2)
 
