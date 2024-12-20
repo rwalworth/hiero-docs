@@ -133,7 +133,7 @@ In your project root directory, run:
     * The default number of accounts will enable you to complete all examples.&#x20;
 3.  **Enter your preferred JSON-RPC endpoint URL**&#x20;
 
-    Default: "http://localhost:7546/" (enter a blank value to use the default value)
+    Current: "https://7546-hederadev-hellofuturewo-l2r7cpgqrcv.ws-us117.gitpod.io" (enter a blank value to use the default value)
 
     * List of public endpoints [here](../core-concepts/smart-contracts/deploying-smart-contracts/json-rpc-relay.md).
     * Note that the default value will be different if you are using Gitpod.
