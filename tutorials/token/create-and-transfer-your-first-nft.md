@@ -1,4 +1,4 @@
-# ✅ Create and Transfer Your First NFT
+# Create and Transfer Your First NFT
 
 ## Summary
 

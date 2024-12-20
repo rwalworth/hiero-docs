@@ -1,4 +1,4 @@
-# ✅ Create and Transfer an NFT using a Solidity Contract
+# Create and Transfer an NFT using a Solidity Contract
 
 ## Summary
 

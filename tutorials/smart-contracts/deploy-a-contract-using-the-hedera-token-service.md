@@ -1,4 +1,4 @@
-# ✅ Deploy a Contract Using the Hedera Token Service
+# Deploy a Contract Using the Hedera Token Service
 
 ## Summary
 
