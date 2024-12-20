@@ -22,6 +22,15 @@ We recommend you complete one of the two tutorials below that teach you how to c
 
 ***
 
+## Table of Contents
+
+1. [Connect Metadata](structure-your-token-metadata-using-json-schema-v2.md#how-do-you-connect-metadata-to-a-token)
+2. [Metadata Schema](structure-your-token-metadata-using-json-schema-v2.md#what-does-the-token-metadata-json-schema-v2-look-like)
+3. [Verify Metadata](structure-your-token-metadata-using-json-schema-v2.md#how-to-verify-your-token-metadata-is-correct)
+4. [Video Tutorial](structure-your-token-metadata-using-json-schema-v2.md#want-to-learn-more-about-token-metadata)
+
+***
+
 ## How do you connect metadata to a token?
 
 It's essential to understand that the token metadata JSON schema V2 requires you to store metadata using a storage solution, centralized or decentralized, such as IPFS or Arweave.

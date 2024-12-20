@@ -22,6 +22,19 @@ By the end of this tutorial, you'll be equipped to deploy smart contracts on the
 
 ***
 
+## Table of Contents&#x20;
+
+1. [Project Setup](deploy-a-smart-contract-using-hardhat-hedera-json-rpc-relay.md#step-1-set-up-project)
+2. [Project Configuration](deploy-a-smart-contract-using-hardhat-hedera-json-rpc-relay.md#step-2-configure-project)
+   1. [Environment Variables](deploy-a-smart-contract-using-hardhat-hedera-json-rpc-relay.md#environment-variables)
+   2. [Hardhat Config File](deploy-a-smart-contract-using-hardhat-hedera-json-rpc-relay.md#hardhat-configuration-file)
+3. [Compile Smart Contract](deploy-a-smart-contract-using-hardhat-hedera-json-rpc-relay.md#step-3-compile-contract)
+4. [Deploy Smart Contract](deploy-a-smart-contract-using-hardhat-hedera-json-rpc-relay.md#step-4-test-and-deploy-contract)
+   1. [Next Steps](deploy-a-smart-contract-using-hardhat-hedera-json-rpc-relay.md#next-steps)
+5. [Additional Resources](deploy-a-smart-contract-using-hardhat-hedera-json-rpc-relay.md#additional-resources)
+
+***
+
 ## Step 1: Set Up Project
 
 To simplify the setup process, you can clone a boilerplate Hardhat example project from the `hedera-hardhat-example-project` [repository](https://github.com/hashgraph/hedera-hardhat-example-project). Open a terminal window and navigate to your preferred directory where your Hardhat project will be stored.&#x20;

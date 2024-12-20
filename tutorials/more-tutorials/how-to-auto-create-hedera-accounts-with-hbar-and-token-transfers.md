@@ -16,8 +16,8 @@ In this tutorial, a treasury account will be created to transfer HTS tokens to B
 
 ## **Prerequisites**
 
-1. Get a Hedera Testnet account [here](../../getting-started/create-and-fund-your-hedera-testnet-account.md).&#x20;
-2. Set up your environment and create a client [here](../../getting-started/environment-setup.md).&#x20;
+* Get a [Hedera Testnet](https://portal.hedera.com/register) account [here](../../getting-started/create-and-fund-your-hedera-testnet-account.md).&#x20;
+* Set up your environment and create a client [here](../../getting-started/environment-setup.md).&#x20;
 
 <details>
 
@@ -27,6 +27,15 @@ In this tutorial, a treasury account will be created to transfer HTS tokens to B
 * [auto-create account by sending NFT](https://github.com/a-ridley/hedera-auto-create-account-with-nft)
 
 </details>
+
+***
+
+## Table of Contents
+
+1. [Create Treasury Account](how-to-auto-create-hedera-accounts-with-hbar-and-token-transfers.md#create-treasury-account)
+2. [Create FTs and NFT Collection](how-to-auto-create-hedera-accounts-with-hbar-and-token-transfers.md#create-fts-and-an-nft-collection)
+3. [Create Bob's ECDSA Public Key Alias](how-to-auto-create-hedera-accounts-with-hbar-and-token-transfers.md#create-bobs-ecdsa-public-key-alias)
+4. [Return New Account ID](how-to-auto-create-hedera-accounts-with-hbar-and-token-transfers.md#return-new-account-id)
 
 ***
 
@@ -46,11 +55,14 @@ We will create the functions necessary to create a new account, create fungible 
 {% tab title="Create Account With Initial Balance" %}
 ```javascript
 const createAccount = async (client:  Client, initialBalance: number) => {
- const accountPrivateKey = PrivateKey.generateED25519();
+ const accountPrivateKey = PrivateKey.generateECDSA();
+ const accountPublicKey = accountPrivateKey.publicKey;
  
  const response = await new AccountCreateTransaction()
    .setInitialBalance(new Hbar(initialBalance))
-   .setKey(accountPrivateKey)
+   .setKey(accountPublicKey)
+   //Do NOT set an alias if you need to update/rotate keys in the future
+   .setAlias(accountPublicKey.toEvmAddress())
    .execute(client);
  
  const receipt = await response.getReceipt(client);

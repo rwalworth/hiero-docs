@@ -9,8 +9,17 @@ In this tutorial, you’ll learn how to make Hedera native tokens work like Ethe
 ## Prerequisites
 
 * Basic understanding of [TypeScript](https://www.typescriptlang.org/) and [Solidity](https://docs.soliditylang.org/en/latest/).
-* Get a [Hedera testnet account](../../getting-started/create-and-fund-your-hedera-testnet-account.md).
+* Get a [Hedera testnet account](https://portal.hedera.com/register).
 * Have [`ts-node`](https://www.npmjs.com/package/ts-node) installed.
+
+***
+
+## Table of Contents
+
+1. [Project Setup](use-native-tokens-as-erc20-tokens.md#project-setup)
+2. [Project Configuration](use-native-tokens-as-erc20-tokens.md#project-configuration)
+3. [Project Contents](use-native-tokens-as-erc20-tokens.md#project-contents)
+4. [Running the Project](use-native-tokens-as-erc20-tokens.md#running-the-project)
 
 ***
 

@@ -21,6 +21,16 @@ This guide provides step-by-step instructions on how to configure and use a Hede
 
 ***
 
+## Table of Contents
+
+1. [Set Up Mirror Node](how-to-configure-a-mirror-node-and-query-specific-data.md#set-up-mirror-node)
+2. [Configure Mirror Node](how-to-configure-a-mirror-node-and-query-specific-data.md#configure-mirror-node)
+3. [Start Mirror Node](how-to-configure-a-mirror-node-and-query-specific-data.md#start-mirror-node)
+4. [Query Mirror Node](how-to-configure-a-mirror-node-and-query-specific-data.md#query-output-verification)
+5. [Additional Resources](how-to-configure-a-mirror-node-and-query-specific-data.md#additional-resources)
+
+***
+
 ## Set Up Mirror Node
 
 Clone the Hedera mirror node repository and navigate to the project directory:

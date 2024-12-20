@@ -1,4 +1,4 @@
-# Deploy a Contract Using the Hedera Token Service
+# ✅ Deploy a Contract Using the Hedera Token Service
 
 ## Summary
 
@@ -16,8 +16,8 @@ _Smart contract entity auto renewal and expiry will be enabled in a future relea
 
 We recommend you complete the following introduction to get a basic understanding of Hedera transactions. This example does not build upon the previous examples.
 
-1. Get a [Hedera testnet account](../../getting-started/create-and-fund-your-hedera-testnet-account.md).
-2. Set up your environment [here](../../getting-started/environment-setup.md).
+* Get a [Hedera testnet account](../../getting-started/create-and-fund-your-hedera-testnet-account.md).
+* Set up your environment [here](../../getting-started/environment-setup.md).
 
 ***
 
@@ -765,11 +765,14 @@ public class HTS {
         byte[] bytecode = object.getBytes(StandardCharsets.UTF_8);
 
         //Create a treasury Key
-        PrivateKey treasuryKey = PrivateKey.generateED25519();
+        PrivateKey treasuryKey = PrivateKey.generateECDSA();
+        PublicKey treasuryPublicKey = treasuryKey.getPublicKey();
 
         //Create a treasury account
         AccountCreateTransaction treasuryAccount = new AccountCreateTransaction()
-                .setKey(treasuryKey)
+                .setKey(treasuryPublicKey)
+                //Do NOT set an alias if you need to update/rotate keys in the future
+                .setAlias(treasuryPublicKey.toEvmAddress())
                 .setInitialBalance(new Hbar(10))
                 .setAccountMemo("treasury account");
 
@@ -935,7 +938,7 @@ const htsContract = require("./HTS.json");
 async function htsContractFunction() {
   //Grab your Hedera testnet account ID and private key from your .env file
   const accountIdTest = AccountId.fromString(process.env.MY_ACCOUNT_ID);
-  const accountKeyTest = PrivateKey.fromStringED25519(
+  const accountKeyTest = PrivateKey.fromStringECDSA(
     process.env.MY_PRIVATE_KEY
   );
 
@@ -953,11 +956,14 @@ async function htsContractFunction() {
   const bytecode = htsContract.data.bytecode.object;
 
   //Treasury Key
-  const treasuryKey = PrivateKey.generateED25519();
+  const treasuryKey = PrivateKey.generateECDSA();
+  const treasuryPublicKey = treasuryKey.publicKey;
 
   //Create token treasury account
   const treasuryAccount = new AccountCreateTransaction()
     .setKey(treasuryKey)
+    //Do NOT set an alias if you need to update/rotate keys in the future
+    .setAlias(treasuryPublicKey.toEvmAddress())
     .setInitialBalance(new Hbar(5))
     .setAccountMemo("treasury account");
 
@@ -1165,11 +1171,14 @@ func main() {
 	client.SetOperator(accountIdTest, privateKeyTest)
 
 	//Treasury Key
-	treasuryKey, err := hedera.PrivateKeyGenerateEd25519()
+	treasuryKey, err := hedera.PrivateKeyGenerateEcdsa()
+	treasuryPublicKey := treasuryKey.PublicKey()
 
 	//Create token treasury account
 	treasuryAccount := hedera.NewAccountCreateTransaction().
-		SetKey(treasuryKey).
+		SetKey(treasuryPublicKey).
+    		//Do NOT set an alias if you need to update/rotate keys in the future
+    		SetAlias(treasuryPublicKey.ToEvmAddress()).
 		SetInitialBalance(hedera.NewHbar(5).
 		SetAccountMemo("treasury account")
 

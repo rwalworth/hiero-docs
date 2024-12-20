@@ -19,8 +19,8 @@ Now that we have a basic understanding of the transaction types, let’s move on
 
 We recommend you complete the following introduction to get a basic understanding of Hedera transactions. This example does not build upon the previous examples.
 
-* Get a [Hedera testnet account](../../getting-started/create-and-fund-your-hedera-testnet-account.md).
-* Set up your environment [here](../../getting-started/environment-setup.md).
+* Get a [Hedera testnet account](https://docs.hedera.com/hedera/getting-started/introduction).
+* Set up your environment [here](https://docs.hedera.com/hedera/getting-started/environment-set-up).
 * `.env` file with this additional variable added:
   * <pre><code><strong>HEDERA_NETWORK=testnet
     </strong></code></pre>
@@ -74,39 +74,51 @@ async function main() {
     /**
      * Step 1: Create 4 accounts
      */
-    const alicePrivateKey = PrivateKey.generateED25519();
+    const alicePrivateKey = PrivateKey.generateECDSA();
+    const alicePublicKey = alicePrivateKey.publicKey;
     const { accountId: aliceId } = await (
         await new AccountCreateTransaction()
-            .setKey(alicePrivateKey)
+            .setKey(alicePublicKey)
+            //Do NOT set an alias if you need to update/rotate keys in the future
+            .setAlias(alicePublicKey.toEvmAddress())
             .setInitialBalance(new Hbar(10))
             .setMaxAutomaticTokenAssociations(-1) // unlimited associations
             .execute(client)
     ).getReceipt(client);
 
-    const bobPrivateKey = PrivateKey.generateED25519();
+    const bobPrivateKey = PrivateKey.generateECDSA();
+    const bobPublicKey = bobPrivateKey.publicKey;
     const { accountId: bobId } = await (
         await new AccountCreateTransaction()
-            .setKey(bobPrivateKey)
+            .setKey(bobPublicKey)
+            //Do NOT set an alias if you need to update/rotate keys in the future
+            .setAlias(bobPublicKey.toEvmAddress())
             .setInitialBalance(new Hbar(10))
             .setMaxAutomaticTokenAssociations(1) // 1 association
             .execute(client)
     ).getReceipt(client);
 
  
-    const charliePrivateKey = PrivateKey.generateED25519();
+    const charliePrivateKey = PrivateKey.generateECDSA();
+    const charliePublicKey = charliePrivateKey.publicKey;
     const { accountId: charlieId } = await (
         await new AccountCreateTransaction()
-            .setKey(charliePrivateKey)
+            .setKey(charliePublicKey)
+            //Do NOT set an alias if you need to update/rotate keys in the future
+            .setAlias(charliePublicKey.toEvmAddress())
             .setInitialBalance(new Hbar(10))
             .setMaxAutomaticTokenAssociations(0) // no association slots
             .execute(client)
     ).getReceipt(client);
 
     // treasury account for tokens
-    const treasuryKey = PrivateKey.generateED25519();
+    const treasuryKey = PrivateKey.generateECDSA();
+    const treasuryPublicKey = treasuryKey.publicKey;
     const { accountId: treasuryAccount } = await (
         await new AccountCreateTransaction()
-            .setKey(treasuryKey)
+            .setKey(treasuryPublicKey)
+            //Do NOT set an alias if you need to update/rotate keys in the future
+            .setAlias(treasuryPublicKey.toEvmAddress()
             .setInitialBalance(new Hbar(10))
             .setMaxAutomaticTokenAssociations(-1)
             .execute(client)
@@ -760,39 +772,51 @@ async function main() {
     /**
      * Step 1: Create 4 accounts
      */
-    const alicePrivateKey = PrivateKey.generateED25519();
+    const alicePrivateKey = PrivateKey.generateECDSA();
+    const alicePublicKey = alicePrivateKey.publicKey;
     const { accountId: aliceId } = await (
         await new AccountCreateTransaction()
-            .setKey(alicePrivateKey)
+            .setKey(alicePublicKey)
+            //Do NOT set an alias if you need to update/rotate keys in the future
+            .setAlias(alicePublicKey.toEvmAddress())
             .setInitialBalance(new Hbar(10))
             .setMaxAutomaticTokenAssociations(-1) // unlimited associations
             .execute(client)
     ).getReceipt(client);
 
-    const bobPrivateKey = PrivateKey.generateED25519();
+    const bobPrivateKey = PrivateKey.generateECDSA();
+    const bobPublicKey = bobPrivateKey.publicKey;
     const { accountId: bobId } = await (
         await new AccountCreateTransaction()
-            .setKey(bobPrivateKey)
+            .setKey(bobPublicKey)
+            //Do NOT set an alias if you need to update/rotate keys in the future
+            .setAlias(alicePublicKey.toEvmAddress())
             .setInitialBalance(new Hbar(10))
             .setMaxAutomaticTokenAssociations(1) // 1 association
             .execute(client)
     ).getReceipt(client);
 
  
-    const charliePrivateKey = PrivateKey.generateED25519();
+    const charliePrivateKey = PrivateKey.generateECDSA();
+    const charliePublicKey = charliePrivateKey.publicKey;
     const { accountId: charlieId } = await (
         await new AccountCreateTransaction()
-            .setKey(charliePrivateKey)
+            .setKey(charliePublicKey)
+            //Do NOT set an alias if you need to update/rotate keys in the future
+            .setAlias(charliePublicKey.toEvmAddress())
             .setInitialBalance(new Hbar(10))
             .setMaxAutomaticTokenAssociations(0) // no association slots
             .execute(client)
     ).getReceipt(client);
 
     // treasury account for tokens
-    const treasuryKey = PrivateKey.generateED25519();
+    const treasuryKey = PrivateKey.generateECDSA();
+    const treasuryPublicKey = treasuryKey.publicKey;
     const { accountId: treasuryAccount } = await (
         await new AccountCreateTransaction()
-            .setKey(treasuryKey)
+            .setKey(treasuryPublicKey)
+            //Do NOT set an alias if you need to update/rotate keys in the future
+            .setAlias(treasuryPublicKey.toEvmAddress())
             .setInitialBalance(new Hbar(10))
             .setMaxAutomaticTokenAssociations(-1)
             .execute(client)
@@ -1066,25 +1090,25 @@ func main() {
 	client.SetDefaultMaxQueryPayment(hedera.HbarFrom(50, hedera.HbarUnits.Hbar))
 
 	// Step 1: Create 4 accounts
-	alicePrivateKey, err := hedera.PrivateKeyGenerateEd25519()
+	alicePrivateKey, err := hedera.PrivateKeyGenerateEcdsa()
 	if err != nil {
 		log.Fatalf("Error generating private key for Alice: %v", err)
 	}
 	aliceId := createAccount(client, alicePrivateKey, 10, -1) // Unlimited associations
 
-	bobPrivateKey, err := hedera.PrivateKeyGenerateEd25519()
+	bobPrivateKey, err := hedera.PrivateKeyGenerateEcdsa()
 	if err != nil {
 		log.Fatalf("Error generating private key for Bob: %v", err)
 	}
 	bobId := createAccount(client, bobPrivateKey, 10, 1) // 1 association
 
-	charliePrivateKey, err := hedera.PrivateKeyGenerateEd25519()
+	charliePrivateKey, err := hedera.PrivateKeyGenerateEcdsa()
 	if err != nil {
 		log.Fatalf("Error generating private key for Charlie: %v", err)
 	}
 	charlieId := createAccount(client, charliePrivateKey, 10, 0) // No associations
 
-	treasuryPrivateKey, err := hedera.PrivateKeyGenerateEd25519()
+	treasuryPrivateKey, err := hedera.PrivateKeyGenerateEcdsa()
 	if err != nil {
 		log.Fatalf("Error generating private key for Treasury: %v", err)
 	}

@@ -51,7 +51,7 @@ client.SetMirrorNetwork(mirrorNode)
 
 ### 3. Set your local node transaction fee paying account
 
-You will need and account ID and key to pay for the [fees](../../networks/mainnet/fees/) associated with each transaction and query that is submitted to your local network. You will use the account ID and key provided by the local node on startup to set-up your operator account ID and key. The operator is the default account that pays for transaction and query fees.
+You will need an account ID and key to pay for the [fees](../../networks/mainnet/fees/) associated with each transaction and query that is submitted to your local network. You will use the account ID and key provided by the local node on startup to set-up your operator account ID and key. The operator is the default account that pays for transaction and query fees.
 
 | **Account ID**  | `0.0.2`                                                                                            |
 | --------------- | -------------------------------------------------------------------------------------------------- |
@@ -63,29 +63,39 @@ You will need and account ID and key to pay for the [fees](../../networks/mainne
 
 {% tabs %}
 {% tab title="Java" %}
+{% code overflow="wrap" %}
 ```java
 client.setOperator(AccountId.fromString("0.0.2"), PrivateKey.fromString("302e020100300506032b65700422042091132178e72057a1d7528025956fe39b0b847f200ab59b2fdd367017f3087137"));
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="JavaScript" %}
+{% code overflow="wrap" %}
 ```javascript
 client.setOperator(AccountId.fromString("0.0.2"),PrivateKey.fromString("302e020100300506032b65700422042091132178e72057a1d7528025956fe39b0b847f200ab59b2fdd367017f3087137"));
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="Go" %}
+{% code overflow="wrap" %}
 ```go
 accountId, err := hedera.AccountIDFromString("0.0.2")
-privateKey, err := hedera.PrivateKeyFromString("302e020100300506032b65700422042091132178e72057a1d7528025956fe39b0b847f200ab59b2fdd367017f3087137")
+privateKey, err := hedera.PrivateKeyFromString(
+"302e020100300506032b65700422042091132178e72057a1d7528025956fe39b0b847f200ab59b2fdd367017f3087137")
+
 client.SetOperator(accountId, privateKey)
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
 ### 4. Submit your transaction
 
 Submit a transaction that will create a new account in your local network. The console should print out the new account ID. In this example, we are using the same key as the transaction fee paying account as the key for the new account. You can also create a [new key](keys/generate-a-new-key-pair.md) if you wish.
+
+
 
 {% tabs %}
 {% tab title="Java" %}
@@ -127,7 +137,7 @@ console.log(newAccountId);
 //Submit a transaction to your local node
 newAccount, err := hedera.NewAccountCreateTransaction().
 	SetKey(privateKey).
-	SetInitialBalance(hedera.HbarFromTinybar(1000)).
+    	SetInitialBalance(hedera.NewHbar(1)).
 	Execute(client)
 
 if err != nil {
@@ -171,6 +181,7 @@ The list of supported mirror node REST APIs can be found [here](../rest-api.md).
 
 {% tabs %}
 {% tab title="Java" %}
+{% code overflow="wrap" %}
 ```java
 import com.hedera.hashgraph.sdk.*;
 import java.io.IOException;
@@ -202,6 +213,7 @@ public class LocalNode {
     }
 }
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="JavaScript" %}
@@ -268,7 +280,7 @@ func main() {
 	//Submit a transaction to your local node
 	newAccount, err := hedera.NewAccountCreateTransaction().
 		SetKey(privateKey).
-		SetInitialBalance(hedera.HbarFromTinybar(1000)).
+    		SetInitialBalance(hedera.NewHbar(1)).
 		Execute(client)
 
 	if err != nil {

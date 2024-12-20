@@ -14,6 +14,15 @@ We recommend that you complete the "Submit Your First Message" tutorial [here](s
 
 ***
 
+## Table of Contents
+
+1. [Create Topic and Submit Messages](query-messages-with-mirror-node.md#1.-create-a-topic-and-submit-three-messages)
+2. [Query Hedera Mirror Node API](query-messages-with-mirror-node.md#2.-query-the-hedera-mirror-node-api)
+3. [Retrieve Message](query-messages-with-mirror-node.md#3.-retrieve-a-specific-message-by-sequence-number)
+4. [Advanced Filtering](query-messages-with-mirror-node.md#4.-advanced-filtering-methods-for-hcs-messages)
+
+***
+
 ## 1. Create a topic and submit three messages
 
 For this tutorial, create a new topic and submit three messages to this topic on testnet. You will use the retrieved topic ID to query for messages via the Hedera Mirror Node API.&#x20;

@@ -46,13 +46,21 @@ hedera.NewTransactionRecordQuery().
 
 <table data-header-hidden><thead><tr><th width="396"></th><th width="220.33333333333331"></th><th></th></tr></thead><tbody><tr><td><strong>Method</strong></td><td><strong>Type</strong></td><td><strong>Requirement</strong></td></tr><tr><td><code>&#x3C;TransactionResponse>.getRecord(&#x3C;client>)</code></td><td>TransactionRecord</td><td>Required</td></tr><tr><td><code>&#x3C;TransactionRecord>.transactionId</code></td><td>TransactionId</td><td>Optional</td></tr><tr><td><code>&#x3C;TransactionRecord>.consensusTimestamp</code></td><td>Instant</td><td>Optional</td></tr><tr><td><code>&#x3C;TransactionRecord>.contractFunctionResult</code></td><td>ContractFunctionResult</td><td>Optional</td></tr><tr><td><code>&#x3C;TransactionRecord>.receipt</code></td><td>TransactionReceipt</td><td>Optional</td></tr><tr><td><code>&#x3C;TransactionRecord>.transactionFee</code></td><td>Hbar</td><td>Optional</td></tr><tr><td><code>&#x3C;TransactionRecord>.transactionHash</code></td><td>ByteString</td><td>Optional</td></tr><tr><td><code>&#x3C;TransactionRecord>.transactionMemo</code></td><td>String</td><td>Optional</td></tr><tr><td><code>&#x3C;TransactionRecord>.transfers</code></td><td>List&#x3C;Transfer></td><td>Optional</td></tr><tr><td><code>&#x3C;TransactionRecord>.tokentransfers</code></td><td>Map&#x3C;TokenId, Map&#x3C;AccountId, List&#x3C;Long>>></td><td>Optional</td></tr><tr><td><code>&#x3C;TransactionRecord>.scheduleRef</code></td><td>ScheduleId</td><td>Optional</td></tr><tr><td><code>&#x3C;TransactionRecord>.assessedCustomFees</code></td><td>List&#x3C;AssessedCustomFees></td><td>Optional</td></tr><tr><td><code>&#x3C;TransactionRecord>.automaticTokenAssociations</code></td><td>List&#x3C;TokenAssociation></td><td>Optional</td></tr><tr><td><code>&#x3C;TransactionRecord>.ethereumHash</code></td><td>ByteString</td><td>Optional</td></tr><tr><td><code>&#x3C;TransactionRecord>.parentConsensusTimestamp</code></td><td>Instant</td><td>Optional</td></tr><tr><td><code>&#x3C;TransactionRecord>.paidStakingRewards</code></td><td>List&#x3C;Transfer></td><td>Optional</td></tr><tr><td><code>&#x3C;TransactionRecord>.prngBytes</code></td><td>ByteString</td><td>Optional</td></tr><tr><td><code>&#x3C;TransactionRecord>.prngNumber</code></td><td>Integer</td><td>Optional</td></tr></tbody></table>
 
+{% hint style="warning" %}
+#### Account Alias
+
+If an alias is set during account creation, it becomes [immutable](../../../support-and-community/glossary.md#immutability), meaning it cannot be changed. If you plan to update or rotate keys in the future, do not set the alias at the time of initial account creation. The alias can be set after finalizing all key updates.&#x20;
+{% endhint %}
+
 {% tabs %}
 {% tab title="Java" %}
 ```java
 //Create a transaction
 AccountCreateTransaction transaction = new AccountCreateTransaction()
-        .setKey(newKey.getPublicKey())
-        .setInitialBalance(new Hbar(1));
+    .setKey(ecdsaPublicKey)
+    //Do NOT set an alias if you need to update/rotate keys in the future
+    .setAlias(ecdsaPublicKey.toEvmAddress())
+    .setInitialBalance(new Hbar(1));
 
 //Sign with the client operator account key and submit to a Hedera network
 TransactionResponse txResponse = transaction.execute(client);
@@ -70,8 +78,10 @@ System.out.println("The transaction record is " +record);
 ```javascript
 //Create a transaction
 const transaction = new AccountCreateTransaction()
-        .setKey(newKey.getPublicKey())
-        .setInitialBalance(new Hbar(1));
+    .setKey(ecdsaPublicKey)
+    //Do NOT set an alias if you need to update/rotate keys in the future
+    .setAlias(ecdsaPublicKey.toEvmAddress())
+    .setInitialBalance(new Hbar(1));
 
 //Sign with the client operator account key and submit to a Hedera network
 const txResponse = await transaction.execute(client);
@@ -86,11 +96,13 @@ console.log("The transaction record is " +record);
 {% endtab %}
 
 {% tab title="Go" %}
-```java
+```go
 //Create a transaction
 transaction := hedera.NewAccountCreateTransaction().
-		SetKey(privateKey.PublicKey()).
-		SetInitialBalance(hedera.NewHbar(1000))
+    SetKey(ecdsaPublicKey).
+    //Do NOT set an alias if you need to update/rotate keys in the future
+    SetAlias(ecdsaPublicKey.ToEvmAddress()).
+    SetInitialBalance(hedera.NewHbar(1))
 
 //Sign with the client operator account key and submit to a Hedera network
 txResponse, err := transaction.Execute(client)
