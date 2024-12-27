@@ -6,6 +6,44 @@ description: Hedera Services release information
 
 Visit the [Hedera status page](https://status.hedera.com/) for the latest versions supported on each network.
 
+## Release v0.58
+
+{% hint style="info" %}
+**MAINNET UPDATE SCHEDULED: FEBRUARY 12, 2025**
+{% endhint %}
+
+{% hint style="info" %}
+**TESTNET UPDATE SCHEDULED: JANUARY 22, 2025**
+{% endhint %}
+
+### [Build 0.58.0](https://github.com/hashgraph/hedera-services/releases/tag/v0.58.0)
+
+<details>
+
+<summary><strong>What's Changed</strong></summary>
+
+* chore: Modify and mount default block streams output directory by [@mhess-swl](https://github.com/mhess-swl) in [#16719](https://github.com/hashgraph/hedera-services/pull/16719)
+* fix: 16657: State validation fails for round 191161423 on LSE by [@artemananiev](https://github.com/artemananiev) in [#16757](https://github.com/hashgraph/hedera-services/pull/16757)
+* feat: Add time-driven event processing for triggering scheduled transactions by [@JivkoKelchev](https://github.com/JivkoKelchev) in [#16017](https://github.com/hashgraph/hedera-services/pull/16017)
+* chore: Integrate latest cryptography library changes by [@Neeharika-Sompalli](https://github.com/Neeharika-Sompalli) in [#16615](https://github.com/hashgraph/hedera-services/pull/16615)
+* fix: Add validation for grpc certificate hash by [@Neeharika-Sompalli](https://github.com/Neeharika-Sompalli) in [#16776](https://github.com/hashgraph/hedera-services/pull/16776)
+* ci: Add workflow for manual XTS failed tests log collection by [@mishomihov00](https://github.com/mishomihov00) in [#16662](https://github.com/hashgraph/hedera-services/pull/16662)
+* ci: Update slack reporting for XTS failure and CITR build promotion by [@rbarkerSL](https://github.com/rbarkerSL) in [#16760](https://github.com/hashgraph/hedera-services/pull/16760)
+* ci: Change from setup-gradle action to ./gradlew command usage by [@mishomihov00](https://github.com/mishomihov00) in [#16706](https://github.com/hashgraph/hedera-services/pull/16706)
+* build(deps): bump codecov/codecov-action from 5.0.2 to 5.0.7 by [@dependabot](https://github.com/dependabot) in [#16725](https://github.com/hashgraph/hedera-services/pull/16725)
+* fix: 16748 Fixed serialization for AddressBookTestingToolState by [@imalygin](https://github.com/imalygin) in [#16799](https://github.com/hashgraph/hedera-services/pull/16799)
+* build(deps): bump docker/setup-qemu-action from 3.0.0 to 3.2.0 by [@dependabot](https://github.com/dependabot) in [#16232](https://github.com/hashgraph/hedera-services/pull/16232)
+
+### New Contributors
+
+* [@boooby19](https://github.com/boooby19) made their first contribution in [#16767](https://github.com/hashgraph/hedera-services/pull/16767)
+* [@PavelSBorisov](https://github.com/PavelSBorisov) made their first contribution in [#16701](https://github.com/hashgraph/hedera-services/pull/16701)
+* [@timfn-hg](https://github.com/timfn-hg) made their first contribution in [#16917](https://github.com/hashgraph/hedera-services/pull/16917)
+
+**Full Changelog**: [v0.57.3...v0.58.0](https://github.com/hashgraph/hedera-services/compare/v0.57.3...v0.58.0)
+
+</details>
+
 ## Release v0.57
 
 {% hint style="info" %}
