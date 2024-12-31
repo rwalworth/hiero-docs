@@ -101,3 +101,5 @@ fmt.Println("The transaction consensus status:", transactionStatus)
 {% endcode %}
 {% endtab %}
 {% endtabs %}
+
+**Reference:** [**Token Airdrop Example**](https://github.com/hashgraph/hedera-sdk-js/blob/main/examples/token-airdrop-example.js)
