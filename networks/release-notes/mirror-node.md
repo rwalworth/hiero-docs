@@ -8,7 +8,11 @@ Visit the [Hedera status page](https://status.hedera.com/) for the latest versio
 
 ## Latest Releases
 
-## [V0.119.0](https://github.com/hashgraph/hedera-mirror-node/releases/tag/v0.119.0)
+## [v0.120.0](https://github.com/hashgraph/hedera-mirror-node/releases/tag/v0.120.0)
+
+Smaller release focusing on paying down some technical debt. Spotless code formatting tool was ran against the whole codebase and a CI check added to enforce it stays formatted. A large number of Sonar issues were addressed reducing the number of overall code smells. Finally, a runbook was added that documents the steps to restore a database backup for Stackgres.
+
+## [v0.119.0](https://github.com/hashgraph/hedera-mirror-node/releases/tag/v0.119.0)
 
 The `/api/v1/contracts/call` API that simulates smart contract executions now supports the [Ethereum Cancun](https://ethereum.org/en/roadmap/dencun/) upgrade. Additionally, there were a number of tasks completed integrating the latest modularized EVM library.
 
@@ -16,7 +20,7 @@ The helm chart gained support for the Kubernetes [Gateway API](https://kubernete
 
 This release fixes a critical bug with the handling of claimed token airdrops. Now claimed airdrops will implicitly create a token association and properly track token balances. Any existing airdrops are corrected via a database migration. The same fixes were back-ported to `v0.118.1`.
 
-## [V0.118.0](https://github.com/hashgraph/hedera-mirror-node/releases/tag/v0.118.0)
+## [v0.118.0](https://github.com/hashgraph/hedera-mirror-node/releases/tag/v0.118.0)
 
 A new developer quick start [guide](https://github.com/hashgraph/hedera-mirror-node/blob/main/docs/development.md) was added by a community member. This document is intended to help new contributors quickly setup their local development environment for the mirror node. Please try it out and hopefully make your first contribution!
 
@@ -24,11 +28,11 @@ This release includes a new Redis-based distributed cache for the REST API. When
 
 A number of new run books were added to improve the day two operations of managing the mirror node database. There are run books to aid in taking and restoring the database volume snapshot. There's also a run book to increase the database volume size. Finally, there's a run book to change the database machine type.
 
-## [V0.117.0](https://github.com/hashgraph/hedera-mirror-node/releases/tag/v0.117.0)
+## [v0.117.0](https://github.com/hashgraph/hedera-mirror-node/releases/tag/v0.117.0)
 
 This is a smaller release as we focus on reworking the web3 module to use the modularized EVM library. All of the `ReadableKVState` classes are now implemented and the EVM properties are mapped. The next release should have most of the remaining pieces in place to start testing.
 
-## [V0.116.0](https://github.com/hashgraph/hedera-mirror-node/releases/tag/v0.116.0)
+## [v0.116.0](https://github.com/hashgraph/hedera-mirror-node/releases/tag/v0.116.0)
 
 [HIP-991](https://hips.hedera.com/hip/hip-991) Permissionless revenue-generating Topic Ids for Topic Operators design was completed this sprint and relevant tasks created. Once this HIP is scheduled for inclusion in consensus nodes we'll proceed with implementing the design.
 
@@ -60,13 +64,13 @@ helm upgrade common hedera/hedera-mirror-common ...
 kubectl delete crds ingressroutes.traefik.containo.us ingressroutetcps.traefik.containo.us ingressrouteudps.traefik.containo.us middlewares.traefik.containo.us middlewaretcps.traefik.containo.us serverstransports.traefik.containo.us tlsoptions.traefik.containo.us tlsstores.traefik.containo.us traefikservices.traefik.containo.us
 ```
 
-## [V0.115.0](https://github.com/hashgraph/hedera-mirror-node/releases/tag/v0.115.0)
+## [v0.115.0](https://github.com/hashgraph/hedera-mirror-node/releases/tag/v0.115.0)
 
 [HIP-904](https://hips.hedera.com/hip/hip-904) Friction-less Airdrops saw the final piece of functionality land in this release. NFT support was added to the `/api/v1/accounts/{id}/airdrops/outstanding` and `/api/v1/accounts/{id}/airdrops/pending` REST APIs.
 
 Starting a mirror node from scratch has been a frequent pain point for new mirror node operators. To help ease this process, a new database [bootstrap](https://github.com/hashgraph/hedera-mirror-node/blob/main/docs/database/bootstrap.md) mechanism was added. A full mirror node database snapshot is now available in a public, requester pays GCS [bucket](https://console.cloud.google.com/storage/browser/mirrornode-db-export) for download. Documentation and scripts have been provided that help with downloading and importing that snapshot into your local database. This bootstrap process is currently in alpha and feedback is appreciated. In future releases, we'll work to automate the snapshot generation every release, offer a minimal snapshot without HCS data, and make the process more streamlined.
 
-## [V0.114.0](https://github.com/hashgraph/hedera-mirror-node/releases/tag/v0.114.0)
+## [v0.114.0](https://github.com/hashgraph/hedera-mirror-node/releases/tag/v0.114.0)
 
 This release contains the two new REST APIs for [HIP-904](https://hips.hedera.com/hip/hip-904) token airdrops. The new `/api/v1/accounts/{sender}/airdrops/outstanding` REST API lists the outstanding airdrops sent by the sender which have not been claimed by recipients. The new `/api/v1/accounts/{receiver}/airdrops/pending` REST API lists the pending airdrops that the receiver has not yet claimed. Both of these APIs are still under development and only return fungible token airdrops at this time. In a subsequent release, non-fungible token airdrop support will be added.
 
@@ -76,7 +80,7 @@ The long-running effort to refactor the web3 tests to be more maintainable and r
 
 The monitor component now supports TLS connections to consensus nodes. A new `hedera.mirror.monitor.nodeValidation.tls` property was added with a default of `PLAINTEXT` to control this behavior. Set it to `BOTH` or `TLS` to connect to the consensus node's secure port. Note that this is currently less secure than it should be since we don't verify certificate hash information in the address book due to a limitation in the SDK.
 
-## [V0.113.0](https://github.com/hashgraph/hedera-mirror-node/releases/tag/v0.113.0)
+## [v0.113.0](https://github.com/hashgraph/hedera-mirror-node/releases/tag/v0.113.0)
 
 Full ingest support for the new [HIP-904](https://hips.hedera.com/hip/hip-904) token airdrop transactions was implemented. In the future, two new airdrop REST APIs will be added to support querying for outstanding and pending airdrops.
 
