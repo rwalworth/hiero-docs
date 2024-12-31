@@ -525,7 +525,6 @@
       * [Formatting](support-and-community/contributing-guide/style-guide/formatting.md)
       * [Punctuation](support-and-community/contributing-guide/style-guide/punctuation.md)
       * [GitBook Markdown Syntax](https://raw.githubusercontent.com/audacity/audacity-support/main/community/contributing/tutorials/gitbook-markdown-syntax.md)
-  * [Hello Future Hackathon 2.0](https://hellofuturehackathon.dev/?utm_source=docs\&utm_campaign=hack_navigation)
   * [Discord](https://hedera.com/discord)
   * [GitHub](https://github.com/hashgraph)
   * [Stack Overflow](https://stackoverflow.com/questions/tagged/hedera-hashgraph)
