@@ -2,7 +2,6 @@
 
 * [Welcome to Hedera — let’s build the future](README.md)
 * [Getting Started](getting-started/README.md)
-  * [Create and Fund Your Hedera Testnet Account](getting-started/create-and-fund-your-hedera-testnet-account.md)
   * [Environment Setup](getting-started/environment-setup.md)
   * [Web2 Developers](getting-started/web2-developers/README.md)
     * [Transfer HBAR](getting-started/web2-developers/transfer-hbar.md)
@@ -53,6 +52,7 @@
     * [How to Set Up a Hedera Local Node](tutorials/local-node/how-to-set-up-a-hedera-local-node.md)
     * [Set Up a Hedera Local Node using the NPM CLI](tutorials/local-node/setup-hedera-node-cli-npm.md)
   * [More Tutorials](tutorials/more-tutorials/README.md)
+    * [Create and Fund Your Hedera Testnet Account](tutorials/more-tutorials/create-and-fund-your-hedera-testnet-account.md)
     * [How to Create a Personal Access Token (API Key) on the Hedera Portal](tutorials/more-tutorials/how-to-create-a-personal-access-token-api-key-on-the-hedera-portal.md)
     * [How to Auto-Create Hedera Accounts with HBAR and Token Transfers](tutorials/more-tutorials/how-to-auto-create-hedera-accounts-with-hbar-and-token-transfers.md)
     * [How to Configure a Mirror Node and Query Data](tutorials/more-tutorials/how-to-configure-a-mirror-node-and-query-specific-data.md)

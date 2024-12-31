@@ -10,7 +10,7 @@ Using the Hedera Token Service, you can create non-fungible tokens (NFTs). NFTs 
 
 We recommend you complete the following introduction to get a basic understanding of Hedera transactions. This example does not build upon the previous examples.
 
-1. Get a [Hedera testnet account](../../getting-started/create-and-fund-your-hedera-testnet-account.md).
+1. Get a [Hedera testnet account](../more-tutorials/create-and-fund-your-hedera-testnet-account.md).
 2. Set up your environment [here](../../getting-started/environment-setup.md).
 
 ***

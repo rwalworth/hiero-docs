@@ -8,7 +8,7 @@ In this tutorial, you will learn how to create a simple smart contract on Hedera
 
 We recommend you complete the following introduction to get a basic understanding of Hedera transactions. This example does not build upon the previous examples.
 
-* Get a [Hedera testnet account](../../getting-started/create-and-fund-your-hedera-testnet-account.md).
+* Get a [Hedera testnet account](../more-tutorials/create-and-fund-your-hedera-testnet-account.md).
 * Set up your environment [here](../../getting-started/environment-setup.md).
 
 ***

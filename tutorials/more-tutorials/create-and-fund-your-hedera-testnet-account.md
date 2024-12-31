@@ -1,10 +1,10 @@
 # Create and Fund Your Hedera Testnet Account
 
-To interact with the Hedera network, you’ll need a testnet account funded with HBAR. [Hedera accounts](../core-concepts/accounts/) are essential for accessing the [Hedera APIs](https://docs.hedera.com/hedera/sdks-and-apis/hedera-api) and paying for transactions and queries with HBAR. This guide outlines three ways to create and fund your testnet account.&#x20;
+To interact with the Hedera network, you’ll need a testnet account funded with HBAR. [Hedera accounts](../../core-concepts/accounts/) are essential for accessing the [Hedera APIs](https://docs.hedera.com/hedera/sdks-and-apis/hedera-api) and paying for transactions and queries with HBAR. This guide outlines three ways to create and fund your testnet account.&#x20;
 
 Explore the options below to choose the one that fits your needs **⬇**:
 
-<table data-view="cards"><thead><tr><th align="center"></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td align="center"><a href="create-and-fund-your-hedera-testnet-account.md#option-1-hedera-developer-portal"><strong>Hedera Developer Portal</strong></a></td><td>Login required. Provides the highest initial HBAR balance and advanced account management tools.</td><td><a href="../.gitbook/assets/testnet access.png">testnet access.png</a></td><td><a href="create-and-fund-your-hedera-testnet-account.md#option-1-hedera-developer-portal">#option-1-hedera-developer-portal</a></td></tr><tr><td align="center"><a href="create-and-fund-your-hedera-testnet-account.md#option-2-hedera-faucet"><strong>Hedera Faucet</strong></a></td><td>Quick and anonymous. Create a testnet account using an EVM wallet address.</td><td><a href="../.gitbook/assets/token-service-icon.png">token-service-icon.png</a></td><td><a href="create-and-fund-your-hedera-testnet-account.md#option-2-hedera-faucet">#option-2-hedera-faucet</a></td></tr><tr><td align="center"><a href="create-and-fund-your-hedera-testnet-account.md#option-3-hashpack-wallet"><strong>HashPack Wallet</strong></a></td><td>Easy to use. Offers simple account creation with a user-friendly wallet interface.</td><td><a href="../.gitbook/assets/hashpack-logo-white.png">hashpack-logo-white.png</a></td><td><a href="create-and-fund-your-hedera-testnet-account.md#option-3-hashpack-wallet">#option-3-hashpack-wallet</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th align="center"></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td align="center"><a href="create-and-fund-your-hedera-testnet-account.md#option-1-hedera-developer-portal"><strong>Hedera Developer Portal</strong></a></td><td>Login required. Provides the highest initial HBAR balance and advanced account management tools.</td><td><a href="../../.gitbook/assets/testnet access.png">testnet access.png</a></td><td><a href="create-and-fund-your-hedera-testnet-account.md#option-1-hedera-developer-portal">#option-1-hedera-developer-portal</a></td></tr><tr><td align="center"><a href="create-and-fund-your-hedera-testnet-account.md#option-2-hedera-faucet"><strong>Hedera Faucet</strong></a></td><td>Quick and anonymous. Create a testnet account using an EVM wallet address.</td><td><a href="../../.gitbook/assets/token-service-icon.png">token-service-icon.png</a></td><td><a href="create-and-fund-your-hedera-testnet-account.md#option-2-hedera-faucet">#option-2-hedera-faucet</a></td></tr><tr><td align="center"><a href="create-and-fund-your-hedera-testnet-account.md#option-3-hashpack-wallet"><strong>HashPack Wallet</strong></a></td><td>Easy to use. Offers simple account creation with a user-friendly wallet interface.</td><td><a href="../../.gitbook/assets/hashpack-logo-white.png">hashpack-logo-white.png</a></td><td><a href="create-and-fund-your-hedera-testnet-account.md#option-3-hashpack-wallet">#option-3-hashpack-wallet</a></td></tr></tbody></table>
 
 #### **Comparison Table: Portal, Faucet, and HashPack**
 
@@ -26,7 +26,7 @@ The Hedera Developer Portal provides a managed interface for creating a testnet 
 
 Visit the [Hedera Developer Portal](https://portal.hedera.com/) and follow the steps to sign up and create your testnet account.
 
-<figure><img src="../.gitbook/assets/portal testnet account.png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/portal testnet account.png" alt="" width="563"><figcaption></figcaption></figure>
 
 
 
@@ -34,13 +34,13 @@ Visit the [Hedera Developer Portal](https://portal.hedera.com/) and follow the s
 
 Once your testnet account is created, it will automatically be funded with 1000 HBAR. From the portal dashboard, you can view your account ID and key pair. Copy and securely save your HEX-encoded private key to configure your development environment later.
 
-<figure><img src="../.gitbook/assets/portal-hex-account-id.png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/portal-hex-account-id.png" alt="" width="563"><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-The portal dashboard also serves as a central location where you can manage your account IDs and private keys, easily access the testnet HBAR, and unlock features like a [personal access token (API key)](../tutorials/more-tutorials/how-to-create-a-personal-access-token-api-key-on-the-hedera-portal.md).&#x20;
+The portal dashboard also serves as a central location where you can manage your account IDs and private keys, easily access the testnet HBAR, and unlock features like a [personal access token (API key)](how-to-create-a-personal-access-token-api-key-on-the-hedera-portal.md).&#x20;
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/portal-faucet-token-testnet.png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/portal-faucet-token-testnet.png" alt="" width="563"><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
 **Portal Dispense Limit and Manual Refill**
@@ -58,11 +58,11 @@ The Hedera faucet allows you to quickly create a testnet account and fund it wit
 
 To use the faucet, first head to the [faucet](https://portal.hedera.com/faucet) landing page.
 
-<div align="left"><figure><img src="../.gitbook/assets/faucet-receive-hbar.png" alt="" width="563"><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/faucet-receive-hbar.png" alt="" width="563"><figcaption></figcaption></figure></div>
 
 ### Step 2: Testnet Account Creation
 
-Enter your EVM wallet address in the 'Enter Wallet Address' field. This initiates an [auto account creation](../core-concepts/accounts/auto-account-creation.md) flow that automatically creates a new Hedera Testnet account with 100 testnet HBAR.
+Enter your EVM wallet address in the 'Enter Wallet Address' field. This initiates an [auto account creation](../../core-concepts/accounts/auto-account-creation.md) flow that automatically creates a new Hedera Testnet account with 100 testnet HBAR.
 
 {% hint style="danger" %}
 **⚠️ Warning**
@@ -80,7 +80,7 @@ For reference, this is an example of an EVM wallet address:
 
 `0x00000000000000000000000000000000002cd37f`
 
-<div><figure><img src="../.gitbook/assets/faucet-evm-address.png" alt=""><figcaption></figcaption></figure> <figure><img src="../.gitbook/assets/faucet-success-account-id.png" alt=""><figcaption></figcaption></figure></div>
+<div><figure><img src="../../.gitbook/assets/faucet-evm-address.png" alt=""><figcaption></figcaption></figure> <figure><img src="../../.gitbook/assets/faucet-success-account-id.png" alt=""><figcaption></figcaption></figure></div>
 
 {% hint style="warning" %}
 **Faucet Dispense Limit**
@@ -88,7 +88,7 @@ For reference, this is an example of an EVM wallet address:
 This faucet can dispense a maximum of 100 HBAR every 24 hours. If you try to use the faucet before the timer runs out, you'll get the above error message. See the below image for the timer countdown and an example error message.
 {% endhint %}
 
-<div><figure><img src="../.gitbook/assets/faucet-wallet-timer (1).png" alt="" width="563"><figcaption></figcaption></figure> <figure><img src="../.gitbook/assets/faucet-receive-error.png" alt="" width="563"><figcaption></figcaption></figure></div>
+<div><figure><img src="../../.gitbook/assets/faucet-wallet-timer (1).png" alt="" width="563"><figcaption></figcaption></figure> <figure><img src="../../.gitbook/assets/faucet-receive-error.png" alt="" width="563"><figcaption></figcaption></figure></div>
 
 ***
 
@@ -107,19 +107,19 @@ Visit the [HashPack web app](https://wallet.hashpack.app/) and follow these step
    * **Advanced Creation**: A customizable setup that includes choosing a seed phrase type.\
      &#xNAN;_(This guide uses the Advanced Creation method.)_
 
-<div><figure><img src="../.gitbook/assets/hashpack-testnet-new-flow-create-new-wallet-login.png" alt="" width="375"><figcaption></figcaption></figure> <figure><img src="../.gitbook/assets/hashpack-testnet-new-flow-testnet-checked.png" alt="" width="375"><figcaption></figcaption></figure></div>
+<div><figure><img src="../../.gitbook/assets/hashpack-testnet-new-flow-create-new-wallet-login.png" alt="" width="375"><figcaption></figcaption></figure> <figure><img src="../../.gitbook/assets/hashpack-testnet-new-flow-testnet-checked.png" alt="" width="375"><figcaption></figcaption></figure></div>
 
 4. Select **ECDSA Account** to create an ECDSA testnet account.
 
-<div><figure><img src="../.gitbook/assets/hashpack-testnet-new-flow-advanced creation.png" alt="" width="375"><figcaption></figcaption></figure> <figure><img src="../.gitbook/assets/hashpack-testnet-new-flow-seed-phrase.png" alt="" width="375"><figcaption></figcaption></figure></div>
+<div><figure><img src="../../.gitbook/assets/hashpack-testnet-new-flow-advanced creation.png" alt="" width="375"><figcaption></figcaption></figure> <figure><img src="../../.gitbook/assets/hashpack-testnet-new-flow-seed-phrase.png" alt="" width="375"><figcaption></figcaption></figure></div>
 
 5. Verify your new account seed phrase and save your recovery keys.
 
-<div><figure><img src="../.gitbook/assets/hashpack-testnet-new-flow-seed-verify.png" alt="" width="375"><figcaption></figcaption></figure> <figure><img src="../.gitbook/assets/hashpack-testnet-new-flow-save-recovery-info.png" alt="" width="375"><figcaption></figcaption></figure></div>
+<div><figure><img src="../../.gitbook/assets/hashpack-testnet-new-flow-seed-verify.png" alt="" width="375"><figcaption></figcaption></figure> <figure><img src="../../.gitbook/assets/hashpack-testnet-new-flow-save-recovery-info.png" alt="" width="375"><figcaption></figcaption></figure></div>
 
 6. Give your new account a nickname (e.g., DINO SZN 🦖) and click **Create Wallet**.
 
-<div><figure><img src="../.gitbook/assets/hashpack-testnet-new-flow-wallet-nickname.png" alt="" width="375"><figcaption></figcaption></figure> <figure><img src="../.gitbook/assets/hashpack-testnet-new-flow-new-account-100hbar-balance.png" alt="" width="375"><figcaption></figcaption></figure></div>
+<div><figure><img src="../../.gitbook/assets/hashpack-testnet-new-flow-wallet-nickname.png" alt="" width="375"><figcaption></figcaption></figure> <figure><img src="../../.gitbook/assets/hashpack-testnet-new-flow-new-account-100hbar-balance.png" alt="" width="375"><figcaption></figcaption></figure></div>
 
 ### Step 2: Fund New Account (optional)
 

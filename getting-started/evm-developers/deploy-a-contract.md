@@ -24,7 +24,7 @@ By the end of this tutorial, you will be able to:
 
 Before you begin, you should have **completed** the following tutorials:
 
-* [x] [Create and Fund Your Hedera Testnet Account](../create-and-fund-your-hedera-testnet-account.md)
+* [x] [Create and Fund Your Hedera Testnet Account](../../tutorials/more-tutorials/create-and-fund-your-hedera-testnet-account.md)
 * [x] [Environment Setup](../environment-setup.md)&#x20;
 * [x] [Configure RPC Connection](../../tutorials/more-tutorials/json-rpc-connections/) ( not required for Gitpod )
 
