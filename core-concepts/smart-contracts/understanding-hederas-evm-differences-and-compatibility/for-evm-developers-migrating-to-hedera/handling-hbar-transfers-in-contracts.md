@@ -55,7 +55,7 @@ event HbarReceived(address sender, uint256 amount);
 {% hint style="info" %}
 **Suggested Tutorial**
 
-For developers new to Solidity, we recommend exploring [Solidity courses](https://solidity-by-example.org/) to gain a deeper understanding of handling value transfers. A detailed tutorial on sending and receiving HBAR using Solidity smart contracts on Hedera can be found [here](https://docs.hedera.com/hedera/tutorials/smart-contracts/send-and-receive-hbar-using-solidity-smart-contracts).
+For developers newer to Solidity, we recommend exploring [Solidity courses](https://solidity-by-example.org/) to gain a deeper understanding of handling value transfers. A detailed tutorial on sending and receiving HBAR using Solidity smart contracts on Hedera can be found [here](https://docs.hedera.com/hedera/tutorials/smart-contracts/send-and-receive-hbar-using-solidity-smart-contracts).
 {% endhint %}
 
 ***
