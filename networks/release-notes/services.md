@@ -54,6 +54,18 @@ Visit the [Hedera status page](https://status.hedera.com/) for the latest versio
 **TESTNET UPDATE SCHEDULED: DECEMBER 19, 2024**
 {% endhint %}
 
+### [Build 0.57.5](https://github.com/hashgraph/hedera-services/releases/tag/v0.57.5)
+
+<details>
+
+<summary><strong>What's Changed</strong></summary>
+
+* chore: Cherry pick fixes for update of default branch to main ([#17200](https://github.com/hashgraph/hedera-services/pull/17200)) by [@rbarkerSL](https://github.com/rbarkerSL) in [#17235](https://github.com/hashgraph/hedera-services/pull/17235)
+
+**Full Changelog**: [v0.57.4...v0.57.5](https://github.com/hashgraph/hedera-services/compare/v0.57.4...v0.57.5)
+
+</details>
+
 ### [Build 0.57.4](https://github.com/hashgraph/hedera-services/releases/tag/v0.57.4)
 
 <details>
