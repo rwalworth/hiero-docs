@@ -54,6 +54,18 @@ Visit the [Hedera status page](https://status.hedera.com/) for the latest versio
 **TESTNET UPDATE SCHEDULED: DECEMBER 19, 2024**
 {% endhint %}
 
+### [Build 0.57.4](https://github.com/hashgraph/hedera-services/releases/tag/v0.57.4)
+
+<details>
+
+<summary><strong>What's Changed</strong></summary>
+
+* chore: (0.57) Keep default schedule lifetime 30min no matter max lifetime by [@tinker-michaelj](https://github.com/tinker-michaelj) in [#17196](https://github.com/hashgraph/hedera-services/pull/17196)
+
+**Full Changelog**: [v0.57.3...v0.57.4](https://github.com/hashgraph/hedera-services/compare/v0.57.3...v0.57.4)
+
+</details>
+
 ### [Build 0.57.3](https://github.com/hashgraph/hedera-services/releases/tag/v0.57.3)
 
 <details>
