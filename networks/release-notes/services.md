@@ -16,6 +16,18 @@ Visit the [Hedera status page](https://status.hedera.com/) for the latest versio
 **TESTNET UPDATE SCHEDULED: JANUARY 22, 2025**
 {% endhint %}
 
+### [Build 0.58.3](https://github.com/hashgraph/hedera-services/releases/tag/v0.58.3)
+
+<details>
+
+<summary><strong>What's Changed</strong></summary>
+
+* feat: cherry-pick: Generated Files 101 & 102 Sequentially Ordered by Node ID by [@iwsimon](https://github.com/iwsimon) in [#17289](https://github.com/hashgraph/hedera-services/pull/17289)
+
+**Full Changelog**: [v0.58.2...v0.58.3](https://github.com/hashgraph/hedera-services/compare/v0.58.2...v0.58.3)
+
+</details>
+
 ### [Build 0.58.0](https://github.com/hashgraph/hedera-services/releases/tag/v0.58.0)
 
 <details>
