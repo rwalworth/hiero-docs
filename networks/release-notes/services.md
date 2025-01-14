@@ -66,6 +66,24 @@ Visit the [Hedera status page](https://status.hedera.com/) for the latest versio
 **TESTNET UPDATE SCHEDULED: JANUARY 8, 2025**
 {% endhint %}
 
+### Release Highlights
+
+This release introduces several new features, improvements, and bug fixes, including:
+
+#### HIPs
+
+* **HIP-423: Long-Term Scheduled Transactions:** This release completes the implementation of [HIP-423](https://hips.hedera.com/hip/hip-423), enabling schedules to execute transactions at a future date and time. This provides developers with a powerful tool for automating on-chain actions and building time-based applications. Benefits include:
+  * **Automated Transactions:** Schedule transactions to execute automatically at a specific time.
+  * **Time-Based Applications:** Build applications that rely on time-based events, such as recurring payments or token distributions.
+  * **Enhanced Security:** Schedule transactions can be signed by multiple parties, ensuring that they are executed only when all required approvals are obtained.
+
+#### New Features
+
+* **Node Operator Queries:** This release introduces a dedicated gRPC port for node operators to perform free queries. This enables node operators to monitor the network and their nodes more efficiently without incurring transaction fees.
+* **Proxy Redirect Contract for Schedule Entities:** This release adds support for a proxy redirect contract for calls to schedule transactions. This allows EOAs to make function calls in schedule entity addresses, enabling more flexible and dynamic interactions with scheduled transactions.
+* **HSS System Contract:** This release introduces the Hedera Schedule Service (HSS) system contract, providing a set of functions for managing scheduled transactions, including signing and authorizing schedules.
+* **Support for Extra Dispatch Authorizations:** The `ScheduleSignHandler` now supports authorizing `Key{contractID=0.0.X}` and `Key{delegatable_contract_id=0.0.X}` keys in a schedule's signatories list, enabling more granular control over schedule execution.
+
 ### [Build 0.57.5](https://github.com/hashgraph/hedera-services/releases/tag/v0.57.5)
 
 <details>
