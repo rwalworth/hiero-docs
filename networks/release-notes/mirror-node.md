@@ -8,6 +8,10 @@ Visit the [Hedera status page](https://status.hedera.com/) for the latest versio
 
 ## Latest Releases
 
+## [v0.121.2](https://github.com/hashgraph/hedera-mirror-node/releases/tag/v0.121.2)
+
+This release combined with v0.121.2 contains important fixes to work with consensus nodes v0.57 and its dynamic address book support. It's recommended to upgrade as soon as possible before consensus nodes upgrade to ingest node data accurately.
+
 ## [v0.121.0](https://github.com/hashgraph/hedera-mirror-node/releases/tag/v0.121.0)
 
 Support for [HIP-423 ](https://hips.hedera.com/hip/hip-423)long term scheduled transactions was added to the mirror node awhile ago, but with its recent resurrection on consensus nodes we needed to certify our support. This release adds new acceptance tests for validating long term scheduled transactions.
