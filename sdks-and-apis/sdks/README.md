@@ -6,7 +6,7 @@ coverY: -154.63917525773195
 
 # SDKs
 
-For friendly, language-specific access to the Hedera API and its network services, there are several options.
+There are several options for friendly, language-specific access to the Hedera API and its network services.
 
 ## Hedera Services Code SDKs
 
@@ -21,6 +21,14 @@ Hedera and the developer community contribute to and maintain Hedera Services Co
 ## Development Tools & SDKs
 
 Hedera and the developer community contribute to and maintain developer tools and SDKs. These can be used to make bootstrapping your own project even easier
+
+### Hedera Developer Playground
+
+Try the interactive [**Hedera Developer Playground**](https://portal.hedera.com/playground) to explore Hedera services, transactions, and queries and experiment with the Hedera SDKs.
+
+{% embed url="https://www.canva.com/design/DAGcenPjdjg/tJNBCThltCIsVgG54h-bPA/view" %}
+[**Hedera Developer Playground**](https://portal.hedera.com/playground)
+{% endembed %}
 
 ### Additional Language Support
 

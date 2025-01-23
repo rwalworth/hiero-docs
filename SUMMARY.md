@@ -154,6 +154,7 @@
     * [Local Environment Setup](open-source-solutions/hashiodao/local-environment-setup.md)
   * [Hedera Custodians Library](open-source-solutions/hedera-custodians-library/README.md)
     * [How to use it](open-source-solutions/hedera-custodians-library/how-to-use-it.md)
+  * [Hedera Developer Playground](open-source-solutions/hedera-developer-playground.md)
   * [Hedera Wallet Snap By MetaMask](open-source-solutions/hedera-wallet-snap-by-metamask/README.md)
     * [Hedera Wallet Snap Documentation](https://docs.tuum.tech/hedera-wallet-snap/basics/introduction)
     * [Tutorial: MetaMask Snaps – What Are They and How to Use Them](open-source-solutions/hedera-wallet-snap-by-metamask/metamask-hedera-wallet-snap-tutorial.md)
