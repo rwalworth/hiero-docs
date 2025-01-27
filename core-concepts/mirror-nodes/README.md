@@ -24,7 +24,7 @@ To make the initial deployments easier, mirror nodes historically provided perio
 
 The mirror node software reduces the processing burden by receiving pre-constructed files from the network, validating them, populating a database, and providing REST APIs.
 
-![](../../.gitbook/assets/placeholder-mirror-node.png)
+![](../../.gitbook/assets/beta-mirror-nodes-infographic-v1.2.png)
 
 Mirror nodes work by validating the signature files associated with record and event files (previously also balance files) from the consensus nodes that were uploaded to a cloud storage solution from the network.
 
