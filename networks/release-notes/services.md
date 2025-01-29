@@ -16,6 +16,35 @@ Visit the [Hedera status page](https://status.hedera.com/) for the latest versio
 **TESTNET UPDATE SCHEDULED: JANUARY 30, 2025**
 {% endhint %}
 
+### [Build 0.58.6](https://github.com/hashgraph/hedera-services/releases/tag/v0.58.6)
+
+<details>
+
+<summary><strong>What's Changed</strong></summary>
+
+* chore: Reapply "FileService address book and node details" by [@mhess-swl](https://github.com/mhess-swl) in [#17543](https://github.com/hashgraph/hedera-services/pull/17543)
+
+**Full Changelog**: [v0.58.5...v0.58.6](https://github.com/hashgraph/hedera-services/compare/v0.58.5...v0.58.6)
+
+</details>
+
+### [Build 0.58.5](https://github.com/hashgraph/hedera-services/releases/tag/v0.58.5)
+
+<details>
+
+<summary><strong>What's Changed</strong></summary>
+
+* fix: 17283: Backport the fix for [#17218](https://github.com/hashgraph/hedera-services/issues/17218) to release 0.58 by [@artemananiev](https://github.com/artemananiev) in [#17296](https://github.com/hashgraph/hedera-services/pull/17296)
+* chore: (0.58) Support custom `Operation`s in standalone executor by [@tinker-michaelj](https://github.com/tinker-michaelj) in [#17354](https://github.com/hashgraph/hedera-services/pull/17354)
+* fix: retain override values on `ConfigProviderImpl.update()` ([#17424](https://github.com/hashgraph/hedera-services/pull/17424)) by [@tinker-michaelj](https://github.com/tinker-michaelj) in [#17430](https://github.com/hashgraph/hedera-services/pull/17430)
+* fix: cherry-pick: FileService address book and node details should be updated at genesis by [@iwsimon](https://github.com/iwsimon) in [#17368](https://github.com/hashgraph/hedera-services/pull/17368)
+* fix: 17467: Back out changes for 15448 from release 0.58 by [@artemananiev](https://github.com/artemananiev) in [#17473](https://github.com/hashgraph/hedera-services/pull/17473)
+* fix: Revert "cherry-pick: FileService address book and node details" by [@mhess-swl](https://github.com/mhess-swl) in [#17539](https://github.com/hashgraph/hedera-services/pull/17539)
+
+**Full Changelog**: [v0.58.3...v0.58.5](https://github.com/hashgraph/hedera-services/compare/v0.58.3...v0.58.5)
+
+</details>
+
 ### [Build 0.58.3](https://github.com/hashgraph/hedera-services/releases/tag/v0.58.3)
 
 <details>
