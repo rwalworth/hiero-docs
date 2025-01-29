@@ -76,7 +76,6 @@ Forces a transfer of tokens between two whitelisted addresses. Only an agent of 
 
 ***
 
-
 ### **Additional References**
 
 * [ERC-3643](https://docs.erc3643.org/erc-3643)
@@ -86,21 +85,28 @@ Forces a transfer of tokens between two whitelisted addresses. Only an agent of 
 To get a deeper understanding of ERC-3643, see the following:
 
 #### 1. Implementation Details and Function Interactions
-For comprehensive implementations of functions like `setIdentityRegistry` and their interactions with compliance modules or identity registries, refer to the [Tokens Interface](https://docs.erc3643.org/erc-3643/smart-contracts-library/permissioned-tokens/tokens-interface) section.  
+
+For comprehensive implementations of functions like `setIdentityRegistry` and their interactions with compliance modules or identity registries, refer to the [Tokens Interface](https://docs.erc3643.org/erc-3643/smart-contracts-library/permissioned-tokens/tokens-interface) section.\
 This section provides detailed function definitions and their roles within the ERC-3643 framework.
 
 #### 2. Supporting Contracts
-- **Identity Registry:**  
-  The [Identity Registry Interface](https://docs.erc3643.org/erc-3643/smart-contracts-library/onchain-identities/identity-registry/identity-registry-interface) section details the contract responsible for managing and verifying investor identities, ensuring compliance with KYC/AML regulations.
 
-- **Compliance Management:**  
+* **Identity Registry:**\
+  The [Identity Registry Interface](https://docs.erc3643.org/erc-3643/smart-contracts-library/onchain-identities/identity-registry/identity-registry-interface) section details the contract responsible for managing and verifying investor identities, ensuring compliance with KYC/AML regulations.
+* **Compliance Management:**\
   The [Compliance Interface](https://docs.erc3643.org/erc-3643/smart-contracts-library/compliance-management/compliance-interface) section outlines the contract that enforces compliance rules during token transfers, ensuring adherence to regulatory requirements.
 
 #### 3. Token Logic Examples
+
 For insights into token operations:
-- Refer to the [Tokens Interface](https://docs.erc3643.org/erc-3643/smart-contracts-library/permissioned-tokens/tokens-interface) section for details on the `transfer` function implementation.  
+
+* Refer to the [Tokens Interface](https://docs.erc3643.org/erc-3643/smart-contracts-library/permissioned-tokens/tokens-interface) section for details on the `transfer` function implementation.\
   This demonstrates how compliance rules are integrated into standard ERC-20-like operations.
 
 #### 4. Forced Transfer Logic
+
 For details on the `forcedTransfer` function, including permission checks and enforcement of whitelisting, refer to the [Tokens Interface](https://docs.erc3643.org/erc-3643/smart-contracts-library/permissioned-tokens/tokens-interface) section.
 
+***
+
+**Contributor**: [**@sumanair** ](https://github.com/sumanair)
