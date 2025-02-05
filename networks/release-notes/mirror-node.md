@@ -8,6 +8,12 @@ Visit the [Hedera status page](https://status.hedera.com/) for the latest versio
 
 ## Latest Releases
 
+## [v0.122.0](https://github.com/hashgraph/hedera-mirror-node/releases/tag/v0.122.0)
+
+This release focuses on two major works projects: integrating the modularized EVM library from consensus nodes and integration block streams. The modularized EVM library work saw 17 pull requests closed in service towards this effort.
+
+[HIP-1056](https://hips.hedera.com/hip/hip-1056) Block stream saw the bulk of the work completed with supporting this new stream format. The common domain classes associated with blocks were added along with the base logic to transform block items into record items. The importer now supports reading block files including verification of the merkle hash chain.
+
 ## [v0.121.2](https://github.com/hashgraph/hedera-mirror-node/releases/tag/v0.121.2)
 
 This release combined with v0.121.2 contains important fixes to work with consensus nodes v0.57 and its dynamic address book support. It's recommended to upgrade as soon as possible before consensus nodes upgrade to ingest node data accurately.
