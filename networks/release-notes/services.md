@@ -27,8 +27,6 @@ Re-tag of `v0.58.7` to trigger workflow.
 * chore: (0.58) Remove unwanted post-upgrade work by [@tinker-michaelj](https://github.com/tinker-michaelj) in [#17637](https://github.com/hashgraph/hedera-services/pull/17637)
 * chore: 0.58-specific state migrations by [@tinker-michaelj](https://github.com/tinker-michaelj) in [#17690](https://github.com/hashgraph/hedera-services/pull/17690)
 
-**Full Changelog**: [v0.58.6...v0.58.7](https://github.com/hashgraph/hedera-services/compare/v0.58.6...v0.58.7)
-
 </details>
 
 ### [Build 0.58.7](https://github.com/hashgraph/hedera-services/releases/tag/v0.58.7)
