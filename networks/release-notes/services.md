@@ -13,19 +13,21 @@ Visit the [Hedera status page](https://status.hedera.com/) for the latest versio
 {% endhint %}
 
 {% hint style="success" %}
-**TESTNET UPDATE SCHEDULED: JANUARY 30, 2025**
+**TESTNET UPDATE SCHEDULED: FEBRUARY 6, 2025**
 {% endhint %}
 
-### [**Build 0.58.8**](https://github.com/hashgraph/hedera-services/releases/tag/v0.58.8)
+### [Build 0.58.8](https://github.com/hashgraph/hedera-services/releases/tag/v0.58.8)
 
 <details>
 
 <summary><strong>What's Changed</strong></summary>
 
-Re-tag of `v0.58.7` to trigger workflow.
+Re-tag of `v0.58.7` to trigger workflow
 
 * chore: (0.58) Remove unwanted post-upgrade work by [@tinker-michaelj](https://github.com/tinker-michaelj) in [#17637](https://github.com/hashgraph/hedera-services/pull/17637)
 * chore: 0.58-specific state migrations by [@tinker-michaelj](https://github.com/tinker-michaelj) in [#17690](https://github.com/hashgraph/hedera-services/pull/17690)
+
+**ull Changelog**: [v0.58.6...v0.58.7](https://github.com/hashgraph/hedera-services/compare/v0.58.6...v0.58.7)
 
 </details>
 
@@ -101,7 +103,7 @@ Re-tag of `v0.58.7` to trigger workflow.
 * fix: 16748 Fixed serialization for AddressBookTestingToolState by [@imalygin](https://github.com/imalygin) in [#16799](https://github.com/hashgraph/hedera-services/pull/16799)
 * build(deps): bump docker/setup-qemu-action from 3.0.0 to 3.2.0 by [@dependabot](https://github.com/dependabot) in [#16232](https://github.com/hashgraph/hedera-services/pull/16232)
 
-#### New Contributors
+### New Contributors
 
 * [@boooby19](https://github.com/boooby19) made their first contribution in [#16767](https://github.com/hashgraph/hedera-services/pull/16767)
 * [@PavelSBorisov](https://github.com/PavelSBorisov) made their first contribution in [#16701](https://github.com/hashgraph/hedera-services/pull/16701)
@@ -228,13 +230,13 @@ This release introduces several new features, improvements, and bug fixes, inclu
 
 **HIP-869 Dynamic Address Book—Stage 1**: This release includes the implementation of HIP-869, enabling the Dynamic Address Book. Node operators can now update node details and address books via Hedera transactions. This streamlines network operations and enables node operators to manage their associated node entries directly in the Address Book.\
 \
-**HIP-904 System Contract Functions**: Implements the System Contract Functions section within [HIP-904](http://hips.hedera.com/hip/hip-904#system-contract-functions). Introduces Hedera Token Service (HTS) support for the airdrop-related capabilities. These functions are implemented as system contract functions, making it possible for smart contracts to issue Frictionless Airdrops, Token Reject, and AutomaticToken Association configurations for efficient management.\
+**HIP-904 System Contract Functions**:  Implements the System Contract Functions section within [HIP-904](http://hips.hedera.com/hip/hip-904#system-contract-functions).  Introduces Hedera Token Service (HTS) support for the airdrop-related capabilities. These functions are implemented as system contract functions, making it possible for smart contracts to issue Frictionless Airdrops, Token Reject, and AutomaticToken Association configurations for efficient management.\
 \
 **HIP-632 - `isAuthorized()`**: The `isAuthorized()` function introduced in [HIP-632](https://hips.hedera.com/hip/hip-632) extends the Hedera Account Service (HAS) System Contract, enabling smart contracts to authenticate signatures against Hedera accounts. This provides functionality akin to the validation step following Ethereum's `ECRECOVER`, without recovering public keys. It supports ECDSA, ED25519, and complex keys such as threshold keys, though ECDSA is recommended for compatibility and interoperability with Ethereum. This builds on the previous functionality of `isAuthorizedRaw()` released in 0.52.\
 \
 **Other Notable Changes:**\
 \
-**Block Streams - Dev Access Preview:** Block Streams is a new output stream that will replace Hedera’s existing event and record streams into a single stream of verifiable data. This consolidated approach not only simplifies data consumption but also enhances Hedera's capabilities by including state data.\
+**Block Streams - Dev Access Preview:** Block Streams is a new output stream that will replace Hedera’s existing event and record streams into a single stream of verifiable data.  This consolidated approach not only simplifies data consumption but also enhances Hedera's capabilities by including state data. \
 \
 Starting with version 0.56, consensus nodes will publish preview block stream files alongside the existing record stream, which remains the authoritative source of truth for Hedera. This preview allows the community to explore, test, and provide feedback on this new feature, paving the way for its future adoption.\
 \
@@ -384,7 +386,7 @@ Starting with version 0.56, consensus nodes will publish preview block stream fi
 * chore: schedule 0.56 release branch creation by [@kimbor](https://github.com/kimbor) in [#16184](https://github.com/hashgraph/hedera-services/pull/16184)
 * feat: Initial TssVoteHandler by [@derektriley](https://github.com/derektriley) in [#16061](https://github.com/hashgraph/hedera-services/pull/16061)
 
-#### New Contributors
+### New Contributors
 
 * [@albertopasqualetto](https://github.com/albertopasqualetto) made their first contribution in [#15927](https://github.com/hashgraph/hedera-services/pull/15927)
 * [@san-est](https://github.com/san-est) made their first contribution in [#16036](https://github.com/hashgraph/hedera-services/pull/16036)
@@ -397,6 +399,8 @@ Starting with version 0.56, consensus nodes will publish preview block stream fi
 ### Performance Results
 
 <figure><img src="../../.gitbook/assets/‎0.56_Performance Measurement Results_Extract.‎001.png" alt=""><figcaption></figcaption></figure>
+
+
 
 ## Release v0.55
 
@@ -450,6 +454,8 @@ Starting with version 0.56, consensus nodes will publish preview block stream fi
 <details>
 
 <summary><strong>What's Changed</strong></summary>
+
+
 
 * docs: tss ledger id platform design proposal by [@edward-swirldslabs](https://github.com/edward-swirldslabs) in [#13747](https://github.com/hashgraph/hedera-services/pull/13747)
 * chore: remove unused `hedera-evm-*` and `cli-clients` modules by [@tinker-michaelj](https://github.com/tinker-michaelj) in [#15271](https://github.com/hashgraph/hedera-services/pull/15271)
@@ -542,7 +548,7 @@ Starting with version 0.56, consensus nodes will publish preview block stream fi
 * chore: disable dab in 0.55 by [@iwsimon](https://github.com/iwsimon) in [#15951](https://github.com/hashgraph/hedera-services/pull/15951)
 * fix: (0.55) post-upgrade txn detection in presence of pre-upgrade events by [@tinker-michaelj](https://github.com/tinker-michaelj) in [#15835](https://github.com/hashgraph/hedera-services/pull/15835)
 
-#### New Contributors
+### New Contributors
 
 * [@tungbq](https://github.com/tungbq) made their first contribution in [#14264](https://github.com/hashgraph/hedera-services/pull/14264)
 
@@ -564,7 +570,7 @@ Starting with version 0.56, consensus nodes will publish preview block stream fi
 **TESTNET UPDATE SCHEDULED: OCTOBER 16, 2024**
 {% endhint %}
 
-### Release Highlights
+### Release Highlights&#x20;
 
 This release introduces exciting new features and improvements, including HIP-904 for token airdrops, and HIP-1010 for updating custom fee via smart contracts.
 
@@ -576,13 +582,14 @@ Implementation: Partial implementation
 
 Delivered in this release:
 
-* TokenAirdrop transaction is similar to crypto transfers, but differs in one fundamental way - when an airdrop is performed and the receiver does not have available or automatic association slots, rather than failing, the transfer will be kept in state as a pending transfer.
+* TokenAirdrop transaction is similar to crypto transfers, but differs in one fundamental way - when an airdrop is performed and the receiver does not have available or automatic association slots, rather than failing, the transfer will be kept in state as a pending transfer. &#x20;
 * TokenClaimAirdrop transaction introduced for recipients to claim pending airdropped tokens.
 * TokenCancelAirdrop transaction introduced giving senders the ability to cancel unclaimed airdrops.
 
-**Benefits**:
+**Benefits**:&#x20;
 
-* Streamlines token distribution, empowers token creators, developers, and projects by allowing them to distribute tokens more efficiently to a wider audience.\\
+* Streamlines token distribution, empowers token creators, developers, and projects by allowing them to distribute tokens more efficiently to a wider audience.\
+
 
 [**HIP-1010**](https://hips.hedera.com/hip/hip-1010)**: Update Token Custom Fee Schedules via Smart Contracts**
 
@@ -593,7 +600,7 @@ Delivered in this release:
 * updateFungibleTokenCustomFees system contract function for updating custom fees for fungible tokens.
 * updateNonFungibleTokenCustomFees system contract function for updating custom fees for non-fungible tokens.
 
-**Benefits:**
+**Benefits:**&#x20;
 
 * Enables smart contracts to manage token custom fees, providing more dynamic and autonomous token management capabilities.
 
@@ -641,7 +648,7 @@ Delivered in this release:
 * feat: improve hashing performance by [@lpetrovic05](https://github.com/lpetrovic05) in [#14444](https://github.com/hashgraph/hedera-services/pull/14444)
 * test: add test for validating numeric values for HAS and ExchangeRate functions by [@stoyanov-st](https://github.com/stoyanov-st) in [#14424](https://github.com/hashgraph/hedera-services/pull/14424)
 * ci: Add registry mirrors to daemon-config on crazy-max/ghaction-setup-docker by [@rbarkerSL](https://github.com/rbarkerSL) in [#14469](https://github.com/hashgraph/hedera-services/pull/14469)
-* docs: Update glossary defns of aliases, triplets by [@david-bakin-sl](https://github.com/david-bakin-sl) in [#14372](https://github.com/hashgraph/hedera-services/pull/14372)
+* docs: Update glossary defns of aliases, triplets by [@david-bakin-sl](https://github.com/david-bakin-sl) in [#14372](https://github.com/hashgraph/hedera-services/pull/14372)&#x20;
 
 **➡ See the full list of changes** [**here**](https://github.com/hashgraph/hedera-services/releases/tag/v0.54.0)**.**
 
@@ -665,17 +672,17 @@ Delivered in this release:
 
 <summary><strong>Binaries (</strong><a href="https://builds.hedera.com/"><strong>builds.hedera.com</strong></a><strong>)</strong> </summary>
 
-Build version.0 - [zip](http://builds.hedera.com/node/software/v0.53/build-v0.53.0.zip) [sha384](http://builds.hedera.com/node/software/v0.53/build-v0.53.0.sha384)
+Build version.0 - [zip](http://builds.hedera.com/node/software/v0.53/build-v0.53.0.zip)  [sha384](http://builds.hedera.com/node/software/v0.53/build-v0.53.0.sha384)
 
-Build version.1 - [zip](http://builds.hedera.com/node/software/v0.53/build-v0.53.1.zip) [sha384](http://builds.hedera.com/node/software/v0.53/build-v0.53.1.sha384)
+Build version.1 - [zip](http://builds.hedera.com/node/software/v0.53/build-v0.53.1.zip)  [sha384](http://builds.hedera.com/node/software/v0.53/build-v0.53.1.sha384)
 
-Build version.2 - [zip](http://builds.hedera.com/node/software/v0.53/build-v0.53.2.zip) [sha384](http://builds.hedera.com/node/software/v0.53/build-v0.53.2.sha384)
+Build version.2 - [zip](http://builds.hedera.com/node/software/v0.53/build-v0.53.2.zip)  [sha384](http://builds.hedera.com/node/software/v0.53/build-v0.53.2.sha384)
 
-Build version.3 - [zip](http://builds.hedera.com/node/software/v0.53/build-v0.53.3.zip) [sha384](http://builds.hedera.com/node/software/v0.53/build-v0.53.3.sha384)
+Build version.3 - [zip](http://builds.hedera.com/node/software/v0.53/build-v0.53.3.zip)  [sha384](http://builds.hedera.com/node/software/v0.53/build-v0.53.3.sha384)
 
-Build version.4 - [zip](http://builds.hedera.com/node/software/v0.53/build-v0.53.4.zip) [sha384](http://builds.hedera.com/node/software/v0.53/build-v0.53.4.sha384)
+Build version.4 - [zip](http://builds.hedera.com/node/software/v0.53/build-v0.53.4.zip)  [sha384](http://builds.hedera.com/node/software/v0.53/build-v0.53.4.sha384)
 
-Build version.5 - [zip](http://builds.hedera.com/node/software/v0.53/build-v0.53.5.zip) [sha384\
+Build version.5 - [zip](http://builds.hedera.com/node/software/v0.53/build-v0.53.5.zip)  [sha384\
 ](http://builds.hedera.com/node/software/v0.53/build-v0.53.5.sha384)
 
 </details>
@@ -712,8 +719,8 @@ Partial completion of HIP-904 Delivered in 0.53
 * Sender pays for association
   * Sender now pays for token association at the time of HTS transaction execution.
 * Max\_auto\_associations
-  * Default value for `max_auto_assocations` will now be `-1` meaning that if an account is created automatically by performing a token transfer to an alias that does not yet exist the account is configured with unlimited automatic token association.
-  * HAPI:CryptoCreate will continue to have `max_auto_associations` defaulting to `0`.
+  * Default value for `max_auto_assocations` will now be `-1` meaning that if an account is created automatically by performing a token transfer to an alias that does not yet exist the account is configured with unlimited automatic token association.&#x20;
+  * HAPI:CryptoCreate will continue to have `max_auto_associations` defaulting to `0`.&#x20;
   * Accounts created before the launch of this feature will remain unchanged.
 * Token reject
   * Introduces _TokenReject_ Transaction.
@@ -732,7 +739,7 @@ Partial completion of HIP-904 Delivered in 0.53
 
 #### Benefits
 
-* NFT owners can return an NFT to treasury custody in order to update parameters within the metadata of the NFT.
+* NFT owners can return an NFT to treasury custody in order to update parameters within the metadata of the NFT.&#x20;
 * NFT cannot be updated by unauthorized parties once distributed.
 
 #### [HIP-993](https://hips.hedera.com/hip/hip-993): Improve record stream legibility and extensibility
@@ -930,7 +937,7 @@ Planned for delivery in release .54:
 * Defines a new function to the Hedera Token Service system contract that allows for the atomic transfer of HBAR, fungible tokens and non-fungible tokens.
   * Function cryptoTransfer(TransferList transferList,TokenTransferList\[] tokenTransfer)
 * Exposes an existing HAPI call via smart contracts.
-* Transfer respects granted allowances.
+* Transfer respects granted allowances. &#x20;
 
 **Benefits**
 
@@ -1062,7 +1069,7 @@ Planned for delivery in release .54:
 
 ### [0.49.0](https://github.com/hashgraph/hedera-services/releases/tag/v0.49.0)
 
-#### What's changed
+#### What's changed&#x20;
 
 * feat: address cold read issue in ExtCodeHash operation by [@lukelee-sl](https://github.com/lukelee-sl) in [#11323](https://github.com/hashgraph/hedera-services/pull/11323)
 * fix: 11348: The fix for 11231 doesn't cover ParsedBucket by [@artemananiev](https://github.com/artemananiev) in [#11349](https://github.com/hashgraph/hedera-services/pull/11349)
