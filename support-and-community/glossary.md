@@ -2,7 +2,7 @@
 description: Hedera & Web3 Glossary - Comprehensive Guide for Developers
 ---
 
-# Glossary
+# 🔴 Glossary
 
 This glossary intends to provide a reference for Hedera and general web3 key terms. The purpose is to assist developers, particularly those new to the field or non-specialists, in understanding essential definitions related to various aspects of this technology. It covers basic to complex concepts and essential development tools and is an accessible resource for developers.
 
@@ -608,6 +608,12 @@ The [Hedera File Service](../sdks-and-apis/deprecated/sdks/readme-1-1/) provides
 ***
 
 A Hedera Improvement Proposal (HIP) is a proposal that can range from core protocol changes to the applications, frameworks, and protocols built on the Hedera public network and used by the community. HIPs are reviewed and evaluated by the Hedera Council, core developers, and editors.
+
+### Hedera Schedule Service (HSS)
+
+***
+
+The Hedera Schedule Service system contract exposes the necessary scheduled transaction features to smart contracts on the Hedera network, enabling the creation, management, and execution of scheduled transactions. Scheduled transactions are actions that require approval from multiple parties (multi-sig coordination) and are executed on the network only after all required signatures are collected and verified. If all required signatures are not collected before the expiration, the transaction expires and is removed from the network.
 
 ### Hedera Smart Contract Service (HSCS)
 
