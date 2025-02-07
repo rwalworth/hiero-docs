@@ -2,7 +2,7 @@
 description: Hedera & Web3 Glossary - Comprehensive Guide for Developers
 ---
 
-# 🔴 Glossary
+# Glossary
 
 This glossary intends to provide a reference for Hedera and general web3 key terms. The purpose is to assist developers, particularly those new to the field or non-specialists, in understanding essential definitions related to various aspects of this technology. It covers basic to complex concepts and essential development tools and is an accessible resource for developers.
 
