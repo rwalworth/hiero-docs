@@ -6,6 +6,39 @@ description: Hedera Services release information
 
 Visit the [Hedera status page](https://status.hedera.com/) for the latest versions supported on each network.
 
+## Release v0.59
+
+{% hint style="info" %}
+**MAINNET UPDATE SCHEDULED: MARCH 12, 2025**
+{% endhint %}
+
+{% hint style="info" %}
+**TESTNET UPDATE SCHEDULED: FEBRUARY 25, 2025**
+{% endhint %}
+
+### [Build 0.59.0](https://github.com/hashgraph/hedera-services/releases/tag/v0.59.0)
+
+<details>
+
+<summary><strong>What's Changed</strong></summary>
+
+* refactor: 16436 Removed `MerkleRoot` interface. by [@imalygin](https://github.com/imalygin) in [#17130](https://github.com/hashgraph/hedera-services/pull/17130)
+* fix: move and change value of Dockerfile environment variable by [@matteriben](https://github.com/matteriben) in [#16239](https://github.com/hashgraph/hedera-services/pull/16239)
+* build: Roll hiero gradle conventions to version 0.1.4 by [@andrewb1269hg](https://github.com/andrewb1269hg) in [#17149](https://github.com/hashgraph/hedera-services/pull/17149)
+* build(deps): bump actions/setup-java from 4.5.0 to 4.6.0 by [@dependabot](https://github.com/dependabot) in [#17113](https://github.com/hashgraph/hedera-services/pull/17113)
+* build(deps): bump gradle/actions from 4.2.1 to 4.2.2 by [@dependabot](https://github.com/dependabot) in [#17111](https://github.com/hashgraph/hedera-services/pull/17111)
+* chore: Update hedera-services to rename develop as main by [@rbarker-dev](https://github.com/rbarker-dev) in [#17091](https://github.com/hashgraph/hedera-services/pull/17091)
+* chore: Update workrflow names to point to main instead of develop by [@rbarker-dev](https://github.com/rbarker-dev) in [#17158](https://github.com/hashgraph/hedera-services/pull/17158)
+* ci: Update Check Integration/XTS Job State to include GH\_TOKEN by [@rbarker-dev](https://github.com/rbarker-dev) in [#17160](https://github.com/hashgraph/hedera-services/pull/17160)
+* ci: add id\_token write permission to node-flow-deploy-release-artifact.yaml by [@rbarker-dev](https://github.com/rbarker-dev) in [#17161](https://github.com/hashgraph/hedera-services/pull/17161)
+* feat: Support overwrites for interface bindings and endpoints by [@timo0](https://github.com/timo0) in [#17117](https://github.com/hashgraph/hedera-services/pull/17117)
+* chore: Refactor hapi tests to use `hapiTest(...)` instead of `defaultHapiSpec(...)` (Part 3) by [@mhess-swl](https://github.com/mhess-swl) in [#16698](https://github.com/hashgraph/hedera-services/pull/16698)
+* feat: consolidate hbar transfer list when decoding cryptoTransfer function by [@lukelee-sl](https://github.com/lukelee-sl) in [#17165](https://github.com/hashgraph/hedera-services/pull/17165)
+
+**Full Changelog**: [v0.58.9...v0.59.0](https://github.com/hashgraph/hedera-services/compare/v0.58.9...v0.59.0)
+
+</details>
+
 ## Release v0.58
 
 {% hint style="info" %}
