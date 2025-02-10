@@ -16,6 +16,18 @@ Visit the [Hedera status page](https://status.hedera.com/) for the latest versio
 **TESTNET UPDATE SCHEDULED: FEBRUARY 6, 2025**
 {% endhint %}
 
+### [Build 0.58.9](https://github.com/hashgraph/hedera-services/releases/tag/v0.58.9)
+
+<details>
+
+<summary><strong>What's Changed</strong></summary>
+
+* chore: Use weights from reclamped stakes in current address book by [@tinker-michaelj](https://github.com/tinker-michaelj) in [#17777](https://github.com/hashgraph/hedera-services/pull/17777)
+
+**Full Changelog**: [v0.58.7...v0.58.9](https://github.com/hashgraph/hedera-services/compare/v0.58.7...v0.58.9)
+
+</details>
+
 ### [Build 0.58.8](https://github.com/hashgraph/hedera-services/releases/tag/v0.58.8)
 
 <details>
