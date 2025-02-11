@@ -8,6 +8,14 @@ Visit the [Hedera status page](https://status.hedera.com/) for the latest versio
 
 ## Latest Releases
 
+## [v0.123.0](https://github.com/hashgraph/hedera-mirror-node/releases/tag/v0.123.0)
+
+This release saw initial support for [HIP-991](https://hips.hedera.com/hip/hip-991) topic custom fees. The design was updated to reflect the recent changes in the improvement proposal. The importer now supports ingesting topic custom fees and persisting them. It's recommended that mirror node operators update to this release before consensus nodes upgrade to v0.59. In a future release, we'll work on exposing this information via the existing APIs.
+
+[HIP-1056](https://hips.hedera.com/hip/hip-1056) block streams saw continued progress. Additional block item to record item transformers were completed including file and schedule transactions. The topic running hash column was made nullable since it is no longer sent in block streams.
+
+Finally, a large amount of progress was made towards our modularized EVM [effort](https://github.com/hashgraph/hedera-mirror-node/issues/8828). In this release, a total of 12 PRs related to modularized EVM were closed and we're getting close to a fully functional implementation.
+
 ## [v0.122.0](https://github.com/hashgraph/hedera-mirror-node/releases/tag/v0.122.0)
 
 This release focuses on two major works projects: integrating the modularized EVM library from consensus nodes and integration block streams. The modularized EVM library work saw 17 pull requests closed in service towards this effort.
