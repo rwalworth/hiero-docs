@@ -293,7 +293,7 @@
     * [Blocks](sdks-and-apis/rest-api/blocks.md)
     * [Schedule Transactions](sdks-and-apis/rest-api/schedule-transactions.md)
     * [Smart Contracts](sdks-and-apis/rest-api/smart-contracts.md)
-    * [Token](sdks-and-apis/rest-api/token.md)
+    * [Tokens](sdks-and-apis/rest-api/tokens.md)
     * [Topics](sdks-and-apis/rest-api/topics.md)
     * [Transactions](sdks-and-apis/rest-api/transactions.md)
     * [Network](sdks-and-apis/rest-api/network.md)
