@@ -56,9 +56,9 @@ This release introduces several new features, improvements, and bug fixes, inclu
 #### **HIPs**
 
 * **HIP-423 Long-Term Scheduled Transactions**:  \
-  Update to ScheduleSign throttles changed: The ScheduleSign transaction is now throttled like other transactions and can now be managed by the default throttling mechanism on the network.  ([#16958](https://github.com/hashgraph/hedera-services/issues/16958), [#16959](https://github.com/hashgraph/hedera-services/issues/16959)) This completes HIP-423.
+  Update to ScheduleSign throttles changed: The ScheduleSign transaction is now throttled like other transactions and can now be managed by the default throttling mechanism on the network.  ([#16958](https://github.com/hashgraph/hedera-services/issues/16958), [#16959](https://github.com/hashgraph/hedera-services/issues/16959)) This completes [HIP-423](https://hips.hedera.com/hip/hip-423).
 * **HIP-755 authorizeSchedule(address)**\
-  Adds functionality to the Hedera Schedule Service System contract so that a smart contract can sign a referenced scheduled transaction using its contract key, enabling automated execution of scheduled transactions directly from smart contracts. ([#16983](https://github.com/hiero-ledger/hiero-consensus-node/pull/16983)), the remaining outstanding features to complete HIP-755 will be provisioned in release .59.
+  Adds functionality to the Hedera Schedule Service System contract so that a smart contract can sign a referenced scheduled transaction using its contract key, enabling automated execution of scheduled transactions directly from smart contracts. ([#16983](https://github.com/hiero-ledger/hiero-consensus-node/pull/16983)), the remaining outstanding features to complete [HIP-755](https://hips.hedera.com/hip/hip-755) will be provisioned in release .59.
 
 #### **Other Notable Changes**
 
