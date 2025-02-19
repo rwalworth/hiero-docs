@@ -41,7 +41,7 @@ Visit the [Hedera status page](https://status.hedera.com/) for the latest versio
 
 ## Release v0.58
 
-{% hint style="info" %}
+{% hint style="success" %}
 **MAINNET UPDATE SCHEDULED: FEBRUARY 19, 2025**
 {% endhint %}
 
@@ -180,6 +180,8 @@ Re-tag of `v0.58.7` to trigger workflow
 **Full Changelog**: [v0.57.3...v0.58.0](https://github.com/hashgraph/hedera-services/compare/v0.57.3...v0.58.0)
 
 </details>
+
+<figure><img src="../../.gitbook/assets/‎0.58_Performance Measurement Results_Extract.‎001.png" alt=""><figcaption></figcaption></figure>
 
 ## Release v0.57
 
