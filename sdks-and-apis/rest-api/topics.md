@@ -40,7 +40,3 @@ The following endpoints are available for the Topics object:
 [https://raw.githubusercontent.com/hiero-ledger/hiero-mirror-node/main/hedera-mirror-rest/api/v1/openapi.yml](https://raw.githubusercontent.com/hiero-ledger/hiero-mirror-node/main/hedera-mirror-rest/api/v1/openapi.yml)
 {% endopenapi %}
 
-{% openapi src="https://raw.githubusercontent.com/hashgraph/hedera-mirror-node/main/hedera-mirror-rest/api/v1/openapi.yml" path="/api/v1/topics/{topicId}" method="get" %}
-[https://raw.githubusercontent.com/hashgraph/hedera-mirror-node/main/hedera-mirror-rest/api/v1/openapi.yml](https://raw.githubusercontent.com/hashgraph/hedera-mirror-node/main/hedera-mirror-rest/api/v1/openapi.yml)
-{% endopenapi %}
-
