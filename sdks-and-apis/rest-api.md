@@ -4,12 +4,6 @@ description: The mirror node REST API offers the ability to query transaction in
 
 # Mirror Node REST API
 
-{% openapi src="https://raw.githubusercontent.com/hashgraph/hedera-mirror-node/main/hedera-mirror-rest/api/v1/openapi.yml" path="/api/v1/topics/{topicId}" method="get" %}
-[https://raw.githubusercontent.com/hashgraph/hedera-mirror-node/main/hedera-mirror-rest/api/v1/openapi.yml](https://raw.githubusercontent.com/hashgraph/hedera-mirror-node/main/hedera-mirror-rest/api/v1/openapi.yml)
-{% endopenapi %}
-
-
-
 ## Overview
 
 The **Hedera Mirror Node REST API** enables developers to access historical transaction data from Hedera's mainnet, testnet, and previewnet. Each transaction generates a record stored in a record file, which can be accessed via the Mirror Node REST APIs.
