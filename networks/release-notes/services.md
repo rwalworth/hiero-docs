@@ -71,6 +71,16 @@ This release introduces several new features, improvements, and bug fixes, inclu
   Refactored out-of-band state modifications:  All out-of-band state modifications have been refactored to be done in Schemas. ([#16843](https://github.com/hashgraph/hedera-services/issues/16843))
 * Increased CryptoGetAccountBalance throttle:  The throttle for the CryptoGetAccountBalance query has been increased to the number of network nodes times 1,000,000 plus a buffer.  This change addresses an issue where the throttle was too low, leading to throttling errors.  ([#16850](https://github.com/hashgraph/hedera-services/issues/16850), [#16857](https://github.com/hashgraph/hedera-services/issues/16857))
 
+### [Build 0.58.10](https://github.com/hiero-ledger/hiero-consensus-node/releases/tag/v0.58.10)
+
+<details>
+
+<summary><strong>What's Changed</strong></summary>
+
+**Full Changelog**: [v0.58.9...v0.58.10](https://github.com/hiero-ledger/hiero-consensus-node/compare/v0.58.9...v0.58.10)
+
+</details>
+
 ### [Build 0.58.9](https://github.com/hashgraph/hedera-services/releases/tag/v0.58.9)
 
 <details>
