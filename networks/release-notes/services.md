@@ -16,6 +16,18 @@ Visit the [Hedera status page](https://status.hedera.com/) for the latest versio
 **TESTNET UPDATE SCHEDULED: FEBRUARY 25, 2025**
 {% endhint %}
 
+### [Build 0.59.2](https://github.com/hiero-ledger/hiero-consensus-node/releases/tag/v0.59.2)
+
+<details>
+
+<summary><strong>What's Changed</strong></summary>
+
+* chore: (0.59) Cherry-pick misc fixes by [@tinker-michaelj](https://github.com/tinker-michaelj) in [#18128](https://github.com/hiero-ledger/hiero-consensus-node/pull/18128)
+
+**Full Changelog**: [v0.59.1...v0.59.2](https://github.com/hiero-ledger/hiero-consensus-node/compare/v0.59.1...v0.59.2)
+
+</details>
+
 ### [Build 0.59.0](https://github.com/hashgraph/hedera-services/releases/tag/v0.59.0)
 
 <details>
