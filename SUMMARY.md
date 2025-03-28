@@ -532,6 +532,7 @@
         * [Get file info](sdks-and-apis/deprecated/sdks/readme-1-1/get-file-info.md)
         * [Network Response Messages](sdks-and-apis/deprecated/sdks/readme-1-1/network-response-messages.md)
   * [Protobuf Markdown](sdks-and-apis/protobuf-markdown.md)
+   * [Account](sdks-and-apis/protobuf-markdowns/account.md)
 * [Support & Community](support-and-community/README.md)
   * [Glossary](support-and-community/glossary.md)
   * [Contributing to Hedera documentation](support-and-community/contributing-guide/README.md)
