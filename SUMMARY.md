@@ -531,7 +531,7 @@
         * [Get file contents](sdks-and-apis/deprecated/sdks/readme-1-1/get-file-contents.md)
         * [Get file info](sdks-and-apis/deprecated/sdks/readme-1-1/get-file-info.md)
         * [Network Response Messages](sdks-and-apis/deprecated/sdks/readme-1-1/network-response-messages.md)
-  * [Protobuf Markdown](sdks-and-apis/protobuf-markdown/README.md)
+  * [Protobuf Markdowns](sdks-and-apis/protobuf-markdowns/README.md)
      * [Account](sdks-and-apis/protobuf-markdown/account.md)
      * [Crypto Create](sdks-and-apis/protobuf-markdowns/crypto_create.md)
 * [Support & Community](support-and-community/README.md)
