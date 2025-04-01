@@ -1,31 +1,39 @@
-name: deploy protobuf docs
+name: Deploy Protobuf Docs
 
 on:
   push:
     branches:
-      - proto-summary-test # or your default branch
+      - proto-summary-test
     paths:
       - 'sdks-and-apis/protobuf-markdowns/**'
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout repository
-        uses: actions/checkout@v3
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-      - name: setup pages
-        uses: actions/configure-pages@v3
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
 
-      - name: copy protobuf markdowns
+      - name: Copy Protobuf Markdown Files
         run: |
           mkdir -p public
           cp -r sdks-and-apis/protobuf-markdowns/* public/
 
-      - name: upload artifact
+      - name: Upload Artifact
         uses: actions/upload-pages-artifact@v2
         with:
           path: public
 
-      - name: deploy to github pages
+      - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
