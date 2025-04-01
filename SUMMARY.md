@@ -470,6 +470,7 @@
       * [Contract Update](sdks-and-apis/protobuf-markdowns/smart-contracts/contract_update.md)
     - Token Service
       * [Token Airdrop](sdks-and-apis/protobuf-markdowns/token-service/token_airdrop.md)
+      * [Token Airdrop](sdks-and-apis/protobuf-markdowns/token-service/token_airdrop.md)
       * [Token Associate](sdks-and-apis/protobuf-markdowns/token-service/token_associate.md)
       * [Token Burn](sdks-and-apis/protobuf-markdowns/token-service/token_burn.md)
       * [Token Cancel Airdrop](sdks-and-apis/protobuf-markdowns/token-service/token_cancel_airdrop.md)
