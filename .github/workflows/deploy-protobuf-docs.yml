@@ -3,7 +3,7 @@ name: deploy protobuf docs
 on:
   push:
     branches:
-      - proto-summary-test  # or your default branch
+      - master  # or your default branch
     paths:
       - 'sdks-and-apis/protobuf-markdowns/**'
 
